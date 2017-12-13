@@ -61,8 +61,8 @@ function remove_img_caption_style($attr, $content = null) {
 		if ( 1 > (int) $width || empty($caption) )
 			return $content;
 		if ( $id ) $id = 'id="' . esc_attr($id) . '" ';
-		return '<div ' . $id . 'class="wp-caption ' . esc_attr($align) . '">'
-		. do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></div>';
+		return '<figure ' . $id . 'class="wp-caption ' . esc_attr($align) . '">'
+		. do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></figure>';
 }
 	
 add_shortcode('wp_caption', 'remove_img_caption_style');
