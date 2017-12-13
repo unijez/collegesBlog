@@ -1,0 +1,112 @@
+/*--------------------------------------------------------------
+# Site Header - Brennan Styling
+--------------------------------------------------------------*/
+header{
+
+	background-color: $headerbg-grey;
+	color: #fff;
+	display: flex;
+    padding: 10px 20px;
+    height: 60px;
+    position: sticky;
+
+	.left {
+        
+        display: flex;
+		flex-grow: 1;
+		float: left;
+
+        img {
+        
+            width: 250px;
+            float: left;
+            vertical-align: center;
+        
+        }
+
+	}
+
+    .central {
+        
+        position: absolute;
+        left: 260px;
+        top: 0;
+        height: 60px;
+        background-color: #212121;
+        width: 260px;
+        display: flex; 
+        justify-content: center;   
+
+        h4 {
+            
+            align-self: center;
+            margin: 0;
+            
+        }
+    }
+
+	.right {
+        
+        display: flex;
+		flex-grow: 1;
+        justify-content: flex-end;
+		float: right;
+
+        img {
+            
+            height: 20px;
+            align-self: center;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            margin-left: 20px;
+    
+        }
+
+        input {
+
+	        background-color: $searchbg-grey;
+            @include borderfix(all, 0px);
+            padding: 5px;
+            width: 50%;
+            align-self: center;
+            color: #fff;
+            margin-right: 25px;
+
+        }
+	}
+
+	@include mq(mobile) {
+    
+	}
+
+
+
+
+	@include mq($until: tablet) {
+        
+        .left {
+            flex-direction: column;
+        }
+
+        .right input {
+            display: none;
+        }
+
+        .central {
+            width: 100%;
+            left: 0;
+            top: 60;
+        }
+
+	}
+
+
+
+    @include mq(mobile, tablet) {
+
+            
+
+    }
+
+}

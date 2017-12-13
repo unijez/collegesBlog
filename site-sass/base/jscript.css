@@ -1,0 +1,17 @@
+/*---------------------------------------------
+    Classes accessed by the jScript - Brennan
+---------------------------------------------*/
+.expand {
+  width: 200px; }
+
+.retract {
+  width: 0px; }
+
+.qCorrect {
+  right: 20px; }
+
+.dBlock {
+  display: block; }
+
+.dNone {
+  display: none; }
