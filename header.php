@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package hello
+ * @package schools
  */
 
 ?>
@@ -29,7 +29,35 @@
 
 
 
+	<nav class="global-nav retract" id="pushIt">
+        <button type ="button" class="closeBtn" id="menuClose">&times;</button>
+        <a href="#" class="active"><span>Home</span></a>
+        <a href="#"><span>Research</span></a>
+        <a href="#"><span>Teaching &amp; learning</span></a>
+        <a href="#"><span>News</span></a>
+        <a href="#"><span>Events</span></a>
+        <a href="#"><span>Video archive</span></a>
+        <a href="#"><span>School blogs</span></a>
+        <a href="#"><span  class="last">Links</span></a>
+    </nav>
 
+    <main id="getPushed">
+      <div class="overlay dNone" id="overlay">
+      </div>
+      <header>
+        <div class="left">
+          <img src="" alt="University Of Lincoln Logo">
+        </div>
+        <div class="central">
+            <h4>Lincoln International <br> Business School</h4>
+        </div>
+        <div class="right">
+          <input type="text" name="search" placeholder="Search" id="search">
+          <button type ="button" id="menuOpen"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/burgericon.png" alt="Burger Icon"></button>
+        </div>
+      </header>
+
+    </main>
 
 
 
