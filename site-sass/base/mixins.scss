@@ -136,3 +136,27 @@
     @content;
   }
 }
+
+@mixin borderfix($side, $value) {
+
+    @if($side == top) {
+        border-top: $value;
+    } 
+
+    @if($side == bottom) {
+        border-bottom: $value;
+    }
+
+    @if($side == left) {
+        border-left: $value;
+    }
+
+    @if($side == right) {
+        border-right: $value;
+    }
+
+    @if($side == all) {
+        border: $value;
+    }
+    
+}

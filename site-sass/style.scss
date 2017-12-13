@@ -1,6 +1,6 @@
 @charset "utf-8";
 /*!
-Theme Name: Hello
+Theme Name: Schools
 Theme URI: http://blogs.lincoln.ac.uk/
 Author: Jez Thompson
 Author URI: http://staff.lincoln.ac.uk/4651c018-5280-4c91-b913-8a813499eed0
@@ -91,8 +91,14 @@ https://github.com/jonathantneal/sanitize.css
 @import "components/components.buttons";
 @import "components/components.navigation";
 
-@import "site-specific/site.grid";
+/*@import "site-specific/site.grid";
 @import "site-specific/site.page";
 @import "site-specific/site.header";
 @import "site-specific/site.footer";
-@import "site-specific/site.post";
+@import "site-specific/site.post";*/
+
+@import "brennan/site.header";
+@import "brennan/jscript";
+
+@import "tom/site.post-listing";
+
