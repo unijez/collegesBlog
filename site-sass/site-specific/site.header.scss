@@ -1,0 +1,26 @@
+/*--------------------------------------------------------------
+# Site Header
+--------------------------------------------------------------*/
+.site-header{
+
+	@include mq(mobile) {
+	     color: red;
+	     
+	     
+	   }
+	   
+	   
+	   
+	   
+	   @include mq($until: tablet) {
+	     color: blue;
+	   }
+	   
+	   
+	   
+	   @include mq(mobile, tablet) {
+	     color: green;
+	   }
+	 
+}
+
