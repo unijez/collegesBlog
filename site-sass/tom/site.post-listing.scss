@@ -281,24 +281,24 @@ blockquote::before {
 
 		/* Extra Small Devices */
 @media screen and (max-width: 739px) {
-	.row {
+/*	.row {
 		width: 100%;
 	}
 	.item {
 		width: 100%;
-	}
+	}*/
 }
 
 		/* Small Devices */
 @media screen and (min-width: 740px) {
-  .item {
+/*  .item {
   	width: 50%;
-  }
+  }*/
 }
 
 		/* Medium Devices */
 @media screen and (min-width: 980px) {
-  .row {
+  /*.row {
     flex-direction: row;
   }
   .item {
@@ -309,12 +309,60 @@ blockquote::before {
 	  margin-left: -75px;
 	  margin-right: -75px;
 	  max-width: 750px;
-  }
+  }*/
 }
 
 		/* Large Devices */
-@media screen and (min-width: 1300px) {
+/*@media screen and (min-width: 1300px) {
   .row {
     flex-direction: row;
   }
+}*/
+
+
+
+.row {
+	
+	width: 100%;
+	
+	@include mq(desktop) {
+		@include flex-direction(row);
+	}
+	
+	@include mq(wide) {
+		
+	}
+	
+}
+
+
+.item {
+	
+	width: 100%;
+	
+	
+	@include mq(tablet) {
+		width: 50%;
+	}
+	
+	@include mq(desktop) {
+		width: 33.3333%;
+	}
+		
+	
+		
+}
+
+
+
+.single-container .alignnone,
+.single-container .aligncenter{
+	  
+	  @include mq(desktop) {
+	  
+		  margin-left: -75px;
+		  margin-right: -75px;
+		  max-width: 750px;
+	  
+	  }
 }
