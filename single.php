@@ -31,7 +31,7 @@
                                      						<div class="heading-image" style="background-image: url('<?php echo $large_image_url[0]; ?>')">
                                      							<h4><?php the_category(','); ?></h4>
                                      							<h1><?php the_title();?></h1>
-                                     							<h5>Reading time 4mins</h5>
+                                     							<h5>Reading time 4mins test</h5>
                                      						</div> <!-- heading-image -->
              
                            <?php else :?>
