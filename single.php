@@ -15,35 +15,35 @@
 
  			<?php if ( have_posts() ) : ?>
 
- 					<?php while ( have_posts() ) : the_post(); ?>
+ 				<?php while ( have_posts() ) : the_post(); ?>
 
-             <?php if ( has_post_thumbnail() ): // If has thumbnail image do the rest...?>
-             
-                                      <?php
-                                                     $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
-                                               // $mobile_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'image-reg-name' );
-                                     ?>
-             
-                                  
-             
-                                     <!-- <img class="class-name" src="<?php echo $large_image_url[0]; ?>" width="<?php echo $large_image_url[1]; ?>" height="<?php echo $large_image_url[2]; ?>" alt="<?php echo $large_image_url['_wp_attachment_image_alt']['0']; ?>"> -->
-             
-                                     						<div class="heading-image" style="background-image: url('<?php echo $large_image_url[0]; ?>')">
-                                     							<h4><?php the_category(','); ?></h4>
-                                     							<h1><?php the_title();?></h1>
-                                     							<h5>Reading time 4mins test</h5>
-                                     						</div> <!-- heading-image -->
-             
-                           <?php else :?>
-             
-                             						<div class="heading-image">
-                             							<h4><?php the_category(','); ?></h4>
-                             							<h1><?php the_title();?></h1>
-                             							<h5>Reading time 4mins</h5>
-                             						</div> <!-- heading-image -->
-             
-                           <?php endif; ?>
-             
+          <?php if ( has_post_thumbnail() ): // If has thumbnail image do the rest...?>
+
+            <?php
+              $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
+              // $mobile_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'image-reg-name' );
+            ?>
+
+            <!-- <img class="class-name" src="<?php echo $large_image_url[0]; ?>" width="<?php echo $large_image_url[1]; ?>" height="<?php echo $large_image_url[2]; ?>" alt="<?php echo $large_image_url['_wp_attachment_image_alt']['0']; ?>"> -->
+
+              <div class="heading-image" style="background-image: url('<?php echo $large_image_url[0]; ?>')">
+                <div class="heading-image_opacity">
+                  <h4><?php the_category(','); ?></h4>
+                  <h1><?php the_title();?></h1>
+                  <h5>Reading time 4mins test</h5>
+                </div>
+              </div> <!-- heading-image -->
+
+            <?php else :?>
+
+              <div class="heading-image">
+                <h4><?php the_category(','); ?></h4>
+                <h1><?php the_title();?></h1>
+                <h5>Reading time 4mins</h5>
+              </div> <!-- heading-image -->
+
+            <?php endif; ?>
+
             <!-- Main text and image content -->
 						<div class="single-container">
 
