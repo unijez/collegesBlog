@@ -1,13 +1,13 @@
+/*
+/* Tom Moore *!/
 
-/* Tom Moore */
-
-/* Optional Styles */
+/* Optional Styles *!/
 
 body {
   font-family: Arial;
 }
 
-/* Needed Styles */
+/* Needed Styles *!/
 
 .container {
   padding: 10px;
@@ -26,7 +26,7 @@ hr {
 }
 
 /* Simple Flex layout segregating items into forced rows.
- * @include can be later inputted to enable cleaner snapping of rows. */
+ * @include can be later inputted to enable cleaner snapping of rows. *!/
 
 .row {
 	width: 100%;
@@ -72,32 +72,32 @@ a {
 	text-decoration: none;
 }
 
-/* Media Queries (not properly done) */
+/* Media Queries (not properly done) *!/
 
-		/* Extra Small Devices */
+		/* Extra Small Devices *!/
 @media screen and (max-width: 739px) {
 	.row {
     flex-direction: column;
   }
 }
 
-		/* Small Devices */
+		/* Small Devices *!/
 @media screen and (min-width: 740px) {
   .row {
     flex-direction: column;
   }
 }
 
-		/* Medium Devices */
+		/* Medium Devices *!/
 @media screen and (min-width: 980px) {
   .row {
     flex-direction: row;
   }
 }
 
-		/* Large Devices */
+		/* Large Devices *!/
 @media screen and (min-width: 1300px) {
   .row {
     flex-direction: row;
   }
-}
+}*/
