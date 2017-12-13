@@ -2,7 +2,6 @@
 
 body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-
 }
 
 a {
@@ -17,7 +16,7 @@ a {
 
 .latest-posts {
   text-align: center;
-  color: #4C555A;
+  color: $main-text-grey;
   letter-spacing: 2px;
   font-weight: 400;
 }
@@ -61,19 +60,19 @@ hr {
 }
 
 .item-text h5 a {
-  color: #A0A1A5;
+  color: $category-excerpt-grey;
   letter-spacing: 2px;
 }
 
 .item-text h2 {
   padding: 0 40px 0 40px;
-  color: #047E8B;
+  color: $secondry-color;
 }
 
 .item-text p {
   margin: 40px 0 0 0;
   padding: 0 40px 0 40px;
-  color: #A0A1A5;
+  color: $category-excerpt-grey;
 }
 
 /* single.php styles */
@@ -83,7 +82,7 @@ hr {
 .heading-image {
   width: 100%;
   height: 75vh;
-  background-color: #002147; /* Defult background image */
+  background-color: $uni-blue; /* Defult background image */
 	background-size: cover;
 	text-align: center;
 	display: flex;
@@ -171,7 +170,7 @@ hr {
 }
 
 .author h4 {
-	color: #4C555A;
+	color: $main-text-grey;
 	font-weight: 300;
 	font-size: 1em;
 	margin: 5px;
@@ -186,7 +185,7 @@ hr {
 }
 
 .single-container p {
-  color: #4C555A;
+  color: $main-text-grey;
   font-weight: 400;
   letter-spacing: 1px;
   word-spacing: 0px;
@@ -195,14 +194,14 @@ hr {
 }
 
 .single-container p a {
-	color: #4C555A;
+	color: $main-text-grey;
 	display: inline-block;
 	line-height: 12px;
-	border-bottom: 4px solid #047E8B;
+	border-bottom: 4px solid $secondry-color;
 }
 
 .single-container figcaption {
-  color: #292E30;
+  color: $caption-color;
   margin-top: 10px;
   letter-spacing: 0.9px;
   word-spacing: 2px;
@@ -252,27 +251,27 @@ blockquote::before {
   margin: 0 auto;
   content: "\201C";
   top: -65px;
-  color: #CECED1;
+  color: $blockquote-before;
 }
 
 .single-container blockquote p {
   font-size: 25px;
   line-height: 40px;
   padding: 0 50px 0 50px;
-  color: #002147;
+  color: $uni-blue;
 }
 
 	/* Related posts */
 
 .related-container {
 	padding: 10px;
-	background-color: #F9F9F9;
+	background-color: $related-container-color;
 	margin-top: 300px;
 }
 
 .related-posts {
   text-align: center;
-  color: #4C555A;
+  color: $main-text-grey;
   letter-spacing: 2px;
   font-weight: 400;
 	margin-top: 50px;
