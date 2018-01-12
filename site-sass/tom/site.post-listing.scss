@@ -355,7 +355,7 @@ blockquote::before {
 
 
 
-.single-container .alignnone,
+.single-container .alignnone, 
 .single-container .aligncenter{
 
 	  @include mq(desktop) {
@@ -366,3 +366,6 @@ blockquote::before {
 
 	  }
 }
+
+
+
