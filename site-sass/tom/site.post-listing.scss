@@ -322,47 +322,47 @@ blockquote::before {
 
 
 .row {
-	
+
 	width: 100%;
-	
+
 	@include mq(desktop) {
 		@include flex-direction(row);
 	}
-	
+
 	@include mq(wide) {
-		
+
 	}
-	
+
 }
 
 
 .item {
-	
+
 	width: 100%;
-	
-	
+
+
 	@include mq(tablet) {
 		width: 50%;
 	}
-	
+
 	@include mq(desktop) {
 		width: 33.3333%;
 	}
-		
-	
-		
+
+
+
 }
 
 
 
 .single-container .alignnone,
 .single-container .aligncenter{
-	  
+
 	  @include mq(desktop) {
-	  
+
 		  margin-left: -75px;
 		  margin-right: -75px;
 		  max-width: 750px;
-	  
+
 	  }
 }
