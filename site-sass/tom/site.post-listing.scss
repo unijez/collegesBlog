@@ -279,47 +279,64 @@ blockquote::before {
 
 /* Media Queries */
 
-		/* Extra Small Devices */
-@media screen and (max-width: 739px) {
-/*	.row {
-		width: 100%;
+	/* index.php */
+
+
+.main-container {
+
+	@include mq($until: tablet) {
+		padding: 0;
 	}
-	.item {
-		width: 100%;
-	}*/
+
 }
 
-		/* Small Devices */
-@media screen and (min-width: 740px) {
-/*  .item {
-  	width: 50%;
-  }*/
+.latest-posts {
+
+	@include mq($until: tablet) {
+		text-align: left;
+		margin-top: 35px;
+		margin-left: 25px;
+	}
+
 }
 
-		/* Medium Devices */
-@media screen and (min-width: 980px) {
-  /*.row {
-    flex-direction: row;
-  }
-  .item {
-  	width: 33.3333%;
-  }
-  .single-container .alignnone,
-  .single-container .aligncenter{
-	  margin-left: -75px;
-	  margin-right: -75px;
-	  max-width: 750px;
-  }*/
+hr {
+
+	@include mq($until: tablet) {
+		float: left;
+		margin-bottom: 35px;
+		margin-left: 25px;
+	}
+
 }
 
-		/* Large Devices */
-/*@media screen and (min-width: 1300px) {
-  .row {
-    flex-direction: row;
-  }
-}*/
+.item-text {
 
+	@include mq($until: tablet) {
+		text-align: left;
+		padding: 30px 50px 40px 25px;
+	}
 
+}
+
+.item-text h2,
+.item-text p {
+
+	@include mq($until: tablet) {
+		padding: 0;
+		margin: 15;
+	}
+
+}
+
+.item-text p {
+
+	@include mq($until: tablet) {
+		padding: 0;
+		margin: 15px 0 0 0;
+	}
+
+}
 
 .row {
 
@@ -340,6 +357,9 @@ blockquote::before {
 
 	width: 100%;
 
+	@include mq($until: tablet) {
+		padding: 0;
+	}
 
 	@include mq(tablet) {
 		width: 50%;
@@ -349,23 +369,17 @@ blockquote::before {
 		width: 33.3333%;
 	}
 
-
-
 }
 
 
 
-.single-container .alignnone, 
+.single-container .alignnone,
 .single-container .aligncenter{
 
 	  @include mq(desktop) {
-
 		  margin-left: -75px;
 		  margin-right: -75px;
 		  max-width: 750px;
-
 	  }
+
 }
-
-
-
