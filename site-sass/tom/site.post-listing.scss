@@ -274,13 +274,39 @@ blockquote::before {
   color: $main-text-grey;
   letter-spacing: 2px;
   font-weight: 400;
-	margin-top: 50px;
+	padding-top: 25px;
+}
+
+	/* Footer */
+
+.footer-top {
+	height: 350px;
+	width: 100%;
+	background: $footerbg-grey;
+	display: inline-flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-content: stretch;
+	align-items: center;
+}
+
+.col {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+	margin: 0 70px;
+}
+
+.footer-bottom {
+	height: 100px;
+	width: 100%;
+	background: $headerbg-grey;
 }
 
 /* Media Queries */
 
 	/* index.php */
-
 
 .main-container {
 
@@ -381,5 +407,83 @@ hr {
 		  margin-right: -75px;
 		  max-width: 750px;
 	  }
+
+}
+
+	/* single.php */
+
+.heading-image {
+
+	@include mq(mobile) {
+		height: 50vh;	/* Issue! Image size not in ratio with set hight and no room (help jez!) */
+	}
+
+	@include mq(desktop) {
+		height: 75vh;
+	}
+
+}
+
+.heading-image h4 {
+
+	@include mq($until: tablet) {
+		font-size: 0.8em;
+	}
+
+}
+
+.heading-image h1 {
+
+	@include mq(mobile) {
+		font-size: 1.5em;
+		line-height: 25px;
+		margin: 0;
+	}
+
+	@include mq(tablet) {
+		font-size: 2.3em;
+		line-height: 45px;
+		margin: 10px 0;
+	}
+
+	@include mq(desktop) {
+		font-size: 2.9em;
+		line-height: 60px;
+	}
+
+}
+
+.author {
+
+	@include mq(mobile) {
+
+	}
+
+}
+
+.single-container p {
+
+	@include mq($until: tablet) {
+		padding: 0 25px;
+	}
+
+}
+
+.related-container {
+
+	@include mq(mobile) {
+		margin-top: 100px;
+		padding: 0;
+	}
+
+}
+
+.related-posts {
+
+	@include mq($until: tablet) {
+		text-align: left;
+		margin-top: 35px;
+		margin-left: 25px;
+	}
 
 }

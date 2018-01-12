@@ -1305,7 +1305,30 @@ blockquote::before {
   color: #4C555A;
   letter-spacing: 2px;
   font-weight: 400;
-  margin-top: 50px; }
+  padding-top: 25px; }
+
+/* Footer */
+.footer-top {
+  height: 350px;
+  width: 100%;
+  background: #444444;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center; }
+
+.col {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  margin: 0 70px; }
+
+.footer-bottom {
+  height: 100px;
+  width: 100%;
+  background: #282828; }
 
 /* Media Queries */
 /* index.php */
@@ -1370,3 +1393,49 @@ blockquote::before {
     margin-left: -75px;
     margin-right: -75px;
     max-width: 750px; } }
+
+/* single.php */
+@media (min-width: 20em) {
+  .heading-image {
+    height: 50vh;
+    /* Issue! Image size not in ratio with set hight and no room (help jez!) */ } }
+
+@media (min-width: 61.25em) {
+  .heading-image {
+    height: 75vh; } }
+
+@media (max-width: 46.24em) {
+  .heading-image h4 {
+    font-size: 0.8em; } }
+
+@media (min-width: 20em) {
+  .heading-image h1 {
+    font-size: 1.5em;
+    line-height: 25px;
+    margin: 0; } }
+
+@media (min-width: 46.25em) {
+  .heading-image h1 {
+    font-size: 2.3em;
+    line-height: 45px;
+    margin: 10px 0; } }
+
+@media (min-width: 61.25em) {
+  .heading-image h1 {
+    font-size: 2.9em;
+    line-height: 60px; } }
+
+@media (max-width: 46.24em) {
+  .single-container p {
+    padding: 0 25px; } }
+
+@media (min-width: 20em) {
+  .related-container {
+    margin-top: 100px;
+    padding: 0; } }
+
+@media (max-width: 46.24em) {
+  .related-posts {
+    text-align: left;
+    margin-top: 35px;
+    margin-left: 25px; } }

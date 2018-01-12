@@ -11,6 +11,26 @@
 
 ?>
 
+  <div class="footer-top">
+
+    <div class="col">
+      hello
+    </div><!-- col-1 -->
+    <div class="col">
+      hello
+    </div><!-- col-2 -->
+    <div class="col">
+      hello
+    </div><!-- col-3 -->
+    <div class="col">
+      hello
+    </div> <!-- col-4 -->
+
+  </div>  <!-- footer-top -->
+
+  <div class="footer-bottom">
+
+  </div>
 
 
 
