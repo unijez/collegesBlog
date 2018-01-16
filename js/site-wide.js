@@ -1,47 +1,29 @@
 jQuery(document).ready(function($) {
-	
-	
+
+
 	 /************Mobile Menu************/
-	 				
-	 	var menuButton = $('.mobile-menu-button');
-	 	var header = $('.site-header');
-	 		
+
+	 	var menuButton = $('.closeBtn');
+	 	var globalNav = $('.global-nav');
+
 	 	function mobileMenuLaunch() {
 	 		menuButton.click( function(e) {
 	 			e.preventDefault();
 	 			e.stopPropagation();
 	 			e.stopImmediatePropagation();
-	 	        var status = header.hasClass('menu-active');
+	 	        var status = globalNav.hasClass('menu-active');
 	 	      if(status){
-	 	        header.removeClass('menu-active');
+	 	        globalNav.removeClass('menu-active');
 	 	        menuButton.removeClass('button-active');
 	 	      }else{
-	 	        header.addClass('menu-active');
+	 	        globalNav.addClass('menu-active');
 	 	        menuButton.addClass('button-active');
 	 	      }
 	 	  });
 	 	}
-	 	
-	 	if ($(window).width() < 740) {
-	 	    mobileMenuLaunch();
-	 	} else {
-	 		menuButton.unbind();
-	 		header.removeClass('menu-active');
-	 		menuButton.removeClass('button-active');
-	 	}
-	 	
-	 	$( window ).resize(function() {
-	 	    if($(window).width() < 740 ) {
-	 	        mobileMenuLaunch();
-	 	    } else {
-	 		    menuButton.unbind();
-	 		    header.removeClass('menu-active');
-	 	    	menuButton.removeClass('button-active');
-	 	    }
-	 	});
-	 	
 
-	
+	mobileMenuLaunch();
+
+
+
 });
-
-
