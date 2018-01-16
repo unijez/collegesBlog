@@ -18,27 +18,27 @@
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses hello_header_style()
+ * @uses collegeBlog_header_style()
  */
-function hello_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'hello_custom_header_args', array(
+function collegeBlog_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'collegeBlog_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'hello_header_style',
+		'wp-head-callback'       => 'collegeBlog_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'hello_custom_header_setup' );
+add_action( 'after_setup_theme', 'collegeBlog_custom_header_setup' );
 
-if ( ! function_exists( 'hello_header_style' ) ) :
+if ( ! function_exists( 'collegeBlog_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see hello_custom_header_setup().
+	 * @see collegeBlog_custom_header_setup().
 	 */
-	function hello_header_style() {
+	function collegeBlog_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*
