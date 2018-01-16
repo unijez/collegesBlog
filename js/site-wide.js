@@ -5,6 +5,7 @@ jQuery(document).ready(function($) {
 
 	 	var menuButton = $('.closeBtn');
 	 	var globalNav = $('.global-nav');
+		var body = $('body');
 
 	 	function mobileMenuLaunch() {
 	 		menuButton.click( function(e) {
@@ -15,9 +16,11 @@ jQuery(document).ready(function($) {
 	 	      if(status){
 	 	        globalNav.removeClass('menu-active');
 	 	        menuButton.removeClass('button-active');
+						body.removeClass('menueOpen');
 	 	      }else{
 	 	        globalNav.addClass('menu-active');
 	 	        menuButton.addClass('button-active');
+						body.addClass('menueOpen');
 	 	      }
 	 	  });
 	 	}

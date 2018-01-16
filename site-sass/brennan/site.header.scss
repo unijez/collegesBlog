@@ -11,56 +11,56 @@ header{
     position: sticky;
 
 	.left {
-        
+
         display: flex;
 		flex-grow: 1;
 		float: left;
 
         img {
-        
+
             width: 250px;
             float: left;
             vertical-align: center;
-        
+
         }
 
 	}
 
     .central {
-        
+
         position: absolute;
         left: 260px;
         top: 0;
         height: 60px;
         background-color: #212121;
         width: 260px;
-        display: flex; 
-        justify-content: center;   
+        display: flex;
+        justify-content: center;
 
         h4 {
-            
+
             align-self: center;
             margin: 0;
-            
+
         }
     }
 
 	.right {
-        
+
         display: flex;
 		flex-grow: 1;
         justify-content: flex-end;
 		float: right;
 
         img {
-            
+
             height: 20px;
             align-self: center;
             position: absolute;
             top: 20px;
             right: 20px;
             margin-left: 20px;
-    
+
         }
 
         input {
@@ -77,14 +77,14 @@ header{
 	}
 
 	@include mq(mobile) {
-    
+
 	}
 
 
 
 
 	@include mq($until: tablet) {
-        
+
         .left {
             flex-direction: column;
         }
@@ -105,7 +105,7 @@ header{
 
     @include mq(mobile, tablet) {
 
-            
+
 
     }
 

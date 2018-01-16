@@ -34,7 +34,6 @@
 
 
 	<nav class="global-nav retract" id="pushIt">
-        <button type ="button" class="closeBtn" id="menuClose">&times;</button>
         <a href="#" class="active"><span>Home</span></a>
         <a href="#"><span>Research</span></a>
         <a href="#"><span>Teaching &amp; learning</span></a>
@@ -57,7 +56,7 @@
         </div>
         <div class="right">
           <input type="text" name="search" placeholder="Search" id="search">
-          <button type ="button" id="menuOpen"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/burgericon.png" alt="Burger Icon"></button>
+          <button type ="button" class="closeBtn">&times;</button>
         </div>
       </header>
 
