@@ -59,9 +59,15 @@
 
 							<?php the_content();?>
 
-						</div> <!-- single-container -->
 
 
+            <?php if ( comments_open() || get_comments_number() ) :
+
+                comments_template();
+
+            endif; ?>
+
+          </div> <!-- single-container -->
 
  					<?php endwhile; ?>
 
