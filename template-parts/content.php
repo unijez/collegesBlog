@@ -24,7 +24,7 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php hello_posted_on(); ?>
+			<?php collegeBlog_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
@@ -53,6 +53,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php hello_entry_footer(); ?>
+		<?php collegeBlog_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
