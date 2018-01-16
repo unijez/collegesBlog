@@ -6,7 +6,11 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package schools
+ * @package WordPress
+ * @subpackage collegeBlog
+ * @author     Jez Thompson <jthompson@lincoln.ac.uk>
+ * @since 1.0
+ * @version 1.0
  */
 
 ?>

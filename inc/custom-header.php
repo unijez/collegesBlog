@@ -8,7 +8,11 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package hello
+ * @package WordPress
+ * @subpackage collegeBlog
+ * @author     Jez Thompson <jthompson@lincoln.ac.uk>
+ * @since 1.0
+ * @version 1.0
  */
 
 /**

@@ -4,7 +4,11 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package hello
+ * @package WordPress
+ * @subpackage collegeBlog
+ * @author     Jez Thompson <jthompson@lincoln.ac.uk>
+ * @since 1.0
+ * @version 1.0
  */
 
 ?>
@@ -31,7 +35,7 @@
 			the_content( sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'hello' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'collegeBlog' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -42,7 +46,7 @@
 			) );
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'hello' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'collegeBlog' ),
 				'after'  => '</div>',
 			) );
 		?>
