@@ -4,7 +4,11 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package hello
+ * @package WordPress
+ * @subpackage collegeBlog
+ * @author     Jez Thompson <jthompson@lincoln.ac.uk>
+ * @since 1.0
+ * @version 1.0
  */
 
 if ( ! function_exists( 'hello_setup' ) ) :
@@ -20,9 +24,9 @@ if ( ! function_exists( 'hello_setup' ) ) :
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on hello, use a find and replace
-		 * to change 'hello' to the name of your theme in all the template files.
+		 * to change 'collegeBlog' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'hello', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'collegeBlog', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -47,7 +51,7 @@ if ( ! function_exists( 'hello_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'hello' ),
+			'menu-1' => esc_html__( 'Primary', 'collegeBlog' ),
 		) );
 
 		/*
@@ -152,9 +156,9 @@ add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
 function hello_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'hello' ),
+		'name'          => esc_html__( 'Sidebar', 'collegeBlog' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'hello' ),
+		'description'   => esc_html__( 'Add widgets here.', 'collegeBlog' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
