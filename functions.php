@@ -210,6 +210,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Rebuilt funcion for comments display.
+ */
 function mytheme_comment($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment; ?>
    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
@@ -243,3 +246,7 @@ function mytheme_comment($comment, $args, $depth) {
      </div>
 <?php
         }
+
+/**
+ * Rebuilt funcion for comments form.
+ */
