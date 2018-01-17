@@ -56,6 +56,7 @@
 								<h4> <b>By</b> <?php the_author(); ?></h4>
 								<h4><?php the_time('F j, Y'); ?></h4>
 							</div> <!-- author -->
+<<<<<<< HEAD
 
 
 
@@ -68,6 +69,17 @@
 
 
 							</article>
+=======
+								
+								
+						<article class="blog-article">
+					
+							
+							<?php the_content();?>
+							
+							
+						</article>
+>>>>>>> 1d1ee448cc6538e462a0b3c244e6d048af66aa5a
 
             </div> <!-- single-container -->
 
