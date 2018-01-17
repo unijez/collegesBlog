@@ -58,16 +58,13 @@
 							</div> <!-- author -->
 								
 								
-								
+						<article class="blog-article">
+					
 							
-							<article class="blog-article">
-						<div class="eta"></div>
-									
-									<div class="word-count"></div>
 							<?php the_content();?>
 							
 							
-							</article>
+						</article>
 
             </div> <!-- single-container -->
 
