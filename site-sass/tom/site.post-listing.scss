@@ -311,6 +311,13 @@ blockquote::before {
 
 	/* Comments */
 
+.comments-container {
+	width: 100%;
+	height: auto;
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(16%, rgba(245,245,245,1)));
+	border-top: 1px solid #000000;
+}
+
 .comment {
 	word-wrap: break-word;
 
@@ -346,7 +353,7 @@ blockquote::before {
 	margin-bottom: $comments-spacing;
 	border-bottom: none;
 	@include flexbox;
-	
+
 	ul {
 		margin: 0;
 	}

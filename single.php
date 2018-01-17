@@ -49,7 +49,7 @@
             <?php endif; ?>
 
             <!-- Main text and image content -->
-			<div class="single-container">
+			       <div class="single-container">
 
 							<div class="author">
 								<?php echo get_avatar( get_the_author_meta( 'ID' ), 64 ); ?>
@@ -59,15 +59,22 @@
 
 							<?php the_content();?>
 
+            </div> <!-- single-container -->
 
 
-            <?php if ( comments_open() || get_comments_number() ) :
+            <!-- Comments -->
+            <div class="comments-container">
+              <div class="single-container">
 
-                comments_template();
+                <?php if ( comments_open() || get_comments_number() ) :
 
-            endif; ?>
+                    comments_template();
 
-          </div> <!-- single-container -->
+                endif; ?>
+
+              </div> <!-- single-container -->
+            </div> <!-- comments-container -->
+
 
  					<?php endwhile; ?>
 
