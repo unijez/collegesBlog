@@ -1264,8 +1264,14 @@ blockquote::before {
 .comments-container {
   width: 100%;
   height: auto;
-  background: -webkit-gradient(left top, right top, color-stop(0%, white), color-stop(16%, whitesmoke));
-  border-top: 1px solid #000000; }
+  padding-top: 50px;
+  background: whitesmoke;
+  background: -moz-linear-gradient(top, whitesmoke 72%, white 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(72%, whitesmoke), color-stop(100%, white));
+  background: -webkit-linear-gradient(top, whitesmoke 72%, white 100%);
+  background: -o-linear-gradient(top, whitesmoke 72%, white 100%);
+  background: -ms-linear-gradient(top, whitesmoke 72%, white 100%);
+  background: linear-gradient(to bottom, whitesmoke 72%, white 100%); }
 
 .comment {
   word-wrap: break-word; }
