@@ -18,7 +18,7 @@
   <div class="footer-top">
 
     <div class="col">
-      collegeBlog
+      this is a change
     </div><!-- col-1 -->
     <div class="col">
       collegeBlog
