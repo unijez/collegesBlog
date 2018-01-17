@@ -790,6 +790,20 @@ h1, h2, h3, h4, h5, h6, p {
   height: 40px;
   background: red; }
 
+/* Main Navigation Button
+   ======================================== */
+.nav-button .fa-bars {
+  display: block; }
+
+.nav-button .fa-times {
+  display: none; }
+
+.nav-button.button-active .fa-bars {
+  display: none; }
+
+.nav-button.button-active .fa-times {
+  display: block; }
+
 /* ==========================================================================
    #NAVIGATION
    ========================================================================== */
@@ -842,13 +856,13 @@ button {
     .global-nav a span:not(.last) {
       padding: 5px 0;
       border-bottom: 1px solid #212121; }
-  .global-nav a:not(.closeBtn) {
+  .global-nav a:not(.nav-button) {
     margin-bottom: 20px; }
   .global-nav a:hover {
     color: #f1f1f1; }
   .global-nav .active {
     color: #fff; }
-  .global-nav .closeBtn {
+  .global-nav .nav-button {
     font-size: 35px;
     font-size: 2.1875rem;
     line-height: 1.3714285714;
@@ -860,10 +874,10 @@ button {
     margin-bottom: 20px; }
 
 @media (max-width: 46.24em) {
-  .global-nav a:not(.closeBtn) {
+  .global-nav a:not(.nav-button) {
     width: 180px; } }
 
-.closeBtn {
+.nav-button {
   position: fixed;
   width: 30px;
   height: 30px;

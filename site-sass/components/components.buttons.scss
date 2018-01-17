@@ -30,3 +30,37 @@
 	height: 40px;
 	background: red;
 }
+
+
+
+/* Main Navigation Button
+   ======================================== */
+
+
+.nav-button {
+	
+	.fa-bars {
+		display: block;
+	}
+	
+	.fa-times {
+		display: none;
+	}
+	
+	
+}
+
+.nav-button.button-active{
+	
+	
+	.fa-bars {
+		display: none;
+	}
+	
+	.fa-times {
+		display: block;
+	}
+	
+	
+	
+}
