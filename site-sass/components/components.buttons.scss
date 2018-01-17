@@ -38,6 +38,17 @@
 
 
 .nav-button {
+	@include flexbox;
+	@include justify-content(center);
+	@include vendor(transition, $global-transition);
+	height: 30px;
+	width: 30px;
+	@include font-size(30px);
+	color: white;
+	
+}
+
+.nav-button {
 	
 	.fa-bars {
 		display: block;

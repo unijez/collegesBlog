@@ -26,28 +26,16 @@
 
 <body>
 
+<div class="overlay"></div>
 
-
-
-
-
-
-
-	<nav class="global-nav retract" id="pushIt">
-        <a href="#" class="active"><span>Home</span></a>
-        <a href="#"><span>Research</span></a>
-        <a href="#"><span>Teaching &amp; learning</span></a>
-        <a href="#"><span>News</span></a>
-        <a href="#"><span>Events</span></a>
-        <a href="#"><span>Video archive</span></a>
-        <a href="#"><span>School blogs</span></a>
-        <a href="#"><span  class="last">Links</span></a>
-    </nav>
-
-    <main id="getPushed">
-      <div class="overlay dNone" id="overlay">
-      </div>
+ <main id="getPushed">
+      
+     
+      
       <header>
+        
+         
+         
         <div class="left">
           <img src="" alt="University Of Lincoln Logo">
         </div>
@@ -63,9 +51,22 @@
           	
           </button>
         </div>
+        
+        <nav class="global-nav retract">
+            <a href="#" class="active"><span>Home</span></a>
+            <a href="#"><span>Research</span></a>
+            <a href="#"><span>Teaching &amp; learning</span></a>
+            <a href="#"><span>News</span></a>
+            <a href="#"><span>Events</span></a>
+            <a href="#"><span>Video archive</span></a>
+            <a href="#"><span>School blogs</span></a>
+            <a href="#"><span  class="last">Links</span></a>
+        </nav>
+        
+        
       </header>
 
-    </main>
+</main>
 
 
 
