@@ -359,6 +359,7 @@ blockquote::before {
 	margin-bottom: $comments-spacing;
 	border-bottom: none;
 	@include flexbox;
+	letter-spacing: 1px;
 
 	ul {
 		margin: 0;
@@ -416,6 +417,56 @@ padding-bottom: $comments-spacing;
 }
 
 	/* Form */
+
+.site-comment__author-detail {
+	@include flexbox;
+	margin: 30px 0;
+}
+
+.site-comment__author,
+.site-comment__email {
+	display: inline;
+	margin: 0 auto;
+	display: block;
+}
+
+.site-comment__author input,
+.site-comment__email input {
+	display: block;
+	border: 1px solid $main-text-grey;
+}
+
+.site-comment__actual label {
+	display: block;
+	margin: 0 auto;
+}
+
+.site-comment__actual {
+	margin: 0 auto;
+}
+
+.site-comment__actual textarea {
+	margin: 0 auto;
+	display: block;
+}
+
+.site-comment__actual label {
+	display: block;
+}
+
+.form-submit input {
+	border: 1px solid $main-text-grey;
+	border-radius: 2px;
+	margin: 30px auto;
+	display: block;
+	padding: 10px 20px;
+	letter-spacing: 1px;
+}
+
+.form-submit input:hover {
+	border: 1px solid $related-container-color;
+	color: $related-container-color;
+}
 
 /* Media Queries */
 

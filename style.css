@@ -1340,7 +1340,8 @@ blockquote::before {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  letter-spacing: 1px; }
   .comment-author ul {
     margin: 0; }
 
@@ -1396,6 +1397,51 @@ blockquote::before {
   padding-left: 25px; }
 
 /* Form */
+.site-comment__author-detail {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 30px 0; }
+
+.site-comment__author,
+.site-comment__email {
+  display: inline;
+  margin: 0 auto;
+  display: block; }
+
+.site-comment__author input,
+.site-comment__email input {
+  display: block;
+  border: 1px solid #4C555A; }
+
+.site-comment__actual label {
+  display: block;
+  margin: 0 auto; }
+
+.site-comment__actual {
+  margin: 0 auto; }
+
+.site-comment__actual textarea {
+  margin: 0 auto;
+  display: block; }
+
+.site-comment__actual label {
+  display: block; }
+
+.form-submit input {
+  border: 1px solid #4C555A;
+  border-radius: 2px;
+  margin: 30px auto;
+  display: block;
+  padding: 10px 20px;
+  letter-spacing: 1px; }
+
+.form-submit input:hover {
+  border: 1px solid #F9F9F9;
+  color: #F9F9F9; }
+
 /* Media Queries */
 /* index.php */
 @media (max-width: 46.24em) {
