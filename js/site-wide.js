@@ -15,18 +15,20 @@ jQuery(document).ready(function($) {
 	 			e.stopPropagation();
 	 			e.stopImmediatePropagation();
 	 	        var status = globalNav.hasClass('menu-active');
+	 	        
 	 	      if(status){
 	 	        
 	 	        globalNav.removeClass('menu-active');
 	 	        menuButton.removeClass('button-active');
-				body.removeClass('menueOpen');
-				overlay.removeClass('dNone');
+				body.removeClass('menuOpen');
+				overlay.removeClass('menuOpen');
 				
 	 	      }else{
 	 	        globalNav.addClass('menu-active');
 	 	        menuButton.addClass('button-active');
-				body.addClass('menueOpen');
-				overlay.addClass('dBlock');
+				body.addClass('menuOpen');
+				overlay.addClass('menuOpen');
+
 	 	      }
 	 	  });
 	 	}

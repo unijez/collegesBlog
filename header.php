@@ -28,11 +28,7 @@
 
 <div class="overlay"></div>
 
- <main id="getPushed">
-      
-     
-      
-      <header>
+ <header>
         
          
          
