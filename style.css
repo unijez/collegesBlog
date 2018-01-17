@@ -1174,6 +1174,9 @@ hr {
   letter-spacing: 0.9px;
   word-spacing: 2px; }
 
+.single-container p img {
+  margin: 0 auto; }
+
 .wp-caption {
   max-width: 100%;
   text-align: center; }
