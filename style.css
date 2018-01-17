@@ -1255,11 +1255,10 @@ blockquote::before {
 .footer-bottom {
   height: 100px;
   width: 100%;
-  background: #282828; }
+  background-color: #282828; }
 
 /* Comments */
 .comment {
-  margin-bottom: 40px;
   word-wrap: break-word; }
 
 .comment.depth-1 {
@@ -1269,10 +1268,16 @@ blockquote::before {
   -o-border-radius: 3px;
   border-radius: 3px;
   border: 1px solid #D8D8D8;
-  padding: 20px; }
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 40px; }
 
 .comment p {
-  margin: 0; }
+  margin: 0;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.7142857143; }
 
 .comment p:not(:last-of-type) {
   margin-bottom: 15px; }
@@ -1298,7 +1303,7 @@ blockquote::before {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  margin-right: 40px; }
+  margin-right: 20px; }
 
 .comment-author ul {
   display: -webkit-box;
@@ -1328,6 +1333,9 @@ blockquote::before {
 .comment-author cite {
   font-style: normal;
   font-weight: 500; }
+
+.comment__content {
+  padding-bottom: 20px; }
 
 .reply {
   display: inline;

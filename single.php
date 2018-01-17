@@ -49,7 +49,7 @@
             <?php endif; ?>
 
             <!-- Main text and image content -->
-						<div class="single-container">
+			<div class="single-container">
 
 							<div class="author">
 								<?php echo get_avatar( get_the_author_meta( 'ID' ), 64 ); ?>

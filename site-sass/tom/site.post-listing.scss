@@ -302,13 +302,12 @@ blockquote::before {
 .footer-bottom {
 	height: 100px;
 	width: 100%;
-	background: $headerbg-grey;
+	background-color: $headerbg-grey;
 }
 
 	/* Comments */
 
 .comment {
-	margin-bottom: 40px;
 	word-wrap: break-word;
 
 }
@@ -316,10 +315,15 @@ blockquote::before {
 .comment.depth-1{
 	@include vendor(border-radius, 3px );
 	border: 1px solid $comments-hr;
-	padding: 20px;
+	padding-top: $comments-spacing;
+	padding-left: $comments-spacing;
+	padding-right: $comments-spacing;
+	margin-bottom: $comments-spacing * 2;
 }
+
 .comment p {
 	margin: 0;
+	@include font-size(14px);
 }
 
 .comment p:not(:last-of-type) {
@@ -335,7 +339,7 @@ blockquote::before {
 }
 
 .comment-author {
-	margin-bottom: 20px;
+	margin-bottom: $comments-spacing;
 	border-bottom: none;
 	@include flexbox;
 	
@@ -348,7 +352,7 @@ blockquote::before {
 	width: 70px;
 	height: 70px;
 	border-radius: 50%;
-	margin-right: 40px;
+	margin-right: $comments-spacing;
 }
 
 .comment-author ul {
@@ -369,6 +373,11 @@ blockquote::before {
 .comment-author cite {
 	font-style: normal;
 	@include font-weight(bold);
+}
+
+
+.comment__content{
+padding-bottom: $comments-spacing;
 }
 
 .reply {
