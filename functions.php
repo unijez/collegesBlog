@@ -178,12 +178,12 @@ function collegeBlog_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-	
+
 	wp_enqueue_script( 'fontawesome', get_template_directory_uri() . '/js/fontawesome-all.min.js', '5.0.1', null,  true );
-	
-	
+
+
 	wp_enqueue_script( 'site-scripts', get_template_directory_uri() . '/js/site-wide-min.js', array('jquery'), null, true );
-	
+
 }
 add_action( 'wp_enqueue_scripts', 'collegeBlog_scripts' );
 
@@ -213,8 +213,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
-
-/**
- * Rebuilt funcion for comments form.
- */
