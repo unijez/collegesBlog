@@ -33,7 +33,7 @@
          
          
         <div class="left">
-          <img src="" alt="University Of Lincoln Logo">
+          <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/uol_landscape.svg" alt="University Of Lincoln Logo">
         </div>
         <div class="central">
             <h4>Lincoln International <br> Business School</h4>
