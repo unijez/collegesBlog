@@ -125,6 +125,19 @@ ul,li {
 	padding: 0;
 }
 
+// First level lists.
+ul,
+ol {
+    margin-bottom : 1.5rem;
+}
+
+// Nested lists.
+li > ul,
+li > ol {
+    margin-bottom : 0;
+}
+
+
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
@@ -133,6 +146,7 @@ ul,li {
 pre {
 	font-family: monospace, monospace; /* 1 */
 	font-size: 1em; /* 2 */
+	white-space: pre-line;
 }
 
 /* Text-level semantics (https://html.spec.whatwg.org/multipage/semantics.html#text-level-semantics)

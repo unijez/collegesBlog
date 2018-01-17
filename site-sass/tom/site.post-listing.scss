@@ -309,9 +309,24 @@ blockquote::before {
 
 .comment {
 	margin-bottom: 40px;
+	word-wrap: break-word;
+
 }
 
-.comment:not(:last-child) {
+.comment.depth-1{
+	@include vendor(border-radius, 3px );
+	border: 1px solid $comments-hr;
+	padding: 20px;
+}
+.comment p {
+	margin: 0;
+}
+
+.comment p:not(:last-of-type) {
+	margin-bottom: 15px;
+}
+
+.comment.depth-1:not(:last-child) {
   border-bottom: 1px solid $comments-hr;
 }
 
@@ -320,9 +335,13 @@ blockquote::before {
 }
 
 .comment-author {
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	border-bottom: none;
 	@include flexbox;
+	
+	ul {
+		margin: 0;
+	}
 }
 
 .comment-author img {
@@ -342,12 +361,14 @@ blockquote::before {
 	padding: 3px 0;
 }
 
+.comment-author cite,
 .comment-author b, a {
 	color: $main-text-grey;
 }
 
 .comment-author cite {
 	font-style: normal;
+	@include font-weight(bold);
 }
 
 .reply {
@@ -355,8 +376,13 @@ blockquote::before {
 	margin-left: 10px;
 }
 
-.children {	/* Needs fixing! cascades through each child and applies to each! */
-	padding-left: 110px;
+
+.depth-1 > .children{
+    padding-left: 50px;
+}
+
+.depth-2 > .children {
+	padding-left: 25px;
 }
 
 	/* Form */

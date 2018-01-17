@@ -257,6 +257,14 @@ ul, li {
   margin: 0;
   padding: 0; }
 
+ul,
+ol {
+  margin-bottom: 1.5rem; }
+
+li > ul,
+li > ol {
+  margin-bottom: 0; }
+
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
@@ -265,7 +273,8 @@ pre {
   font-family: monospace, monospace;
   /* 1 */
   font-size: 1em;
-  /* 2 */ }
+  /* 2 */
+  white-space: pre-line; }
 
 /* Text-level semantics (https://html.spec.whatwg.org/multipage/semantics.html#text-level-semantics)
    ========================================================================== */
@@ -1250,22 +1259,40 @@ blockquote::before {
 
 /* Comments */
 .comment {
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  word-wrap: break-word; }
 
-.comment:not(:last-child) {
+.comment.depth-1 {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #D8D8D8;
+  padding: 20px; }
+
+.comment p {
+  margin: 0; }
+
+.comment p:not(:last-of-type) {
+  margin-bottom: 15px; }
+
+.comment.depth-1:not(:last-child) {
   border-bottom: 1px solid #D8D8D8; }
 
 .comment-list {
   padding: 0; }
 
 .comment-author {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   border-bottom: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex; }
+  .comment-author ul {
+    margin: 0; }
 
 .comment-author img {
   width: 70px;
@@ -1294,19 +1321,23 @@ blockquote::before {
 .comment-author li {
   padding: 3px 0; }
 
+.comment-author cite,
 .comment-author b, a {
   color: #4C555A; }
 
 .comment-author cite {
-  font-style: normal; }
+  font-style: normal;
+  font-weight: 500; }
 
 .reply {
   display: inline;
   margin-left: 10px; }
 
-.children {
-  /* Needs fixing! cascades through each child and applies to each! */
-  padding-left: 110px; }
+.depth-1 > .children {
+  padding-left: 50px; }
+
+.depth-2 > .children {
+  padding-left: 25px; }
 
 /* Form */
 /* Media Queries */
