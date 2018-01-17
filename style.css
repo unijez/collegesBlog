@@ -1288,6 +1288,7 @@ blockquote::before {
 .comments-container {
   width: 100%;
   height: auto;
+  margin-bottom: 150px;
   padding-top: 50px;
   background: whitesmoke;
   background: -moz-linear-gradient(top, whitesmoke 72%, white 100%);
@@ -1340,8 +1341,8 @@ blockquote::before {
     margin: 0; }
 
 .comment-author img {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   margin-right: 20px; }
 
@@ -1373,6 +1374,9 @@ blockquote::before {
 .comment-author cite {
   font-style: normal;
   font-weight: 500; }
+
+.comment-meta {
+  font-size: 14px; }
 
 .comment__content {
   padding-bottom: 20px; }
@@ -1551,6 +1555,11 @@ blockquote::before {
     text-align: left;
     margin-top: 35px;
     margin-left: 25px; } }
+
+/* comments */
+@media (max-width: 46.24em) {
+  .comment-author img {
+    display: none; } }
 
 /* comments form */
 @media (max-width: 46.24em) {

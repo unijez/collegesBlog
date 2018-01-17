@@ -314,6 +314,7 @@ blockquote::before {
 .comments-container {
 	width: 100%;
 	height: auto;
+	margin-bottom: 150px;
 	padding-top: 50px;
 	background: rgba(245,245,245,1);
 	background: -moz-linear-gradient(top, rgba(245,245,245,1) 72%, rgba(255,255,255,1) 100%);
@@ -326,7 +327,6 @@ blockquote::before {
 
 .comment {
 	word-wrap: break-word;
-
 }
 
 .comment.depth-1{
@@ -367,8 +367,8 @@ blockquote::before {
 }
 
 .comment-author img {
-	width: 70px;
-	height: 70px;
+	width: 60px;
+	height: 60px;
 	border-radius: 50%;
 	margin-right: $comments-spacing;
 }
@@ -393,6 +393,9 @@ blockquote::before {
 	@include font-weight(bold);
 }
 
+.comment-meta {
+	font-size: 14px;
+}
 
 .comment__content{
 padding-bottom: $comments-spacing;
@@ -653,6 +656,16 @@ hr {
 		text-align: left;
 		margin-top: 35px;
 		margin-left: 25px;
+	}
+
+}
+
+	/* comments */
+
+.comment-author img {
+
+	@include mq($until: tablet) {
+		display: none;
 	}
 
 }

@@ -56,34 +56,37 @@
 								<h4> <b>By</b> <?php the_author(); ?></h4>
 								<h4><?php the_time('F j, Y'); ?></h4>
 							</div> <!-- author -->
-								
-								
-								
-							
+
+
+
+
 							<article class="blog-article">
 						<div class="eta"></div>
-									
+
 									<div class="word-count"></div>
 							<?php the_content();?>
-							
-							
+
+
 							</article>
 
             </div> <!-- single-container -->
 
 
             <!-- Comments -->
-            <div class="comments-container">
-              <div class="single-container">
 
-                <?php if ( comments_open() || get_comments_number() ) :
+                <?php if ( comments_open() || get_comments_number() ) : ?>
 
-                    comments_template();
+                  <div class="comments-container">
+                    <div class="single-container">
 
-                endif; ?>
+                  <?php  comments_template(); ?>
 
-              </div> <!-- single-container -->
-            </div> <!-- comments-container -->
+                </div> <!-- single-container -->
+                </div> <!-- comments-container -->
+
+              <?php  endif; ?>
+
+
 
 
  					<?php endwhile; ?>
