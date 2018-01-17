@@ -179,6 +179,9 @@ function collegeBlog_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
+
+	wp_enqueue_script( 'readingTime', get_template_directory_uri() . '/js/readingTime.min.js', null, null,  true );
+
 	wp_enqueue_script( 'fontawesome', get_template_directory_uri() . '/js/fontawesome-all.min.js', '5.0.1', null,  true );
 
 
