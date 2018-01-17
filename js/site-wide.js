@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
 
 	 /************Mobile Menu************/
 
-	 	var menuButton = $('.closeBtn');
+	 	var menuButton = $('.nav-button');
 	 	var globalNav = $('.global-nav');
 		var body = $('body');
 

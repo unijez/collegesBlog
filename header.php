@@ -56,7 +56,12 @@
         </div>
         <div class="right">
           <input type="text" name="search" placeholder="Search" id="search">
-          <button type ="button" class="closeBtn">&times;</button>
+          <button type="button" class="nav-button">
+          
+          	<i class="fal fa-bars"></i>
+          	<i class="fal fa-times"></i>
+          	
+          </button>
         </div>
       </header>
 
