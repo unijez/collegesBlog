@@ -5,7 +5,7 @@ jQuery(document).ready(function($) {
 
 	 	var menuButton = $('.nav-button');
 	 	var globalNav = $('.global-nav');
-		var body = $('body');
+		var body = $('html');
 		var overlay = $('.overlay');
 		
 		
@@ -20,13 +20,13 @@ jQuery(document).ready(function($) {
 	 	        
 	 	        globalNav.removeClass('menu-active');
 	 	        menuButton.removeClass('button-active');
-				body.removeClass('menuOpen');
+				body.removeClass('stop-scroll');
 				overlay.removeClass('menuOpen');
 				
 	 	      }else{
 	 	        globalNav.addClass('menu-active');
 	 	        menuButton.addClass('button-active');
-				body.addClass('menuOpen');
+				body.addClass('stop-scroll');
 				overlay.addClass('menuOpen');
 
 	 	      }
