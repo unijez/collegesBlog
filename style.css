@@ -1408,21 +1408,26 @@ blockquote::before {
 .site-comment__author input,
 .site-comment__email input {
   display: block;
-  border: 1px solid #4C555A; }
-
-.site-comment__actual label {
-  display: block;
-  margin: 0 auto; }
+  border: 1px solid #4C555A;
+  margin: 10px 0;
+  background: #F9F9F9;
+  width: 100%;
+  padding: 10px; }
 
 .site-comment__actual {
-  margin: 0 auto; }
-
-.site-comment__actual textarea {
-  margin: 0 auto;
-  display: block; }
+  padding: 0 100px; }
 
 .site-comment__actual label {
-  display: block; }
+  margin: auto; }
+
+.site-comment__actual textarea {
+  border: 1px solid #4C555A;
+  margin-top: 10px;
+  background: #F9F9F9;
+  width: 100%;
+  padding: 10px;
+  display: block;
+  margin-top: 10px; }
 
 .form-submit input {
   border: 1px solid #4C555A;
@@ -1430,7 +1435,8 @@ blockquote::before {
   margin: 30px auto;
   display: block;
   padding: 10px 20px;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  display: block; }
 
 .form-submit input:hover {
   border: 1px solid #F9F9F9;
@@ -1545,3 +1551,12 @@ blockquote::before {
     text-align: left;
     margin-top: 35px;
     margin-left: 25px; } }
+
+/* comments form */
+@media (max-width: 46.24em) {
+  .site-comment__actual {
+    padding: 0 53px; } }
+
+@media (max-width: 46.24em) {
+  .site-comment__author-detail {
+    flex-direction: column; } }

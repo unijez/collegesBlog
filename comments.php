@@ -70,7 +70,7 @@ if ( post_password_required() ) {
 
 							'fields' =>array(
 								'author' => '<div class="site-comment__author-detail">
-									<div class="site-comment__author"><label for="author">' . __( 'Your Name','afternoontea' ) . ' <span class="required"></span></label> <input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div>',
+									<div class="site-comment__author"><label for="author">' . __( 'Your Name','afternoontea' ) . ' <span class="required">*</span></label> <input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div>',
 								'email'  => '<div class="site-comment__email"><label for="email">' . __( 'Your Email address','afternoontea' ) . ' <span class="required">*</span></label> <input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></div></div></div>',
 
 							),

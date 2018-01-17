@@ -434,24 +434,28 @@ padding-bottom: $comments-spacing;
 .site-comment__email input {
 	display: block;
 	border: 1px solid $main-text-grey;
-}
-
-.site-comment__actual label {
-	display: block;
-	margin: 0 auto;
+	margin: 10px 0;
+	background: $comments-input-background;
+	width: 100%;
+	padding: 10px;
 }
 
 .site-comment__actual {
-	margin: 0 auto;
-}
-
-.site-comment__actual textarea {
-	margin: 0 auto;
-	display: block;
+	padding: 0 100px;
 }
 
 .site-comment__actual label {
+	margin: auto;
+}
+
+.site-comment__actual textarea {
+	border: 1px solid $main-text-grey;
+	margin-top: 10px;
+	background: $comments-input-background;
+	width: 100%;
+	padding: 10px;
 	display: block;
+	margin-top: 10px;
 }
 
 .form-submit input {
@@ -461,6 +465,7 @@ padding-bottom: $comments-spacing;
 	display: block;
 	padding: 10px 20px;
 	letter-spacing: 1px;
+	display: block;
 }
 
 .form-submit input:hover {
@@ -651,3 +656,21 @@ hr {
 	}
 
 }
+
+ /* comments form */
+
+ .site-comment__actual {
+
+	 @include mq($until: tablet) {
+		 padding: 0 53px;
+	 }
+
+ }
+
+.site-comment__author-detail {
+
+	@include mq($until: tablet) {
+		flex-direction: column;
+	}
+
+ }
