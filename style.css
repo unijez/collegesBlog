@@ -1261,6 +1261,12 @@ blockquote::before {
   background-color: #282828; }
 
 /* Comments */
+.comments-container {
+  width: 100%;
+  height: auto;
+  background: -webkit-gradient(left top, right top, color-stop(0%, white), color-stop(16%, whitesmoke));
+  border-top: 1px solid #000000; }
+
 .comment {
   word-wrap: break-word; }
 
