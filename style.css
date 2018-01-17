@@ -956,29 +956,22 @@ header {
   background-color: #282828;
   color: #fff;
   display: flex;
-  padding: 10px 20px;
-  height: 60px;
-  position: sticky; }
+  padding: 20px; }
   header .left {
-    display: flex;
-    flex-grow: 1;
-    float: left; }
+    display: flex; }
     header .left img {
-      width: 250px;
-      float: left;
-      vertical-align: center; }
+      width: 250px; }
   header .central {
-    position: absolute;
-    left: 260px;
-    top: 0;
-    height: 60px;
     background-color: #212121;
-    width: 260px;
-    display: flex;
-    justify-content: center; }
-    header .central h4 {
-      align-self: center;
-      margin: 0; }
+    display: flex; }
+    header .central h1 {
+      align-self: left;
+      padding-left: 20px;
+      letter-spacing: 0.06em;
+      font-size: 22px;
+      font-size: 1.375rem;
+      line-height: 1.0909090909;
+      line-height: 27px; }
   header .right {
     display: flex;
     flex-grow: 1;

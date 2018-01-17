@@ -6,21 +6,16 @@ header{
 	background-color: $headerbg-grey;
 	color: #fff;
 	display: flex;
-    padding: 10px 20px;
-    height: 60px;
-    position: sticky;
+    padding: 20px;
 
 	.left {
 
         display: flex;
-		flex-grow: 1;
-		float: left;
+
 
         img {
 
             width: 250px;
-            float: left;
-            vertical-align: center;
 
         }
 
@@ -28,21 +23,19 @@ header{
 
     .central {
 
-        position: absolute;
-        left: 260px;
-        top: 0;
-        height: 60px;
         background-color: #212121;
-        width: 260px;
         display: flex;
-        justify-content: center;
 
-        h4 {
 
-            align-self: center;
-            margin: 0;
+        h1 {
 
+            align-self: left;
+            padding-left: 20px;
+            letter-spacing: 0.06em;
+            @include font-size(22px);	
+            line-height: 27px;
         }
+        
     }
 
 	.right {
