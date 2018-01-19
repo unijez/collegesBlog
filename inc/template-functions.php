@@ -121,6 +121,11 @@ function mytheme_comment($comment, $args, $depth) {
 * Nav menu functions.
 */
 
-register_nav_menu( 'primary', 'Primary Menu' );
-
-register_nav_menu( 'Secondry', 'Secondry Menu' );
+register_nav_menu( 'home', 'Home Menu' );
+register_nav_menu( 'research', 'Research Menu' );
+register_nav_menu( 'teachingLearing', 'Teaching and Learing Menu' );
+register_nav_menu( 'news', 'Research Menu' );
+register_nav_menu( 'events', 'Research Menu' );
+register_nav_menu( 'videoArchive', 'Video Archive Menu' );
+register_nav_menu( 'schoolBlogs', 'School Blogs Menu' );
+register_nav_menu( 'links', 'Links Menu' );

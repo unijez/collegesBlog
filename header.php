@@ -48,63 +48,207 @@
           </button>
         </div>
 
+
         <nav class="global-nav retract">
             <a href="#" class="active"><span>Home</span></a>
+
+							<?php
+							$defaults = array(
+								'theme_location'  => 'home',
+								'menu'            => '',
+								'container'       => 'div',
+								'container_class' => '',
+								'container_id'    => '',
+								'menu_class'      => 'menu',
+								'menu_id'         => '',
+								'echo'            => true,
+								'fallback_cb'     => 'wp_page_menu',
+								'before'          => '',
+								'after'           => '',
+								'link_before'     => '',
+								'link_after'      => '',
+								'items_wrap'      => '%3$s',
+								'depth'           => 0,
+								'walker'          => ''
+							);
+
+							wp_nav_menu( $defaults );
+							?>
+
             <a href="#"><span>Research</span></a>
 
-						<?php
-						$defaults = array(
-							'theme_location'  => 'primary',
-							'menu'            => 'foo',
-							'container'       => 'div',
-							'container_class' => '',
-							'container_id'    => '',
-							'menu_class'      => 'menu',
-							'menu_id'         => '',
-							'echo'            => true,
-							'fallback_cb'     => 'wp_page_menu',
-							'before'          => '',
-							'after'           => '',
-							'link_before'     => '',
-							'link_after'      => '',
-							'items_wrap'      => '%3$s',
-							'depth'           => 0,
-							'walker'          => ''
-						);
+							<?php
+							$defaults = array(
+								'theme_location'  => 'research',
+								'menu'            => '',
+								'container'       => 'div',
+								'container_class' => '',
+								'container_id'    => '',
+								'menu_class'      => 'menu',
+								'menu_id'         => '',
+								'echo'            => true,
+								'fallback_cb'     => 'wp_page_menu',
+								'before'          => '',
+								'after'           => '',
+								'link_before'     => '',
+								'link_after'      => '',
+								'items_wrap'      => '%3$s',
+								'depth'           => 0,
+								'walker'          => ''
+							);
 
-						wp_nav_menu( $defaults );
-						?>
-						
+							wp_nav_menu( $defaults );
+							?>
+
             <a href="#"><span>Teaching &amp; learning</span></a>
+
+							<?php
+							$defaults = array(
+								'theme_location'  => 'teachingLearing',
+								'menu'            => '',
+								'container'       => 'div',
+								'container_class' => '',
+								'container_id'    => '',
+								'menu_class'      => 'menu',
+								'menu_id'         => '',
+								'echo'            => true,
+								'fallback_cb'     => 'wp_page_menu',
+								'before'          => '',
+								'after'           => '',
+								'link_before'     => '',
+								'link_after'      => '',
+								'items_wrap'      => '%3$s',
+								'depth'           => 0,
+								'walker'          => ''
+							);
+
+							wp_nav_menu( $defaults );
+							?>
+
             <a href="#"><span>News</span></a>
 
-						<?php
-						$defaults = array(
-							'theme_location'  => 'secondry',
-							'menu'            => 'bar',
-							'container'       => 'div',
-							'container_class' => '',
-							'container_id'    => '',
-							'menu_class'      => 'menu',
-							'menu_id'         => '',
-							'echo'            => true,
-							'fallback_cb'     => 'wp_page_menu',
-							'before'          => '',
-							'after'           => '',
-							'link_before'     => '',
-							'link_after'      => '',
-							'items_wrap'      => '%3$s',
-							'depth'           => 0,
-							'walker'          => ''
-						);
+							<?php
+							$defaults = array(
+								'theme_location'  => 'news',
+								'menu'            => '',
+								'container'       => 'div',
+								'container_class' => '',
+								'container_id'    => '',
+								'menu_class'      => 'menu',
+								'menu_id'         => '',
+								'echo'            => true,
+								'fallback_cb'     => 'wp_page_menu',
+								'before'          => '',
+								'after'           => '',
+								'link_before'     => '',
+								'link_after'      => '',
+								'items_wrap'      => '%3$s',
+								'depth'           => 0,
+								'walker'          => ''
+							);
 
-						wp_nav_menu( $defaults );
-						?>
+							wp_nav_menu( $defaults );
+							?>
 
             <a href="#"><span>Events</span></a>
+
+							<?php
+							$defaults = array(
+								'theme_location'  => 'events',
+								'menu'            => '',
+								'container'       => 'div',
+								'container_class' => '',
+								'container_id'    => '',
+								'menu_class'      => 'menu',
+								'menu_id'         => '',
+								'echo'            => true,
+								'fallback_cb'     => 'wp_page_menu',
+								'before'          => '',
+								'after'           => '',
+								'link_before'     => '',
+								'link_after'      => '',
+								'items_wrap'      => '%3$s',
+								'depth'           => 0,
+								'walker'          => ''
+							);
+
+							wp_nav_menu( $defaults );
+							?>
+
             <a href="#"><span>Video archive</span></a>
+
+							<?php
+							$defaults = array(
+								'theme_location'  => 'videoArchive',
+								'menu'            => '',
+								'container'       => 'div',
+								'container_class' => '',
+								'container_id'    => '',
+								'menu_class'      => 'menu',
+								'menu_id'         => '',
+								'echo'            => true,
+								'fallback_cb'     => 'wp_page_menu',
+								'before'          => '',
+								'after'           => '',
+								'link_before'     => '',
+								'link_after'      => '',
+								'items_wrap'      => '%3$s',
+								'depth'           => 0,
+								'walker'          => ''
+							);
+
+							wp_nav_menu( $defaults );
+							?>
+
             <a href="#"><span>School blogs</span></a>
+
+							<?php
+							$defaults = array(
+								'theme_location'  => 'schoolBlogs',
+								'menu'            => '',
+								'container'       => 'div',
+								'container_class' => '',
+								'container_id'    => '',
+								'menu_class'      => 'menu',
+								'menu_id'         => '',
+								'echo'            => true,
+								'fallback_cb'     => 'wp_page_menu',
+								'before'          => '',
+								'after'           => '',
+								'link_before'     => '',
+								'link_after'      => '',
+								'items_wrap'      => '%3$s',
+								'depth'           => 0,
+								'walker'          => ''
+							);
+
+							wp_nav_menu( $defaults );
+							?>
+
             <a href="#"><span  class="last">Links</span></a>
+
+							<?php
+							$defaults = array(
+								'theme_location'  => 'links',
+								'menu'            => '',
+								'container'       => 'div',
+								'container_class' => '',
+								'container_id'    => '',
+								'menu_class'      => 'menu',
+								'menu_id'         => '',
+								'echo'            => true,
+								'fallback_cb'     => 'wp_page_menu',
+								'before'          => '',
+								'after'           => '',
+								'link_before'     => '',
+								'link_after'      => '',
+								'items_wrap'      => '%3$s',
+								'depth'           => 0,
+								'walker'          => ''
+							);
+
+							wp_nav_menu( $defaults );
+							?>
 
         </nav>
 

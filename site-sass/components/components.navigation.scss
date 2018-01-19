@@ -67,7 +67,7 @@ button {
     }
 
     a:not(.nav-button) {
-        margin-bottom: 20px;
+        margin-bottom: 5px;
     }
 
     a:hover {
@@ -117,15 +117,20 @@ button {
     Tom Nav Styling
 --------------------------------------------------------------------------*/
 
-.menu-foo-container,
-.menu-bar-container {
+.menu-home-container,
+.menu-research-container,
+.menu-teaching-and-learning-container,
+.menu-news-container,
+.menu-events-container,
+.menu-video-archive-container,
+.menu-school-blogs-container,
+.menu-links-container {
   text-align: right;
-  font-size: 14px;
-
+  margin-bottom: 20px;
 }
 
 /*--------------------------------------------------------------------------
-    Tom Nav Styling
+    Tom Nav Styling - END
 --------------------------------------------------------------------------*/
 
 
