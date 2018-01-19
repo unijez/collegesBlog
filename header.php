@@ -29,9 +29,9 @@
 <div class="overlay"></div>
 
  <header>
-        
-         
-         
+
+
+
         <div class="left">
           <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/uol_landscape.svg" alt="University Of Lincoln Logo">
         </div>
@@ -41,25 +41,75 @@
         <div class="right">
           <input type="text" name="search" placeholder="Search" id="search">
           <button type="button" class="nav-button">
-          
+
           	<i class="fal fa-bars"></i>
           	<i class="fal fa-times"></i>
-          	
+
           </button>
         </div>
-        
+
         <nav class="global-nav retract">
             <a href="#" class="active"><span>Home</span></a>
             <a href="#"><span>Research</span></a>
+
+						<?php
+						$defaults = array(
+							'theme_location'  => 'primary',
+							'menu'            => 'foo',
+							'container'       => 'div',
+							'container_class' => '',
+							'container_id'    => '',
+							'menu_class'      => 'menu',
+							'menu_id'         => '',
+							'echo'            => true,
+							'fallback_cb'     => 'wp_page_menu',
+							'before'          => '',
+							'after'           => '',
+							'link_before'     => '',
+							'link_after'      => '',
+							'items_wrap'      => '%3$s',
+							'depth'           => 0,
+							'walker'          => ''
+						);
+
+						wp_nav_menu( $defaults );
+						?>
+						
             <a href="#"><span>Teaching &amp; learning</span></a>
             <a href="#"><span>News</span></a>
+
+						<?php
+						$defaults = array(
+							'theme_location'  => 'secondry',
+							'menu'            => 'bar',
+							'container'       => 'div',
+							'container_class' => '',
+							'container_id'    => '',
+							'menu_class'      => 'menu',
+							'menu_id'         => '',
+							'echo'            => true,
+							'fallback_cb'     => 'wp_page_menu',
+							'before'          => '',
+							'after'           => '',
+							'link_before'     => '',
+							'link_after'      => '',
+							'items_wrap'      => '%3$s',
+							'depth'           => 0,
+							'walker'          => ''
+						);
+
+						wp_nav_menu( $defaults );
+						?>
+
             <a href="#"><span>Events</span></a>
             <a href="#"><span>Video archive</span></a>
             <a href="#"><span>School blogs</span></a>
             <a href="#"><span  class="last">Links</span></a>
+
         </nav>
-        
-        
+
+
+
       </header>
 
 </main>

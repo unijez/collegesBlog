@@ -93,7 +93,7 @@ function mytheme_comment($comment, $args, $depth) {
 							</li>
 							<li>
 								<div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('%1$s'), get_comment_date('F j, Y')) ?></a><?php edit_comment_link() ?>
-									<p class="comments-bullet">&#8226;</p>
+									<span class="comments-bullet">&#8226;</span>
 									<div class="reply">
 						         <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
 						      </div>
@@ -116,3 +116,11 @@ function mytheme_comment($comment, $args, $depth) {
      </div>
 <?php
         }
+
+/**
+* Nav menu functions.
+*/
+
+register_nav_menu( 'primary', 'Primary Menu' );
+
+register_nav_menu( 'Secondry', 'Secondry Menu' );

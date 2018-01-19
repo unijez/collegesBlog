@@ -925,6 +925,17 @@ button {
 /*--------------------------------------------------------------------------
     Brennan Nav Styling - END
 --------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------
+    Tom Nav Styling
+--------------------------------------------------------------------------*/
+.menu-foo-container,
+.menu-bar-container {
+  text-align: right;
+  font-size: 14px; }
+
+/*--------------------------------------------------------------------------
+    Tom Nav Styling
+--------------------------------------------------------------------------*/
 /* Navigation With Divided Line
    ========================================================================== */
 .nav-divide-line li:not(:last-child) {
@@ -1395,6 +1406,9 @@ blockquote::before {
   padding-left: 25px; }
 
 /* Form */
+.site-comment__title small {
+  padding: 0 10px; }
+
 .site-comment__author-detail {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1561,7 +1575,15 @@ blockquote::before {
   .comment-author img {
     display: none; } }
 
+@media (max-width: 46.24em) {
+  .comment p {
+    padding: 0 0px; } }
+
 /* comments form */
+@media (max-width: 46.24em) {
+  .site-comment__title {
+    text-align: center; } }
+
 @media (max-width: 46.24em) {
   .site-comment__actual {
     padding: 0 53px; } }
@@ -1569,3 +1591,17 @@ blockquote::before {
 @media (max-width: 46.24em) {
   .site-comment__author-detail {
     flex-direction: column; } }
+
+@media (max-width: 46.24em) {
+  .comment.depth-1 {
+    border-top: 1px solid #D8D8D8;
+    border-bottom: 3px solid #D8D8D8;
+    border-left: none;
+    border-right: none;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 0px;
+    width: 90%;
+    margin: 0 auto; } }

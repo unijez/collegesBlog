@@ -421,6 +421,10 @@ padding-bottom: $comments-spacing;
 
 	/* Form */
 
+.site-comment__title small {
+	padding: 0 10px;
+}
+
 .site-comment__author-detail {
 	@include flexbox;
 	margin: 30px 0;
@@ -670,7 +674,23 @@ hr {
 
 }
 
+.comment p {
+
+	@include mq($until: tablet) {
+		padding: 0 0px;
+	}
+
+}
+
  /* comments form */
+
+.site-comment__title {
+
+	 @include mq($until: tablet) {
+		 text-align: center;
+	 }
+
+ }
 
  .site-comment__actual {
 
@@ -687,3 +707,17 @@ hr {
 	}
 
  }
+
+.comment.depth-1 {
+
+	@include mq($until: tablet) {
+		border-top: 1px solid $comments-hr;
+		border-bottom: 3px solid $comments-hr;
+		border-left: none;
+		border-right: none;
+		@include vendor(border-radius, 0px );
+		width: 90%;
+		margin: 0 auto;
+	}
+
+}

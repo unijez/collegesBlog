@@ -34,7 +34,7 @@
                 <div class="heading-image_opacity">
                   <h4><?php the_category(','); ?></h4>
                   <h1><?php the_title();?></h1>
-				  <h5>Reading time <span class="eta"></span></h5>
+				          <h5>Reading time <span class="eta"></span></h5>
                 </div>
               </div> <!-- heading-image -->
 
@@ -56,30 +56,13 @@
 								<h4> <b>By</b> <?php the_author(); ?></h4>
 								<h4><?php the_time('F j, Y'); ?></h4>
 							</div> <!-- author -->
-<<<<<<< HEAD
 
 
 
-
-							<article class="blog-article">
-						<div class="eta"></div>
-
-									<div class="word-count"></div>
-							<?php the_content();?>
-
-
-							</article>
-=======
-								
-								
 						<article class="blog-article">
-					
-							
-							<?php the_content();?>
-							
-							
+						 <div class="word-count"></div>
+						  <?php the_content();?>
 						</article>
->>>>>>> 1d1ee448cc6538e462a0b3c244e6d048af66aa5a
 
             </div> <!-- single-container -->
 
