@@ -1,0 +1,87 @@
+/*--------------------------------------------------------------
+# Site Footer - Tom Styling
+--------------------------------------------------------------*/
+/* Footer */
+
+.footer-top {
+height: 350px;
+width: 100%;
+background: $footerbg-grey;
+display: inline-flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: center;
+align-content: stretch;
+align-items: center;
+}
+
+.col {
+order: 0;
+flex: 1 2 auto;
+align-self: auto;
+margin: 0 70px;
+}
+
+.footer-bottom {
+height: 100px;
+width: 100%;
+background-color: $headerbg-grey;
+}
+
+/*--------------------------------------------------------------
+# Site Footer - Brennan Styling
+--------------------------------------------------------------*/
+
+.col {
+  color: #fff;
+  .textwidget {
+    line-height: 2;
+  }
+}
+
+@include mq(mobile) {
+
+}
+
+
+
+
+@include mq($until: tablet) {
+  .footer-top {
+    flex-direction: column;
+    height: 100%;
+
+    .col:nth-of-type(1) {
+      margin-top: 30px;
+    }
+
+    .col {
+      height: 150px;
+      width: 275px;
+      margin: 5px 0;
+
+      .widget {
+        width: 100%;
+      }
+
+      .widget-title {
+        font-size: 18px;
+      }
+
+      .textwidget {
+        line-height: 1.5;
+        font-size: 14px;
+      }
+
+    }
+
+  }
+}
+
+
+
+  @include mq(mobile, tablet) {
+
+
+
+  }

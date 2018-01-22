@@ -16,22 +16,29 @@
 ?>
 
   <div class="footer-top">
-
+    <?php/*
+      if (
+        is_active_sidebar( 'footer-1'  )
+        is_active_sidebar( 'footer-1' ) &&
+        is_active_sidebar( 'footer-1'  ) &&
+        is_active_sidebar( 'footer-1' ) &&
+        ) :
+     */?>
     <div class="col">
-      this is a change
+      <?php dynamic_sidebar( 'footer-1' ); ?>
     </div><!-- col-1 -->
     <div class="col">
-      collegeBlog
+      <?php dynamic_sidebar( 'footer-2' ); ?>
     </div><!-- col-2 -->
     <div class="col">
-      collegeBlog
+      <?php dynamic_sidebar( 'footer-3' ); ?>
     </div><!-- col-3 -->
     <div class="col">
-      collegeBlog
+      <?php dynamic_sidebar( 'footer-4' ); ?>
     </div> <!-- col-4 -->
 
   </div>  <!-- footer-top -->
-
+  <?/* endif;*/?>
   <div class="footer-bottom">
 
   </div>
