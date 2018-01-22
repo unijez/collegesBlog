@@ -15,13 +15,6 @@ align-content: stretch;
 align-items: center;
 }
 
-.col {
-order: 0;
-flex: 1 2 auto;
-align-self: auto;
-margin: 0 70px;
-}
-
 .footer-bottom {
 height: 100px;
 width: 100%;
@@ -33,6 +26,10 @@ background-color: $headerbg-grey;
 --------------------------------------------------------------*/
 
 .col {
+  order: 0;
+  flex: 1 2 auto;
+  align-self: auto;
+  margin: 0 70px;
   color: #fff;
   .textwidget {
     line-height: 2;
