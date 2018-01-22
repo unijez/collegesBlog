@@ -49,10 +49,6 @@ if ( ! function_exists( 'collegeBlog_setup' ) ) :
 		/* image resizing */
 		add_image_size( 'post-intro-image', 300, 200, true );
 
-		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'collegeBlog' ),
-		) );
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
