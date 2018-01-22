@@ -162,7 +162,7 @@ function collegeBlog_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'collegeBlog_widgets_init' );
-//Footer Widgets
+/*/Footer Widgets
 	register_sidebar( array(
 		'name'          => esc_html__( 'First Footer Widget Area', 'collegeBlog' ),
 		'id'            => 'footer-1',
@@ -201,7 +201,7 @@ add_action( 'widgets_init', 'collegeBlog_widgets_init' );
 	) );
 }
 add_action( 'widgets_init', 'collegeBlog_widgets_init' );
-
+*/
 
 /**
  * Enqueue scripts and styles.
