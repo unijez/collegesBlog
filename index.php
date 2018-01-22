@@ -36,7 +36,7 @@ get_header(); ?>
 					<div class="item">
 						<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 							<a href="<?php the_permalink();?>">
-								<?php the_post_thumbnail('post-intro-image'); ?>
+								<?php default_image('post-intro-image'); ?>
 							</a>
 							<div class="item-text">
 								<h5><?php the_category(','); ?></h5>
