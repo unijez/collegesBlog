@@ -212,3 +212,15 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+
+/**
+ * Default Image Function: adds default image when no preset thumbnail is found
+ */
+ function default_image($thumbnail) {
+		if ( has_post_thumbnail() ) {
+							the_post_thumbnail($thumbnail);
+				} else {
+							?><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/default-image.jpg" alt="<?php the_title(); ?>" /><?php
+		}
+	}
