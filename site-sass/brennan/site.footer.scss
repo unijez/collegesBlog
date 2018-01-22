@@ -25,6 +25,10 @@ background-color: $headerbg-grey;
 # Site Footer - Brennan Styling
 --------------------------------------------------------------*/
 
+body {
+  overflow-x: hidden;
+}
+
 .col {
   order: 0;
   flex: 1 2 auto;

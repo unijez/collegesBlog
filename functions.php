@@ -162,6 +162,42 @@ function collegeBlog_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'collegeBlog_widgets_init' );
+register_sidebar( array(
+        'name' => __( 'First Footer Widget Area', 'collegeBlog' ),
+        'id' => 'footer-1',
+        'description' => __( 'The first footer widget area', 'collegeBlog' ),
+        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ) );
+	register_sidebar( array(
+	        'name' => __( 'Second Footer Widget Area', 'collegeBlog' ),
+	        'id' => 'footer-2',
+	        'description' => __( 'The first footer widget area', 'collegeBlog' ),
+	        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+	        'after_widget' => '</div>',
+	        'before_title' => '<h2 class="widget-title">',
+	        'after_title' => '</h2>',
+	    ) );
+	register_sidebar( array(
+	        'name' => __( 'Third Footer Widget Area', 'collegeBlog' ),
+	        'id' => 'footer-3',
+	        'description' => __( 'The first footer widget area', 'collegeBlog' ),
+	        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+	        'after_widget' => '</div>',
+	        'before_title' => '<h2 class="widget-title">',
+	        'after_title' => '</h2>',
+	    ) );
+	register_sidebar( array(
+	        'name' => __( 'Fourth Footer Widget Area', 'collegeBlog' ),
+	        'id' => 'footer-4',
+	        'description' => __( 'The first footer widget area', 'collegeBlog' ),
+	        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+	        'after_widget' => '</div>',
+	        'before_title' => '<h2 class="widget-title">',
+	        'after_title' => '</h2>',
+	    ) );
 /*/Footer Widgets
 	register_sidebar( array(
 		'name'          => esc_html__( 'First Footer Widget Area', 'collegeBlog' ),
@@ -200,6 +236,7 @@ add_action( 'widgets_init', 'collegeBlog_widgets_init' );
 		'after_title'   => '</h2>',
 	) );
 }
+*/
 add_action( 'widgets_init', 'collegeBlog_widgets_init' );
 
 /**
