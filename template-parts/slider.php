@@ -43,19 +43,7 @@
       </div>    <!-- slick-slide -->
 
     <?php endwhile ?>
-    
-    <script>
-    $(document).ready(function(){
-      $('.hero-header').slick({
-        setting-name: autoplay,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-      });
-    });
-
-    </script>
+   
 </div><!-- hero-header-->
 
 <?php else : ?>

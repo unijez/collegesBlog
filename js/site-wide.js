@@ -36,7 +36,7 @@ jQuery(document).ready(function($) {
 	mobileMenuLaunch();
 
 	
-	
+//	Reading Time Plugin
 	
 	var $article = $('.blog-article');
 		
@@ -56,6 +56,17 @@ jQuery(document).ready(function($) {
 				$article.find('.reading-time').remove();
 			}
 		});
+	
+	
+	
+//	Slider Plugin
+	
+	$('.hero-header').slick({
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  autoplay: true,
+	  autoplaySpeed: 2000
+	});
 	
 
 });
