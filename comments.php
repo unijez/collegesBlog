@@ -49,7 +49,39 @@ if ( post_password_required() ) {
 
 	endif; // Check for have_comments().
 
-	comment_form();
-	?>
+
+
+
+						$commenter = wp_get_current_commenter();
+						$req = get_option( 'require_name_email' );
+						$aria_req = ( $req ? " aria-required='true'" : '' );
+
+
+
+						$args_blog = array(
+
+							'comment_field' => '<div class="site-comment__review-body">
+							<div class="site-comment__actual"><label for="Your Comment">' . _x( 'Your Comment', 'noun' ) . ' <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></div>',
+
+							'title_reply_before' => __('<h4 class="site-comment__title">'),
+							'class_submit' => __('submit-review main-btn'),
+							'comment_notes_before' => '',
+							'title_reply' => ''.__( 'Leave your Comment','afternoontea' ).'',
+
+							'fields' =>array(
+								'author' => '<div class="site-comment__author-detail">
+									<div class="site-comment__author"><label for="author">' . __( 'Your Name','afternoontea' ) . ' <span class="required"></span></label> <input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div>',
+								'email'  => '<div class="site-comment__email"><label for="email">' . __( 'Your Email address','afternoontea' ) . ' <span class="required">*</span></label> <input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></div></div></div>',
+
+							),
+
+						);
+
+
+
+
+
+
+	 comment_form($args_blog); ?>
 
 </div><!-- #comments -->

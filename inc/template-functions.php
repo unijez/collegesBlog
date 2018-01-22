@@ -68,7 +68,7 @@ function remove_img_caption_style($attr, $content = null) {
 		return '<figure ' . $id . 'class="wp-caption ' . esc_attr($align) . '">'
 		. do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></figure>';
 }
-	
+
 add_shortcode('wp_caption', 'remove_img_caption_style');
 add_shortcode('caption', 'remove_img_caption_style');
 
@@ -93,7 +93,7 @@ function mytheme_comment($comment, $args, $depth) {
 							</li>
 							<li>
 								<div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('%1$s'), get_comment_date('F j, Y')) ?></a><?php edit_comment_link() ?>
-									<p class="reply">&#8226;</p>
+									<p class="comments-bullet">&#8226;</p>
 									<div class="reply">
 						         <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
 						      </div>
@@ -106,14 +106,13 @@ function mytheme_comment($comment, $args, $depth) {
          <em><?php _e('Your comment is awaiting moderation.') ?></em>
          <br />
       <?php endif; ?>
-     	
-	     <div class="comment__content">	
-	     	
+
+	     <div class="comment__content">
+
 	      <?php comment_text() ?>
-	     	
+
 	     </div> <!--comment__content-->
 
      </div>
 <?php
         }
-

@@ -1383,8 +1383,11 @@ blockquote::before {
   padding-bottom: 20px; }
 
 .reply {
-  display: inline;
-  margin-left: 10px; }
+  display: inline; }
+
+.comments-bullet {
+  padding: 0 10px;
+  display: inline; }
 
 .depth-1 > .children {
   padding-left: 50px; }

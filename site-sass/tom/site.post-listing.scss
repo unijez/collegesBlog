@@ -399,7 +399,11 @@ padding-bottom: $comments-spacing;
 
 .reply {
 	display: inline;
-	margin-left: 10px;
+}
+
+.comments-bullet {
+	padding: 0 10px;
+	display: inline;
 }
 
 
