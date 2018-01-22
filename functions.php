@@ -201,7 +201,6 @@ add_action( 'widgets_init', 'collegeBlog_widgets_init' );
 	) );
 }
 add_action( 'widgets_init', 'collegeBlog_widgets_init' );
-*/
 
 /**
  * Enqueue scripts and styles.
