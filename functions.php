@@ -162,6 +162,46 @@ function collegeBlog_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'collegeBlog_widgets_init' );
+//Footer Widgets
+	register_sidebar( array(
+		'name'          => esc_html__( 'First Footer Widget Area', 'collegeBlog' ),
+		'id'            => 'footer-1',
+		'description'   => esc_html__( 'Add widgets here.', 'collegeBlog' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Second Footer Widget Area', 'collegeBlog' ),
+		'id'            => 'footer-2',
+		'description'   => esc_html__( 'Add widgets here.', 'collegeBlog' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Third Footer Widget Area', 'collegeBlog' ),
+		'id'            => 'footer-3',
+		'description'   => esc_html__( 'Add widgets here.', 'collegeBlog' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Fourth Footer Widget Area', 'collegeBlog' ),
+		'id'            => 'footer-4',
+		'description'   => esc_html__( 'Add widgets here.', 'collegeBlog' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'collegeBlog_widgets_init' );
+
 
 /**
  * Enqueue scripts and styles.

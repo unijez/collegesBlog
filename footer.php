@@ -17,18 +17,18 @@
 
   <div class="footer-top">
 
-    <div class="col">
+    <!--<div class="col">
       collegeBlog
-    </div><!-- col-1 -->
-    <div class="col">
+    </div> col-1 -->
+    <!--<<div class="col">
       collegeBlog
-    </div><!-- col-2 -->
-    <div class="col">
+    </div>col-2 -->
+    <!--<div class="col">
       collegeBlog
-    </div><!-- col-3 -->
-    <div class="col">
+    </div>col-3 -->
+    <!--<div class="col">
       collegeBlog
-    </div> <!-- col-4 -->
+    <!--</div>col-4 -->
 
   </div>  <!-- footer-top -->
 
