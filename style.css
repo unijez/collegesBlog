@@ -1061,9 +1061,6 @@ header {
 /*--------------------------------------------------------------
 # Site Footer - Brennan Styling
 --------------------------------------------------------------*/
-body {
-  overflow-x: hidden; }
-
 .col {
   order: 0;
   flex: 1 2 auto;
@@ -1256,6 +1253,9 @@ body {
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
 
+.hero-header {
+  overflow-x: hidden; }
+
 .slick-track {
   position: relative;
   left: 0;
@@ -1263,7 +1263,7 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 1440px !important; }
+  width: 1440px; }
   .slick-track:before, .slick-track:after {
     content: "";
     display: table; }
