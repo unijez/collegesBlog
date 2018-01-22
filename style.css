@@ -1009,6 +1009,58 @@ header {
       left: 0;
       top: 60; } }
 
+/*--------------------------------------------------------------
+# Site Footer - Tom Styling
+--------------------------------------------------------------*/
+/* Footer */
+.footer-top {
+  height: 350px;
+  width: 100%;
+  background: #444444;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center; }
+
+.col {
+  order: 0;
+  flex: 1 2 auto;
+  align-self: auto;
+  margin: 0 70px; }
+
+.footer-bottom {
+  height: 100px;
+  width: 100%;
+  background-color: #282828; }
+
+/*--------------------------------------------------------------
+# Site Footer - Brennan Styling
+--------------------------------------------------------------*/
+.col {
+  color: #fff; }
+  .col .textwidget {
+    line-height: 2; }
+
+@media (max-width: 46.24em) {
+  .footer-top {
+    flex-direction: column;
+    height: 100%; }
+    .footer-top .col:nth-of-type(1) {
+      margin-top: 30px; }
+    .footer-top .col {
+      height: 150px;
+      width: 275px;
+      margin: 5px 0; }
+      .footer-top .col .widget {
+        width: 100%; }
+      .footer-top .col .widget-title {
+        font-size: 18px; }
+      .footer-top .col .textwidget {
+        line-height: 1.5;
+        font-size: 14px; } }
+
 /*---------------------------------------------
     Classes accessed by the jScript - Brennan
 ---------------------------------------------*/
@@ -1266,29 +1318,6 @@ blockquote::before {
   letter-spacing: 2px;
   font-weight: 400;
   padding-top: 25px; }
-
-/* Footer */
-.footer-top {
-  height: 350px;
-  width: 100%;
-  background: #444444;
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-content: stretch;
-  align-items: center; }
-
-.col {
-  order: 0;
-  flex: 0 1 auto;
-  align-self: auto;
-  margin: 0 70px; }
-
-.footer-bottom {
-  height: 100px;
-  width: 100%;
-  background-color: #282828; }
 
 /* Comments */
 .comments-container {

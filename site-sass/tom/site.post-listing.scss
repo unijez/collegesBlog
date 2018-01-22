@@ -282,33 +282,6 @@ blockquote::before {
 	padding-top: 25px;
 }
 
-	/* Footer */
-
-.footer-top {
-	height: 350px;
-	width: 100%;
-	background: $footerbg-grey;
-	display: inline-flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-content: stretch;
-	align-items: center;
-}
-
-.col {
-  order: 0;
-  flex: 0 1 auto;
-  align-self: auto;
-	margin: 0 70px;
-}
-
-.footer-bottom {
-	height: 100px;
-	width: 100%;
-	background-color: $headerbg-grey;
-}
-
 	/* Comments */
 
 .comments-container {

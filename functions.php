@@ -144,7 +144,16 @@ add_filter( 'get_the_archive_title', function ($title) {
     return $title;
 
 });
+	/* FUNCTIONS ADDED BY BRENNAN */
 
+	/* ADDING IN A DEFAULT IMAGE TO POSTS FUNCTION */
+	function default_image($thumbnail) {
+		if ( has_post_thumbnail() ) {
+							the_post_thumbnail($thumbnail);
+				} else {
+							?><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/default-image.jpg" alt="<?php the_title(); ?>" /><?php
+		}
+	}
 /*
 *
 *	FUCNTIONS ADDED BY TOM / END
@@ -158,6 +167,43 @@ function collegeBlog_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'collegeBlog' ),
 		'id'            => 'sidebar-1',
+		'description'   => esc_html__( 'Add widgets here.', 'collegeBlog' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	//Footer Widgets
+	register_sidebar( array(
+		'name'          => esc_html__( 'First Footer Widget Area', 'collegeBlog' ),
+		'id'            => 'footer-1',
+		'description'   => esc_html__( 'Add widgets here.', 'collegeBlog' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Second Footer Widget Area', 'collegeBlog' ),
+		'id'            => 'footer-2',
+		'description'   => esc_html__( 'Add widgets here.', 'collegeBlog' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Third Footer Widget Area', 'collegeBlog' ),
+		'id'            => 'footer-3',
+		'description'   => esc_html__( 'Add widgets here.', 'collegeBlog' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Fourth Footer Widget Area', 'collegeBlog' ),
+		'id'            => 'footer-4',
 		'description'   => esc_html__( 'Add widgets here.', 'collegeBlog' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
