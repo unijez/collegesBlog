@@ -1042,8 +1042,17 @@ header {
 /*---------------------------------------------
     Classes accessed by the jScript - Brennan
 ---------------------------------------------*/
-.retract.menu-active {
-  width: 300px; }
+@media (min-width: 20em) {
+  .retract.menu-active {
+    width: 80vw; } }
+
+@media (min-width: 46.25em) {
+  .retract.menu-active {
+    width: 50vw; } }
+
+@media (min-width: 61.25em) {
+  .retract.menu-active {
+    width: 300px; } }
 
 .retract {
   width: 0px; }
