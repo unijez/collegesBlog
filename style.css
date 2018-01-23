@@ -876,7 +876,9 @@ button {
   flex-direction: column;
   box-shadow: 0px 10px 5px #000;
   padding-top: 110px;
-  transition: width 0.25s ease-in-out; }
+  transition: width 0.25s ease-in-out;
+  overflow: auto;
+  line-height: 50px; }
   .global-nav:after {
     content: "";
     display: table;
@@ -888,18 +890,15 @@ button {
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.5;
-    color: #5C5C5C;
+    color: #ffffff;
+    font-size: 19px;
     text-decoration: none;
-    font-weight: bold; }
-    .global-nav a span:not(.last) {
-      padding: 5px 0;
-      border-bottom: 1px solid #212121; }
+    letter-spacing: 1px;
+    transition: ease-in .1s; }
   .global-nav a:not(.nav-button) {
     margin-bottom: 5px; }
   .global-nav a:hover {
-    color: #f1f1f1; }
-  .global-nav .active {
-    color: #fff; }
+    border-bottom: 2px solid #ffffff; }
   .global-nav .nav-button {
     font-size: 35px;
     font-size: 2.1875rem;
@@ -927,21 +926,37 @@ button {
 /*--------------------------------------------------------------------------
     Tom Nav Styling
 --------------------------------------------------------------------------*/
+/* Nav text */
 .menu-main-menu-container {
   text-align: right;
-  margin-right: 10px; }
+  margin-right: 30px; }
   .menu-main-menu-container li {
-    padding: 7px 0 10px 0; }
+    padding: 5px 0 5px 0; }
   .menu-main-menu-container a {
-    padding: 2px 10px 15px 0;
-    border-bottom: 1px solid #212121; }
+    padding: 2px 20px 15px 0;
+    border-bottom: 2px solid #212121; }
 
 .sub-menu {
-  margin-right: 20px; }
+  margin-right: 40px; }
   .sub-menu a {
-    margin-top: 5px; }
+    margin-top: 5px;
+    color: #878785; }
   .sub-menu li {
-    padding-top: 20px; }
+    padding-top: 0px; }
+
+.sub-menu .current-menu-item a,
+.current-menu-item a {
+  border-bottom: 2px solid #ffffff; }
+
+.current-menu-item .sub-menu a {
+  border-color: #212121; }
+
+/* Nav links */
+.links {
+  padding: 50px 30px; }
+  .links svg {
+    float: right;
+    margin: 0 20px; }
 
 /*--------------------------------------------------------------------------
     Tom Nav Styling - END
@@ -1028,7 +1043,7 @@ header {
     Classes accessed by the jScript - Brennan
 ---------------------------------------------*/
 .retract.menu-active {
-  width: 200px; }
+  width: 300px; }
 
 .retract {
   width: 0px; }

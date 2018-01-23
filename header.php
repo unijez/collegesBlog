@@ -74,7 +74,23 @@
 							wp_nav_menu( $defaults );
 							?>
 
-        </nav>
+							<div class="links">
+								
+								<a href="">
+									<i class="fab fa-instagram fa-2x"></i>
+								</a>
+								<a href="">
+									<i class="fab fa-twitter fa-2x"></i>
+								</a>
+								<a href="">
+									<i class="fab fa-facebook-f fa-2x"></i>
+								</a>
+
+							</div> <!-- links -->
+
+
+
+        </nav> <!-- global-nav retract -->
 
 
 

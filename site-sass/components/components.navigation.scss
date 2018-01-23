@@ -49,20 +49,19 @@ button {
     box-shadow: 0px 10px 5px #000;
     padding-top: 110px;
     transition: width 0.25s ease-in-out;
+    overflow: auto;
+    line-height: 50px;
 
     a {
         width: 180px;
         text-align: right;
         zoom:1;
         @include font-size(16px);
-        color: $navtext-grey;
+        color: $navtext;
+        font-size: 19px;
         text-decoration: none;
-        font-weight: bold;
-
-        span:not(.last) {
-            padding: 5px 0 ;
-            border-bottom: 1px solid #212121;
-        }
+        letter-spacing: 1px;
+        transition: ease-in .1s;
     }
 
     a:not(.nav-button) {
@@ -71,12 +70,8 @@ button {
 
     a:hover {
 
-        color: #f1f1f1;
+        border-bottom: 2px solid #ffffff;
 
-    }
-
-    .active {
-        color: #fff;
     }
 
     .nav-button {
@@ -116,30 +111,61 @@ button {
     Tom Nav Styling
 --------------------------------------------------------------------------*/
 
+/* Nav text */
+
 .menu-main-menu-container {
   text-align: right;
-  margin-right: 10px;
+  margin-right: 30px;
 
   li {
-    padding: 7px 0 10px 0;
+    padding: 5px 0 5px 0;
   }
 
   a {
-    padding: 2px 10px 15px 0;
-    border-bottom: 1px solid $nav-underline;
+    padding: 2px 20px 15px 0;
+    border-bottom: 2px solid $nav-underline;
   }
 
 }
 
 .sub-menu {
-  margin-right: 20px;
+  margin-right: 40px;
 
   a {
     margin-top: 5px;
+    color: $nav-sublink;
   }
 
   li {
-    padding-top: 20px;
+    padding-top: 0px;
+  }
+
+}
+
+.sub-menu .current-menu-item,
+.current-menu-item {
+
+  a {
+    border-bottom: 2px solid #ffffff;
+  }
+
+
+
+}
+
+.current-menu-item  .sub-menu a{
+  border-color: $nav-underline;
+}
+
+/* Nav links */
+
+.links {
+  padding: 50px 30px;
+
+
+  svg {
+    float: right;
+    margin: 0 20px;
   }
 
 }
