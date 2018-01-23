@@ -98,11 +98,22 @@ function collegeBlog_content_width() {
 }
 add_action( 'after_setup_theme', 'collegeBlog_content_width', 0 );
 
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
+
+
+
+function collegeBlog_search_form( $form ) {
+	$form = '<form role="search" method="get" id="searchform" class="searchform" action="' . esc_url( home_url( '/' ) ). '" >
+    <div><label class="screen-reader-text" for="s">' . __( 'Search for:', 'collegeBlog' ) . '</label>
+    <input type="text" placeholder="' . esc_attr__( 'Search', 'collegeBlog' ) . '" value="' . get_search_query() . '" name="s" id="s" class="blog-search" />
+    <input type="submit" id="searchsubmit" value="' . esc_attr__( 'Search', 'collegeBlog' ) . '" class="search-classes-here" />
+    </div>
+    </form>';
+
+	return $form;
+}
+add_filter( 'get_search_form', 'collegeBlog_search_form', 100 );
+
+
 
 /*
 *

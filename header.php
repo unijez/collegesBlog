@@ -40,6 +40,8 @@
         </div>
         <div class="right">
           <input type="text" name="search" placeholder="Search" id="search">
+		
+		  
           <button type="button" class="nav-button">
 
           	<i class="fal fa-bars"></i>
