@@ -3,8 +3,12 @@
   $args = array(
 
       'post_type' => 'post',
-      'posts_per_page' => 5
-
+      'posts_per_page' => 5,
+      'meta_query' => array(
+                      array(
+      'key' => '_thumbnail_id',
+      'compare' => 'EXISTS'
+      ),)
   );
 
   $home_work_posts = new WP_Query( $args );
@@ -43,7 +47,7 @@
       </div>    <!-- slick-slide -->
 
     <?php endwhile ?>
-   
+
 </div><!-- hero-header-->
 
 <?php else : ?>

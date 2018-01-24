@@ -306,9 +306,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Default Image Function: adds default image when no preset thumbnail is found
  */
  function default_image($thumbnail) {
+
 		if ( has_post_thumbnail() ) {
-							the_post_thumbnail($thumbnail);
-				} else {
-							?><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/default-image.jpg" alt="<?php the_title(); ?>" /><?php
+			the_post_thumbnail($thumbnail);
+		} else {
+			?><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/default-image.jpg" alt="<?php the_title(); ?>" /><?php
 		}
 	}
