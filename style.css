@@ -1442,15 +1442,23 @@ li.slick-list button:hover {
 li.slick-active button {
   background-color: #656565; }
 
-.slick-track .slick-slide {
+.slick-track > .slick-slide {
   overflow-y: hidden;
   height: 600px; }
-  .slick-track .slick-slide a {
+  .slick-track > .slick-slide > a {
     display: none; }
-  .slick-track .slick-slide img {
+  .slick-track > .slick-slide img {
     margin-top: -75px;
     margin-bottom: -75px;
     z-index: -1; }
+
+.overlay-slide > .item-text {
+  color: #fff; }
+  .overlay-slide > .item-text a {
+    display: block; }
+  .overlay-slide > .item-text h5 {
+    font-size: 20px;
+    height: 25px; }
 
 /* misc styles */
 body {
