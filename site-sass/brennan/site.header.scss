@@ -1,12 +1,13 @@
 /*--------------------------------------------------------------
 # Site Header - Brennan Styling
 --------------------------------------------------------------*/
+
 header{
 
 	background-color: $headerbg-grey;
 	color: #fff;
 	display: flex;
-    padding: 20px;
+	height: 95px;
 
 	.left {
 
@@ -16,6 +17,7 @@ header{
         img {
 
             width: 250px;
+						margin-left: 30px;
 
         }
 
@@ -23,23 +25,21 @@ header{
 
     .central {
 
-        background-color: #212121;
-        display: flex;
-				height: 94px;
-				position: absolute;
-				top: 31px;
-				left: 290px;
+				position: relative;
+        background-color: $nav-underline;
+				height: 95px;
 				z-index: 0;
+				display: flex;
+				padding: 0 20px;
+				margin-left: 20px;
 
         h1 {
-						height: 100%;
-            align-self: left;
-            padding-left: 20px;
-            letter-spacing: 0.06em;
-            @include font-size(22px);
-            line-height: 27px;
-            margin: 0;
-				    padding: 20px;
+
+					align-self: center;
+					font-size: 25px;
+					margin: 0 auto;
+
+
         }
 
     }
