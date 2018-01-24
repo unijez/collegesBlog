@@ -58,129 +58,71 @@ header{
     }
 }
 
-.form-control {
-  font-family: "FontAwesome"
-}
+// Search Bar
 
-.right {
+.searchform {
+width: 100%;
+@include flexbox;
 
-	form {
-		width: 100%;
+	.search-container {
+		align-self: center;
+		margin: 0 auto;
 	}
 
 }
 
 .search-container {
-	position: relative;
-
-}
-
-.submit-container{
-
-
-	span {
-
-	}
 
 	input {
+		border: none;
+		background: $searchbg-grey;
+		align-self: center;
+		padding: 10px;
+		z-index: 2;
+	}
 
+	button {
+		background: $searchbg-grey;
+		width: 38px;
+		height: 38px;
+		margin-left: -5px;
+	}
+
+	// Placeholder text colour
+
+	::-webkit-input-placeholder {
+			color:    #fff;
+	}
+	:-moz-placeholder {
+		 color:    #fff;
+		 opacity:  1;
+	}
+	::-moz-placeholder {
+		 color:    #fff;
+		 opacity:  1;
+	}
+	:-ms-input-placeholder {
+		 color:    #fff;
+	}
+	::-ms-input-placeholder {
+		 color:    #fff;
+	}
+
+	::placeholder {
+		 color:    #fff;
 	}
 
 }
 
+// MQ
 
+.searchform {
 
-
-
-				/*
-
-				form {
-
-					@include flexbox;
-					width: 100%;
-					padding: 0 30%;
-
-				}
-
-        input {
-
-	        	background-color: $searchbg-grey;
-            @include borderfix(all, 0px);
-            padding: 5px;
-            width: 30%;
-            align-self: center;
-						padding: 10px;
-						z-index: 1;
-
-        }
-
-				.blog-search {
-
-						width: 100%;
-						z-index: 2;
-						padding: 15px;
-
-				}
-
-				.search-classes-here {
-
-						display: inline-block;
-						position: relative;
-						width: 100%;
-
-
-				}
-
-				.search-icon {
-
-						height: 48px;
-						width: 48px;
-						@include flexbox;
-						align-self: center;
-						background-color: $searchbg-grey;
-						z-index: 1;
-
-				}
-
-				.fa-search {
-
-						position: absolute;
-						top: 41px;
-						z-index: 2;
-
-				}
-
-				// Placeholder text colour
-
-				::-webkit-input-placeholder {
-				    color:    #fff;
-				}
-				:-moz-placeholder {
-				   color:    #fff;
-				   opacity:  1;
-				}
-				::-moz-placeholder {
-				   color:    #fff;
-				   opacity:  1;
-				}
-				:-ms-input-placeholder {
-				   color:    #fff;
-				}
-				::-ms-input-placeholder {
-				   color:    #fff;
-				}
-
-				::placeholder {
-				   color:    #fff;
-				}
-
+	@include mq($until:desktop){
+		display: none;
 	}
 
-	*/
-
-	@include mq(mobile) {
-
-	}
+}
 
 
 
