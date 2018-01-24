@@ -32,11 +32,11 @@ header{
             align-self: left;
             padding-left: 20px;
             letter-spacing: 0.06em;
-            @include font-size(22px);	
+            @include font-size(22px);
             line-height: 27px;
             margin: 0;
         }
-        
+
     }
 
 	.right {
@@ -55,20 +55,128 @@ header{
             right: 20px;
             margin-left: 20px;
 
-        }
+    }
+}
+
+.form-control {
+  font-family: "FontAwesome"
+}
+
+.right {
+
+	form {
+		width: 100%;
+	}
+
+}
+
+.search-container {
+	position: relative;
+
+}
+
+.submit-container{
+
+
+	span {
+
+	}
+
+	input {
+
+	}
+
+}
+
+
+
+
+
+				/*
+
+				form {
+
+					@include flexbox;
+					width: 100%;
+					padding: 0 30%;
+
+				}
 
         input {
 
-	        background-color: $searchbg-grey;
+	        	background-color: $searchbg-grey;
             @include borderfix(all, 0px);
             padding: 5px;
-            width: 50%;
+            width: 30%;
             align-self: center;
-            color: #fff;
-            margin-right: 25px;
+						padding: 10px;
+						z-index: 1;
 
         }
+
+				.blog-search {
+
+						width: 100%;
+						z-index: 2;
+						padding: 15px;
+
+				}
+
+				.search-classes-here {
+
+						display: inline-block;
+						position: relative;
+						width: 100%;
+
+
+				}
+
+				.search-icon {
+
+						height: 48px;
+						width: 48px;
+						@include flexbox;
+						align-self: center;
+						background-color: $searchbg-grey;
+						z-index: 1;
+
+				}
+
+				.fa-search {
+
+						position: absolute;
+						top: 41px;
+						z-index: 2;
+
+				}
+
+				// Placeholder text colour
+
+				::-webkit-input-placeholder {
+				    color:    #fff;
+				}
+				:-moz-placeholder {
+				   color:    #fff;
+				   opacity:  1;
+				}
+				::-moz-placeholder {
+				   color:    #fff;
+				   opacity:  1;
+				}
+				:-ms-input-placeholder {
+				   color:    #fff;
+				}
+				::-ms-input-placeholder {
+				   color:    #fff;
+				}
+
+				::placeholder {
+				   color:    #fff;
+				}
+
 	}
+
+	*/
 
 	@include mq(mobile) {
 

@@ -839,9 +839,6 @@ h1, h2, h3, h4, h5, h6, p {
 /* ==========================================================================
    #NAVIGATION
    ========================================================================== */
-/**
- * Default inline navigation
- */
 /*--------------------------------------------------------------------------
     Brennan Nav Styling
 --------------------------------------------------------------------------*/
@@ -992,7 +989,92 @@ header {
   background-color: #282828;
   color: #fff;
   display: flex;
-  padding: 20px; }
+  padding: 20px;
+  /*
+
+				form {
+
+					@include flexbox;
+					width: 100%;
+					padding: 0 30%;
+
+				}
+
+        input {
+
+	        	background-color: $searchbg-grey;
+            @include borderfix(all, 0px);
+            padding: 5px;
+            width: 30%;
+            align-self: center;
+						padding: 10px;
+						z-index: 1;
+
+        }
+
+				.blog-search {
+
+						width: 100%;
+						z-index: 2;
+						padding: 15px;
+
+				}
+
+				.search-classes-here {
+
+						display: inline-block;
+						position: relative;
+						width: 100%;
+
+
+				}
+
+				.search-icon {
+
+						height: 48px;
+						width: 48px;
+						@include flexbox;
+						align-self: center;
+						background-color: $searchbg-grey;
+						z-index: 1;
+
+				}
+
+				.fa-search {
+
+						position: absolute;
+						top: 41px;
+						z-index: 2;
+
+				}
+
+				// Placeholder text colour
+
+				::-webkit-input-placeholder {
+				    color:    #fff;
+				}
+				:-moz-placeholder {
+				   color:    #fff;
+				   opacity:  1;
+				}
+				::-moz-placeholder {
+				   color:    #fff;
+				   opacity:  1;
+				}
+				:-ms-input-placeholder {
+				   color:    #fff;
+				}
+				::-ms-input-placeholder {
+				   color:    #fff;
+				}
+
+				::placeholder {
+				   color:    #fff;
+				}
+
+	}
+
+	*/ }
   header .left {
     display: flex; }
     header .left img {
@@ -1021,14 +1103,12 @@ header {
       top: 20px;
       right: 20px;
       margin-left: 20px; }
-    header .right input {
-      background-color: #2d2d2d;
-      border: 0px;
-      padding: 5px;
-      width: 50%;
-      align-self: center;
-      color: #fff;
-      margin-right: 25px; }
+  header .form-control {
+    font-family: "FontAwesome"; }
+  header .right form {
+    width: 100%; }
+  header .search-container {
+    position: relative; }
   @media (max-width: 46.24em) {
     header .left {
       flex-direction: column; }

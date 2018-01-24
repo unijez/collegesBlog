@@ -39,9 +39,9 @@
             <h1>Lincoln International <br> Business School</h1>
         </div>
         <div class="right">
-          <input type="text" name="search" placeholder="Search" id="search">
-		
-		  
+					
+					<?php get_search_form() ?>
+
           <button type="button" class="nav-button">
 
           	<i class="fal fa-bars"></i>
@@ -77,7 +77,7 @@
 							?>
 
 							<div class="links">
-								
+
 								<a href="">
 									<i class="fab fa-instagram fa-2x"></i>
 								</a>

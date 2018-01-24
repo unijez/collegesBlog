@@ -118,7 +118,22 @@ function mytheme_comment($comment, $args, $depth) {
         }
 
 /**
-* Nav menu functions.
+* Nav menu function.
 */
 
 register_nav_menu( 'main', 'Main Menu' );
+
+/**
+* Search function.
+*/
+
+function collegeBlog_search_form( $form ) {
+	$form = '<form role="search" method="get" id="searchform" class="searchform" action="' . esc_url( home_url( '/' ) ). '" >
+<label class="screen-reader-text" for="s">' . __( 'Search for:', 'collegeBlog' ) . '</label>
+<input type="text" placeholder="' . esc_attr__( 'Search', 'collegeBlog' ) . '" value="' . get_search_query() . '" name="s" id="s" class="blog-search" />
+<button type="submit" id="searchsubmit"><i class="fal fa-search"></i></button>
+</form>';
+
+	return $form;
+}
+add_filter( 'get_search_form', 'collegeBlog_search_form', 100 );
