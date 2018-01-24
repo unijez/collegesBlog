@@ -1152,7 +1152,8 @@ header {
     header .central {
       width: 100%;
       left: 0;
-      top: 60; } }
+      top: 60;
+      display: none; } }
 
 /*---------------------------------------------
     Classes accessed by the jScript - Brennan
@@ -1512,6 +1513,29 @@ li.slick-active button {
     margin-bottom: 15px; }
   .overlay-slide > .item-text h2, .overlay-slide > .item-text .brighter > a {
     color: #fff !important; }
+
+@media (max-width: 46.24em) {
+  .hero-header {
+    height: 350px; }
+  .readmore {
+    display: none; }
+  .slick-track > .slick-slide {
+    overflow-y: hidden;
+    height: 350%; }
+    .slick-track > .slick-slide > a {
+      display: none; }
+    .slick-track > .slick-slide img {
+      height: 320px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      z-index: -1; }
+  .overlay-slide > .item-text {
+    color: #fff; }
+    .overlay-slide > .item-text h2 {
+      font-size: 30px;
+      margin-bottom: 7.5px; }
+    .overlay-slide > .item-text h2, .overlay-slide > .item-text .brighter > a {
+      color: #fff !important; } }
 
 /* misc styles */
 body {

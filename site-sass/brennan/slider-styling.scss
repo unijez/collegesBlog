@@ -104,3 +104,54 @@ li.slick-active button{
   }
 
 }
+
+@include mq($until: tablet) {
+
+    .hero-header {
+      height: 350px;
+    }
+
+    .readmore {
+      display: none;
+    }
+
+    .slick-track > .slick-slide {
+      overflow-y: hidden;
+      height: 350%;
+      > a {
+        display: none;
+      }
+
+      img {
+        height: 320px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        z-index: -1;
+      }
+
+    }
+
+    .overlay-slide > .item-text{
+
+      color: #fff;
+
+      h2 {
+        font-size: 30px;
+        margin-bottom: 7.5px;
+      }
+
+      h2, .brighter > a{
+        color: #fff !important;
+      }
+
+    }
+
+}
+
+
+
+@include mq(mobile, tablet) {
+
+
+
+}
