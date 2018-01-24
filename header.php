@@ -48,7 +48,7 @@
           	<i class="fal fa-times"></i>
 
           </button>
-        </div>
+        </div> <!-- right -->
 
 
         <nav class="global-nav retract">
@@ -75,21 +75,20 @@
 
 							wp_nav_menu( $defaults );
 							?>
+					</div> <!-- collapse -->
 
-							<div class="links">
+					<div class="links collapse">
+						<a href="">
+							<i class="fab fa-instagram fa-2x"></i>
+						</a>
+						<a href="">
+							<i class="fab fa-twitter fa-2x"></i>
+						</a>
+						<a href="">
+							<i class="fab fa-facebook-f fa-2x"></i>
+						</a>
+					</div> <!-- links collapse -->
 
-								<a href="">
-									<i class="fab fa-instagram fa-2x"></i>
-								</a>
-								<a href="">
-									<i class="fab fa-twitter fa-2x"></i>
-								</a>
-								<a href="">
-									<i class="fab fa-facebook-f fa-2x"></i>
-								</a>
-
-							</div> <!-- links -->
-						</div>
 
         </nav> <!-- global-nav retract -->
 

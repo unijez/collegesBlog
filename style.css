@@ -933,6 +933,9 @@ button {
     padding: 2px 20px 15px 0;
     border-bottom: 2px solid #212121; }
 
+.collapse {
+  min-width: 300px; }
+
 .sub-menu {
   margin-right: 40px; }
   .sub-menu a {
@@ -1053,9 +1056,6 @@ header {
     color: #fff; }
   header .search-container ::placeholder {
     color: #fff; }
-  header .collapse {
-    min-width: 300px;
-    display: flex; }
   @media (max-width: 61.24em) {
     header .searchform {
       display: none; } }
