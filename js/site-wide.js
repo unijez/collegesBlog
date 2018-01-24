@@ -62,10 +62,13 @@ jQuery(document).ready(function($) {
 //	Slider Plugin
 
 	$('.hero-header').slick({
-	  slidesToShow: 1,
+		dots: true,
+		pauseOnHover: true,
+		arrows: false,
+		slidesToShow: 1,
 	  slidesToScroll: 1,
 	  autoplay: true,
-	  autoplaySpeed: 1750
+	  autoplaySpeed: 2500
 	});
 
 
