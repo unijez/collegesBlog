@@ -309,7 +309,8 @@ blockquote::before {
 	width: 100%;
 	height: auto;
 	margin-bottom: 150px;
-	padding-top: 50px;
+	padding-top: 100px;
+	border-top: 1px solid $main-text-grey;
 	background: rgba(245,245,245,1);
 	background: -moz-linear-gradient(top, rgba(245,245,245,1) 72%, rgba(255,255,255,1) 100%);
 	background: -webkit-gradient(left top, left bottom, color-stop(72%, rgba(245,245,245,1)), color-stop(100%, rgba(255,255,255,1)));
