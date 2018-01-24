@@ -1790,17 +1790,6 @@ blockquote::before {
   padding-top: 25px; }
 
 /* Footer */
-.footer-top {
-  height: 350px;
-  width: 100%;
-  background: #444444;
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-content: stretch;
-  align-items: center; }
-
 .footer-bottom {
   height: 100px;
   width: 100%;
