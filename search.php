@@ -21,7 +21,10 @@ get_header(); ?>
 
 			<div class="main-container">
 
-				<h3 class="latest-posts">LATEST POSTS</h3>
+				<h3 class="latest-posts">
+						<?php echo $wp_query->found_posts; ?>
+						<?php _e( 'Search Results Found For', 'locale' ); ?>: "<?php the_search_query(); ?>"
+				</h3>
 				<hr></hr>
 
 				<div class="row">
