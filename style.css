@@ -847,7 +847,7 @@ h1, h2, h3, h4, h5, h6, p {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
-  z-index: 0;
+  z-index: 3;
   display: none; }
   .overlay.menuOpen {
     display: block; }
@@ -866,7 +866,7 @@ button {
   margin-left: 0;
   height: 100%;
   position: fixed;
-  z-index: 2;
+  z-index: 4;
   top: 0;
   right: 0;
   display: flex;
@@ -1093,7 +1093,8 @@ header {
     height: 94px;
     position: absolute;
     top: 31px;
-    left: 290px; }
+    left: 290px;
+    z-index: 0; }
     header .central h1 {
       height: 100%;
       align-self: left;
