@@ -25,16 +25,20 @@ header{
 
         background-color: #212121;
         display: flex;
-
+				height: 94px;
+				position: absolute;
+				top: 31px;
+				left: 290px;
 
         h1 {
-
+						height: 100%;
             align-self: left;
             padding-left: 20px;
             letter-spacing: 0.06em;
             @include font-size(22px);
             line-height: 27px;
             margin: 0;
+				    padding: 20px;
         }
 
     }
@@ -141,6 +145,7 @@ width: 100%;
             width: 100%;
             left: 0;
             top: 60;
+						display: none;
         }
 
 	}

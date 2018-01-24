@@ -1043,6 +1043,7 @@ button {
 .comment-tabs {
   margin: 0px;
   padding: 0px;
+<<<<<<< HEAD
   list-style: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1070,6 +1071,24 @@ button {
 
 .comment-tab__tab-content {
   display: none;
+=======
+  list-style: none; }
+
+.comment-tabs li {
+  background: none;
+  color: #222;
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer; }
+
+.comment-tabs li.current {
+  background: #ededed;
+  color: #222; }
+
+.comment-tab__tab-content {
+  display: none;
+  background: #ededed;
+>>>>>>> ab80fbabccfbde3eaa8fe18c635f5c2226ddba2f
   padding: 15px; }
 
 .comment-tab__tab-content.current {
@@ -1089,8 +1108,13 @@ header {
       width: 250px; }
   header .central {
     background-color: #212121;
-    display: flex; }
+    display: flex;
+    height: 94px;
+    position: absolute;
+    top: 31px;
+    left: 290px; }
     header .central h1 {
+      height: 100%;
       align-self: left;
       padding-left: 20px;
       letter-spacing: 0.06em;
@@ -1098,7 +1122,8 @@ header {
       font-size: 1.375rem;
       line-height: 1.0909090909;
       line-height: 27px;
-      margin: 0; }
+      margin: 0;
+      padding: 20px; }
   header .right {
     display: flex;
     flex-grow: 1;
@@ -1157,7 +1182,8 @@ header {
     header .central {
       width: 100%;
       left: 0;
-      top: 60; } }
+      top: 60;
+      display: none; } }
 
 /*---------------------------------------------
     Classes accessed by the jScript - Brennan
@@ -1462,7 +1488,8 @@ header {
     .slick-slide .overlay-slide .readmore {
       width: 30%;
       margin: 0 auto;
-      background-color: rgba(0, 0, 0, 0.4); }
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 10px; }
       .slick-slide .overlay-slide .readmore p {
         color: #fff;
         margin: 0; }
@@ -1502,6 +1529,7 @@ li.slick-active button {
   .slick-track > .slick-slide > a {
     display: none; }
   .slick-track > .slick-slide img {
+    width: 100%;
     margin-top: -75px;
     margin-bottom: -75px;
     z-index: -1; }
@@ -1515,6 +1543,29 @@ li.slick-active button {
     margin-bottom: 15px; }
   .overlay-slide > .item-text h2, .overlay-slide > .item-text .brighter > a {
     color: #fff !important; }
+
+@media (max-width: 46.24em) {
+  .hero-header {
+    height: 350px; }
+  .readmore {
+    display: none; }
+  .slick-track > .slick-slide {
+    overflow-y: hidden;
+    height: 350%; }
+    .slick-track > .slick-slide > a {
+      display: none; }
+    .slick-track > .slick-slide img {
+      height: 320px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      z-index: -1; }
+  .overlay-slide > .item-text {
+    color: #fff; }
+    .overlay-slide > .item-text h2 {
+      font-size: 30px;
+      margin-bottom: 7.5px; }
+    .overlay-slide > .item-text h2, .overlay-slide > .item-text .brighter > a {
+      color: #fff !important; } }
 
 /* misc styles */
 body {
