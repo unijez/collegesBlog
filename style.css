@@ -1103,8 +1103,12 @@ header {
       top: 20px;
       right: 20px;
       margin-left: 20px; }
+  header .form-control {
+    font-family: "FontAwesome"; }
   header .right form {
     width: 100%; }
+  header .search-container {
+    position: relative; }
   @media (max-width: 46.24em) {
     header .left {
       flex-direction: column; }

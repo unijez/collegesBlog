@@ -128,11 +128,16 @@ register_nav_menu( 'main', 'Main Menu' );
 */
 
 function collegeBlog_search_form( $form ) {
-	$form = '<form role="search" method="get" id="searchform" class="searchform" action="' . esc_url( home_url( '/' ) ). '" >
-    <div><label class="screen-reader-text" for="s">' . __( 'Search for:', 'collegeBlog' ) . '</label>
-    <input type="text" placeholder="' . esc_attr__( 'Search', 'collegeBlog' ) . '" value="' . get_search_query() . '" name="s" id="s" class="blog-search" />
-    <input type="submit" id="searchsubmit" value="' . esc_attr__( 'Search', 'collegeBlog' ) . '" class="search-classes-here" />
-    </div>
+	$form = '
+
+		<form role="search" method="get" id="searchform" class="searchform" action="' . esc_url( home_url( '/' ) ). '" >
+
+				<label class="screen-reader-text" for="s">' . __( 'Search for:', 'collegeBlog' ) . '</label>
+		    <input type="text" placeholder="' . esc_attr__( 'Search', 'collegeBlog' ) . '" value="' . get_search_query() . '" name="s" id="s" class="blog-search" />
+
+
+				<input type="submit" id="searchsubmit" value="&#xf002;" class="search-classes-here" />
+
     </form>';
 
 	return $form;
