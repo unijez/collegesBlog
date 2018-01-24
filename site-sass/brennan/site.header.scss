@@ -114,6 +114,11 @@ width: 100%;
 
 }
 
+.collapse {
+	min-width: 300px;
+	display: flex;
+}
+
 // MQ
 
 .searchform {

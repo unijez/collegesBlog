@@ -1053,6 +1053,9 @@ header {
     color: #fff; }
   header .search-container ::placeholder {
     color: #fff; }
+  header .collapse {
+    min-width: 300px;
+    display: flex; }
   @media (max-width: 61.24em) {
     header .searchform {
       display: none; } }
@@ -1366,6 +1369,20 @@ header {
     background-color: rgba(34, 34, 34, 0.6);
     z-index: 1;
     position: absolute; }
+    .slick-slide .overlay-slide .readmore {
+      width: 30%;
+      margin: 0 auto;
+      background-color: rgba(0, 0, 0, 0.4); }
+      .slick-slide .overlay-slide .readmore p {
+        color: #fff;
+        margin: 0; }
+      .slick-slide .overlay-slide .readmore a {
+        color: #32a0a7; }
+    .slick-slide .overlay-slide .item-text {
+      margin: 0 auto;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%); }
 
 .slick-dots {
   bottom: -5px; }
@@ -1389,15 +1406,25 @@ li.slick-list button:hover {
 li.slick-active button {
   background-color: #656565; }
 
-.slick-track .slick-slide {
+.slick-track > .slick-slide {
   overflow-y: hidden;
   height: 600px; }
-  .slick-track .slick-slide a {
+  .slick-track > .slick-slide > a {
     display: none; }
-  .slick-track .slick-slide img {
+  .slick-track > .slick-slide img {
     margin-top: -75px;
     margin-bottom: -75px;
     z-index: -1; }
+
+.overlay-slide > .item-text {
+  color: #fff; }
+  .overlay-slide > .item-text a {
+    display: block; }
+  .overlay-slide > .item-text h2 {
+    font-size: 60px;
+    margin-bottom: 15px; }
+  .overlay-slide > .item-text h2, .overlay-slide > .item-text .brighter > a {
+    color: #fff !important; }
 
 /* misc styles */
 body {

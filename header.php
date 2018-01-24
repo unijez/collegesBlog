@@ -39,7 +39,7 @@
             <h1>Lincoln International <br> Business School</h1>
         </div>
         <div class="right">
-					
+
 					<?php get_search_form() ?>
 
           <button type="button" class="nav-button">
@@ -52,7 +52,7 @@
 
 
         <nav class="global-nav retract">
-
+					<div class="collapse">
 							<?php
 							$defaults = array(
 								'theme_location'  => 'main',
@@ -89,8 +89,7 @@
 								</a>
 
 							</div> <!-- links -->
-
-
+						</div>
 
         </nav> <!-- global-nav retract -->
 

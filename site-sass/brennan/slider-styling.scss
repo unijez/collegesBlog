@@ -14,6 +14,28 @@
     background-color: rgba(34, 34, 34, 0.6);
     z-index: 1;
     position: absolute;
+
+    .readmore {
+      width: 30%;
+      margin: 0 auto;
+      background-color: rgba(#000000, 0.4);
+
+      p {
+        color: #fff;
+        margin: 0;
+      }
+
+      a {
+        color: #32a0a7;
+      }
+    }
+
+    .item-text {
+      margin: 0 auto;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 }
 
@@ -47,10 +69,10 @@ li.slick-active button{
   background-color: rgb(101, 101, 101);
 }
 
-.slick-track .slick-slide {
+.slick-track > .slick-slide {
   overflow-y: hidden;
   height: 600px;
-  a {
+  > a {
     display: none;
   }
 
@@ -58,6 +80,25 @@ li.slick-active button{
     margin-top: -75px;
     margin-bottom: -75px;
     z-index: -1;
+  }
+
+}
+
+.overlay-slide > .item-text{
+
+  color: #fff;
+
+  a {
+    display: block;
+  }
+
+  h2 {
+    font-size: 60px;
+    margin-bottom: 15px;
+  }
+
+  h2, .brighter > a{
+    color: #fff !important;
   }
 
 }
