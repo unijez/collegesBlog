@@ -1043,7 +1043,6 @@ button {
 .comment-tabs {
   margin: 0px;
   padding: 0px;
-<<<<<<< HEAD
   list-style: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1071,24 +1070,6 @@ button {
 
 .comment-tab__tab-content {
   display: none;
-=======
-  list-style: none; }
-
-.comment-tabs li {
-  background: none;
-  color: #222;
-  display: inline-block;
-  padding: 10px 15px;
-  cursor: pointer; }
-
-.comment-tabs li.current {
-  background: #ededed;
-  color: #222; }
-
-.comment-tab__tab-content {
-  display: none;
-  background: #ededed;
->>>>>>> ab80fbabccfbde3eaa8fe18c635f5c2226ddba2f
   padding: 15px; }
 
 .comment-tab__tab-content.current {
@@ -1809,17 +1790,6 @@ blockquote::before {
   padding-top: 25px; }
 
 /* Footer */
-.footer-top {
-  height: 350px;
-  width: 100%;
-  background: #444444;
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-content: stretch;
-  align-items: center; }
-
 .footer-bottom {
   height: 100px;
   width: 100%;
