@@ -1372,7 +1372,8 @@ header {
     .slick-slide .overlay-slide .readmore {
       width: 30%;
       margin: 0 auto;
-      background-color: rgba(0, 0, 0, 0.4); }
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 10px; }
       .slick-slide .overlay-slide .readmore p {
         color: #fff;
         margin: 0; }
@@ -1412,6 +1413,7 @@ li.slick-active button {
   .slick-track > .slick-slide > a {
     display: none; }
   .slick-track > .slick-slide img {
+    width: 100%;
     margin-top: -75px;
     margin-bottom: -75px;
     z-index: -1; }
