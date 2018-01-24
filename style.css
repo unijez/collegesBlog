@@ -1086,16 +1086,28 @@ header {
   header .left {
     display: flex; }
     header .left img {
+<<<<<<< HEAD
       width: 250px;
       margin-left: 30px; }
+=======
+      width: 225px; }
+>>>>>>> 1eda687c5ea07d0631b299e053be0e628e49145c
   header .central {
     position: relative;
     background-color: #212121;
     height: 95px;
     z-index: 0;
     display: flex;
+<<<<<<< HEAD
     padding: 0 20px;
     margin-left: 20px; }
+=======
+    height: 94px;
+    position: absolute;
+    top: 0px;
+    left: 250px;
+    z-index: 0; }
+>>>>>>> 1eda687c5ea07d0631b299e053be0e628e49145c
     header .central h1 {
       align-self: center;
       font-size: 25px;
