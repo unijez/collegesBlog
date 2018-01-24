@@ -983,8 +983,87 @@ button {
 /*@import "site-specific/site.grid";
 @import "site-specific/site.page";
 @import "site-specific/site.header";
-@import "site-specific/site.footer";
-@import "site-specific/site.post";*/
+@import "site-specific/site.footer";*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+  display: block; }
+
+.hentry {
+  margin: 0 0 3em; }
+
+.byline, .updated:not(.published) {
+  display: none; }
+
+.single .byline, .group-blog .byline {
+  display: inline; }
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em; }
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+  word-wrap: break-word; }
+
+.bypostauthor {
+  display: block; }
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%; }
+
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.wp-caption .wp-caption-text {
+  margin: 0.8075em 0; }
+
+.wp-caption-text {
+  text-align: center; }
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery-caption {
+  display: block;
+  text-align: left; }
+
+/*--------------------------------------------------------------
+## Comment Tabs
+--------------------------------------------------------------*/
+.comment-tabs {
+  margin: 0px;
+  padding: 0px;
+  list-style: none; }
+
+.comment-tabs li {
+  background: none;
+  color: #222;
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer; }
+
+.comment-tabs li.current {
+  background: #ededed;
+  color: #222; }
+
+.comment-tab__tab-content {
+  display: none;
+  background: #ededed;
+  padding: 15px; }
+
+.comment-tab__tab-content.current {
+  display: inherit; }
+
 /*--------------------------------------------------------------
 # Site Header - Brennan Styling
 --------------------------------------------------------------*/
@@ -999,8 +1078,13 @@ header {
       width: 250px; }
   header .central {
     background-color: #212121;
-    display: flex; }
+    display: flex;
+    height: 94px;
+    position: absolute;
+    top: 31px;
+    left: 290px; }
     header .central h1 {
+      height: 100%;
       align-self: left;
       padding-left: 20px;
       letter-spacing: 0.06em;
@@ -1008,7 +1092,8 @@ header {
       font-size: 1.375rem;
       line-height: 1.0909090909;
       line-height: 27px;
-      margin: 0; }
+      margin: 0;
+      padding: 20px; }
   header .right {
     display: flex;
     flex-grow: 1;
