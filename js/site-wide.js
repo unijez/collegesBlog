@@ -72,4 +72,19 @@ jQuery(document).ready(function($) {
 	});
 
 
+
+//	Comment Tabs
+
+$('ul.comment-tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.comment-tabs li').removeClass('current');
+		$('.comment-tab__tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	})
+
+
+
 });

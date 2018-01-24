@@ -1435,7 +1435,8 @@ a {
 
 /* Needed Styles for index.php and archive.php */
 .main-container {
-  padding: 10px; }
+  padding: 10px;
+  margin-top: 50px; }
 
 .latest-posts {
   text-align: center;

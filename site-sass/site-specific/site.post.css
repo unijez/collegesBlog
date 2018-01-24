@@ -1,104 +1,79 @@
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
-
 .sticky {
-    display: block;
-}
+  display: block; }
 
 .hentry {
-    margin: 0 0 3em;
-}
+  margin: 0 0 3em; }
 
 .byline, .updated:not(.published) {
-    display: none;
-}
+  display: none; }
 
 .single .byline, .group-blog .byline {
-    display: inline;
-}
+  display: inline; }
 
 .page-links {
-    clear: both;
-    margin: 0 0 1.5em;
-}
-
-
+  clear: both;
+  margin: 0 0 1.5em; }
 
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
-
 .comment-content a {
-    word-wrap: break-word;
-}
+  word-wrap: break-word; }
 
 .bypostauthor {
-    display: block;
-}
-
+  display: block; }
 
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
-
 .wp-caption {
-    margin-bottom: 1.5em;
-    max-width: 100%;
-}
+  margin-bottom: 1.5em;
+  max-width: 100%; }
 
 .wp-caption img[class*="wp-image-"] {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
 
 .wp-caption .wp-caption-text {
-    margin: 0.8075em 0;
-}
+  margin: 0.8075em 0; }
 
 .wp-caption-text {
-    text-align: center;
-}
+  text-align: center; }
 
 /*--------------------------------------------------------------
 ## Galleries
 --------------------------------------------------------------*/
-
 .gallery-caption {
-    display: block;
-    text-align: left;
-}
-
+  display: block;
+  text-align: left; }
 
 /*--------------------------------------------------------------
 ## Comment Tabs
 --------------------------------------------------------------*/
+.comment-tabs {
+  margin: 0px;
+  padding: 0px;
+  list-style: none; }
 
-		.comment-tabs{
-			margin: 0px;
-			padding: 0px;
-			list-style: none;
-		}
-		.comment-tabs li{
-			background: none;
-			color: #222;
-			display: inline-block;
-			padding: 10px 15px;
-			cursor: pointer;
-		}
+.comment-tabs li {
+  background: none;
+  color: #222;
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer; }
 
-		.comment-tabs li.current{
-			background: #ededed;
-			color: #222;
-		}
+.comment-tabs li.current {
+  background: #ededed;
+  color: #222; }
 
-		.tab-content{
-			display: none;
-			background: #ededed;
-			padding: 15px;
-		}
+.tab-content {
+  display: none;
+  background: #ededed;
+  padding: 15px; }
 
-		.tab-content.current{
-			display: inherit;
-		}
+.tab-content.current {
+  display: inherit; }
