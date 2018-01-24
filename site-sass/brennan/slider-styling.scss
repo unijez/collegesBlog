@@ -14,6 +14,28 @@
     background-color: rgba(34, 34, 34, 0.6);
     z-index: 1;
     position: absolute;
+
+    .readmore {
+      width: 30%;
+      margin: 0 auto;
+      background-color: rgba(#000000, 0.4);
+
+      p {
+        color: #fff;
+        margin: 0;
+      }
+
+      a {
+        color: #32a0a7;
+      }
+    }
+
+    .item-text {
+      margin: 0 auto;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 }
 
@@ -70,9 +92,13 @@ li.slick-active button{
     display: block;
   }
 
-  h5 {
-    font-size: 20px;
-    height: 25px;
+  h2 {
+    font-size: 60px;
+    margin-bottom: 15px;
+  }
+
+  h2, .brighter > a{
+    color: #fff !important;
   }
 
 }

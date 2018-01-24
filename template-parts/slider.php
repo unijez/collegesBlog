@@ -46,10 +46,15 @@
 
         <div class="overlay-slide item">
             <div class="item-text">
-              <h5><?php the_category(',');?></h5>
+              <h5 class="brighter"><?php the_category(',');?></h5>
               <a href="<?php the_permalink()?>">
                 <h2><?php the_title();?></h2>
               </a>
+              <div class="readmore">
+								<p><?php the_excerpt();?>
+                  <a href="<?php the_permalink()?>">Read More...</a>
+                </p>
+							</div> <!-- author -->
             </div> <!-- item-text -->
           </div> <!-- post -->
         </div> <!-- item -->
