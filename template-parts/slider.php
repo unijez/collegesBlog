@@ -44,7 +44,16 @@
 
         <?php endif; ?>
 
-      </div>    <!-- slick-slide -->
+        <div class="overlay-slide item">
+            <div class="item-text">
+              <h5><?php the_category(','); ?></h5>
+              <a href="<?php the_permalink();?>">
+                <h2><?php the_title();?></h2>
+              </a>
+              <p><?php the_excerpt();?></p>
+            </div> <!-- item-text -->
+          </div> <!-- post -->
+        </div> <!-- item -->
 
     <?php endwhile ?>
 
