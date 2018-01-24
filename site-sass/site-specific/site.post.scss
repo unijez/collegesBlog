@@ -93,12 +93,12 @@
 			color: #222;
 		}
 
-		.tab-content{
+		.comment-tab__tab-content{
 			display: none;
 			background: #ededed;
 			padding: 15px;
 		}
 
-		.tab-content.current{
+		.comment-tab__tab-content.current{
 			display: inherit;
 		}
