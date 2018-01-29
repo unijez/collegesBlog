@@ -61,7 +61,7 @@
 	
 	display: none;
 	
-	@include mq(tablet) {
+	@include mq(desktop) {
 		padding-right: $desktop-side-pad;
 		display: block;
 	}
