@@ -290,7 +290,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 	function slider_image() {
 		global $post;
-		$image_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+		$image_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'hero-header' );
 		echo $image_url;
 	}
 
