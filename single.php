@@ -60,9 +60,8 @@
 
 
 						<article class="blog-article">
-						 <div class="word-count"></div>
 						  <?php the_content();?>
-						</article>
+						</article> <!--blog-article-->
 
             </div> <!-- single-container -->
 
