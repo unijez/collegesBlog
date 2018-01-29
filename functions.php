@@ -290,11 +290,18 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 	function slider_image() {
 		global $post;
-		$image_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'hero-header' );
-		echo $image_url;
+		$image_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID));
+		/*$image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'hero-header', false);*/
+		if ($image_url[0] == false) {
+				$image_url = esc_url(get_template_directory_uri())."/images/largesliderimage.jpg";
+				echo $image_url;
+		} else {
+				echo $image_url;
+		}
 	}
 
  function default_image($thumbnail) {
+
 		if ( has_post_thumbnail() ) {
 			the_post_thumbnail($thumbnail);
 		} else {
