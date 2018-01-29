@@ -2431,7 +2431,7 @@ Colour Control
   @media (min-width: 46.25em) {
     .site-header__logo {
       width: auto;
-      order: initial; } }
+      order: inherit; } }
 
 .site-header__branding {
   background-color: #212121;
@@ -2441,7 +2441,7 @@ Colour Control
   @media (min-width: 46.25em) {
     .site-header__branding {
       width: auto;
-      order: initial; } }
+      order: inherit; } }
 
 .site-header__branding h1 {
   font-size: 25px;
@@ -2450,7 +2450,7 @@ Colour Control
 
 .site-header__search {
   display: none; }
-  @media (min-width: 46.25em) {
+  @media (min-width: 61.25em) {
     .site-header__search {
       padding-right: 30px;
       display: block; } }
