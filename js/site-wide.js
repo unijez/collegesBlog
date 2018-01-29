@@ -10,12 +10,12 @@ jQuery(document).ready(function($) {
 
 
 	 	function mobileMenuLaunch() {
-	 		menuButton.click( function(e) {
+	 		menuButton.add(overlay).click( function(e) {
 	 			e.preventDefault();
 	 			e.stopPropagation();
 	 			e.stopImmediatePropagation();
 	 	        var status = globalNav.hasClass('menu-active');
-
+	 			
 	 	      if(status){
 
 	 	        globalNav.removeClass('menu-active');
@@ -49,10 +49,10 @@ jQuery(document).ready(function($) {
 			round: true,
 			lang: 'en',
 			success: function() {
-				console.log('It worked!');
+//				console.log('It worked!');
 			},
 			error: function(message) {
-				console.log(message);
+//				console.log(message);
 				$article.find('.reading-time').remove();
 			}
 		});
