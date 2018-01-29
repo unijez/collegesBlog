@@ -28,28 +28,39 @@
 
 <div class="overlay"></div>
 
- <header class="site-header">
 
+<header class="site-header">
 
+	
+	<div class="site-module site-module-inner level-elements">
+	
 
-        <div class="left">
-          <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/uol_landscape.svg" alt="University Of Lincoln Logo">
-        </div>
-        <div class="central">
+        <div class="site-header__logo level-left">
+		  <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="<?php bloginfo( 'name' ); ?>">
+	          <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/uol_landscape.svg" alt="<?php bloginfo( 'name' ); ?> University Of Lincoln Logo">
+		  </a>
+        </div> <!--site-header__logo-->
+		
+        <div class="site-header__branding level-left">
             <h1>Lincoln International <br> Business School</h1>
-        </div>
-        <div class="right">
+        </div> <!--site-header__branding-->
+		
+        <div class="site-header__search level-right">
 
 					<?php get_search_form() ?>
 
-          <button type="button" class="nav-button">
+          
+		  
+        </div> <!-- site-header__search -->
 
-          	<i class="fal fa-bars"></i>
-          	<i class="fal fa-times"></i>
-
-          </button>
-        </div> <!-- right -->
-
+		
+		<button type="button" class="nav-button">
+		
+		          	<i class="fal fa-bars"></i>
+		          	<i class="fal fa-times"></i>
+		
+		          </button>
+		
 
         <nav class="global-nav retract">
 					<div class="collapse">
@@ -92,10 +103,10 @@
 
         </nav> <!-- global-nav retract -->
 
+	</div> <!--site-module-inner-->
+
+</header>
 
 
-      </header>
 
-
-
-	<div id="content" class="site-content">
+<div id="content" class="site-content">

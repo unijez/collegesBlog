@@ -129,7 +129,7 @@ register_nav_menu( 'main', 'Main Menu' );
 
 function collegeBlog_search_form( $form ) {
 	$form =
-	'<form role="search" method="get" id="searchform" class="searchform" action="' . esc_url( home_url( '/' ) ). '" >
+	'<form role="search" method="get" id="searchform" class="site-header__search--form" action="' . esc_url( home_url( '/' ) ). '" >
 		<div class="search-container">
 			<label class="screen-reader-text" for="s">' . __( 'Search for:', 'collegeBlog' ) . '</label>
 			<input type="text" placeholder="' . esc_attr__( 'Search', 'collegeBlog' ) . '" value="' . get_search_query() . '" name="s" id="s" class="blog-search" />
