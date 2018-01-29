@@ -1363,7 +1363,8 @@ width: 100%;
   position: relative;
   height: 700px;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  background-position: center; }
   .slick-slide .overlay-slide {
     top: 0;
     left: 0;
