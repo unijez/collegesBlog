@@ -1,6 +1,12 @@
 /*--------------------------------------------------------------
 # Site Header
 --------------------------------------------------------------*/
+
+@mixin input-border {
+	border-bottom: 1px solid $nav-underline;
+}
+
+
 .site-header{
 	
 	.site-module {
@@ -30,6 +36,7 @@
 	width: 75%;
 	
 	@include mq(tablet) {
+		@include align-self(center);
 		width: auto;
 		order: inherit;
 	}
@@ -54,10 +61,13 @@
 
 .site-header__branding h1 {
 	@include font-size(25px);
+	letter-spacing: 0.04em;
 	margin: 0;
 }
 
 .site-header__search {
+	
+	
 	
 	display: none;
 	
@@ -73,6 +83,7 @@
 		align-self: center;
 		padding: 10px;
 		z-index: 2;
+		@include input-border;
 	}
 
 	button {
@@ -80,6 +91,7 @@
 		width: 38px;
 		height: 38px;
 		margin-left: -5px;
+		@include input-border;
 	}
 
 	// Placeholder text colour
@@ -109,12 +121,21 @@
 }
 
 
-@include mq($until: tablet) {
 
-		.nav-button {
-			order: 2;
-			margin-left: auto;
-			margin-top: -$nav-button-size;
-		}
 
+.nav-button {
+	order: 2;
+	margin-left: auto;
+	margin-top: -$nav-button-size;
+			
+	@include mq(tablet) {
+		margin-top: -82px;
+	}
+	
+	@include mq(desktop) {
+		order: inherit;
+		margin-top: 0;
+	}
+	
 }
+

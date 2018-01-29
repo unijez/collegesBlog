@@ -44,6 +44,7 @@ $nav-button-size: 77px !default;
 	z-index: 100;
 	@include flexbox;
 	@include justify-content(center);
+	@include align-items(center);
 	@include vendor(transition, $global-transition);
 	height: $nav-button-size;
 	width: $nav-button-size;
