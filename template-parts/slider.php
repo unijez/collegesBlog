@@ -19,7 +19,7 @@
 
     <?php while ( $home_work_posts->have_posts() ) : $home_work_posts->the_post() ?>
 
-      <div class="slick-slide">
+      <div class="slick-slide" style="background-image: url(<?php slider_image();?>)">
 
         <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"> <?php the_title(); ?> </a>
 
@@ -31,16 +31,6 @@
             $imgwidth = $imgdata[1];
             $wanted_width = 1600;
           ?>
-
-          <?php if ( $imgwidth >= $wanted_width ) : ?>
-
-            <?php default_image('hero-header');?>
-
-          <?php else: ?>
-
-            <?php default_image('hero-header');?>
-
-          <?php endif; ?>
 
         <?php endif; ?>
 

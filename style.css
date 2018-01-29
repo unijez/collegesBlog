@@ -1471,7 +1471,9 @@ button {
 
 .slick-slide {
   position: relative;
-  height: 700px; }
+  height: 700px;
+  background-repeat: no-repeat;
+  background-size: cover; }
   .slick-slide .overlay-slide {
     top: 0;
     left: 0;
