@@ -288,8 +288,13 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 /**
  * Default Image Function: adds default image when no preset thumbnail is found
  */
- function default_image($thumbnail) {
+	function slider_image() {
+		global $post;
+		$image_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+		echo $image_url;
+	}
 
+ function default_image($thumbnail) {
 		if ( has_post_thumbnail() ) {
 			the_post_thumbnail($thumbnail);
 		} else {
