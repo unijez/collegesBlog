@@ -37,12 +37,16 @@
    ======================================== */
 
 
+$nav-button-size: 77px !default;
+
 .nav-button {
+	position: relative;
+	z-index: 100;
 	@include flexbox;
 	@include justify-content(center);
 	@include vendor(transition, $global-transition);
-	height: 30px;
-	width: 30px;
+	height: $nav-button-size;
+	width: $nav-button-size;
 	@include font-size(30px);
 	color: white;
 	

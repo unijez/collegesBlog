@@ -3,48 +3,19 @@
 --------------------------------------------------------------*/
 
 .site-header{
-
+	padding: 0;
 	background-color: $headerbg-grey;
 	color: #fff;
-	display: flex;
-	height: 95px;
+	/*display: flex;*/
+	min-height: 95px;
 
 	.left {
 
-        display: flex;
-
-
-        img {
-/*<<<<<<< HEAD
-
-            width: 250px;
-						margin-left: 30px;
-
-=======
-            width: 225px;
->>>>>>> 1eda687c5ea07d0631b299e053be0e628e49145c*/
-        }
-
+     
 	}
 
-    .central {
+  /*  .central {
 
-/*<<<<<<< HEAD
-				position: relative;
-        background-color: $nav-underline;
-				height: 95px;
-=======
-        background-color: #212121;
-        display: flex;
-				height: 94px;
-				position: absolute;
-				top: 0px;
-				left: 250px;
->>>>>>> 1eda687c5ea07d0631b299e053be0e628e49145c*/
-				z-index: 0;
-				display: flex;
-				padding: 0 20px;
-				margin-left: 20px;
 
         h1 {
 
@@ -55,9 +26,9 @@
 
         }
 
-    }
+    }*/
 
-	.right {
+	/*.right {
 
         display: flex;
 		flex-grow: 1;
@@ -73,12 +44,12 @@
             right: 20px;
             margin-left: 20px;
 
-    }
-}
+		}
+	}*/
 
 // Search Bar
 
-.searchform {
+/*.searchform {
 width: 100%;
 @include flexbox;
 
@@ -87,54 +58,13 @@ width: 100%;
 		margin: 0 auto;
 	}
 
-}
+}*/
 
-.search-container {
 
-	input {
-		border: none;
-		background: $searchbg-grey;
-		align-self: center;
-		padding: 10px;
-		z-index: 2;
-	}
-
-	button {
-		background: $searchbg-grey;
-		width: 38px;
-		height: 38px;
-		margin-left: -5px;
-	}
-
-	// Placeholder text colour
-
-	::-webkit-input-placeholder {
-			color:    #fff;
-	}
-	:-moz-placeholder {
-		 color:    #fff;
-		 opacity:  1;
-	}
-	::-moz-placeholder {
-		 color:    #fff;
-		 opacity:  1;
-	}
-	:-ms-input-placeholder {
-		 color:    #fff;
-	}
-	::-ms-input-placeholder {
-		 color:    #fff;
-	}
-
-	::placeholder {
-		 color:    #fff;
-	}
-
-}
 
 // MQ
 
-.searchform {
+/*.searchform {
 
 	@include mq($until:desktop){
 		display: none;
@@ -170,6 +100,6 @@ width: 100%;
 
 
 
-    }
+    }*/
 
 }

@@ -2,6 +2,18 @@
 # Page Elements
 --------------------------------------------------------------*/
 
+.site-module-inner {
+	@include module-inner-wrap;
+}
+
+
+.site-module {
+	padding: $mobile-side-pad;
+
+}
+
+
+
 .sitebody-content {
 	position: relative;
 	word-wrap: break-word;
@@ -11,7 +23,7 @@
 
 /*
 Case Studies Row Test
-*/
+
 
 
 .grid-row{
@@ -82,7 +94,7 @@ $green-colour: #9BC53D!default;
 }
 
 
-/*Text Control*/
+Text Control
 
 
 .college-type {
@@ -148,16 +160,16 @@ $green-colour: #9BC53D!default;
 }
 
 
-/*
+
 Triangle Control
-*/
+
 
 .small-tri:before {
 	width: 0;
 	height: 0;
 	border-style: solid;
 	border-width: 10px 10px 0 10px;
-	/*border-color: #007bff transparent transparent transparent;*/
+	border-color: #007bff transparent transparent transparent;
 	
 }
 
@@ -193,7 +205,7 @@ Triangle Control
 
 
 
-/*Hover Effects*/
+Hover Effects
 
 .article-block:hover .article-block_detail{
 	height: $case-article-height-hover;
@@ -219,7 +231,7 @@ Triangle Control
 
 
 
-/*Colour Control*/
+Colour Control
 
 .blue-colour .article-block_detail{
 	border-color: $blue-colour;
@@ -272,4 +284,4 @@ Triangle Control
 
 .green-colour.small-tri:before {
 	border-color: $green-colour transparent transparent transparent;
-}
+}*/

@@ -2,7 +2,7 @@
 # Grid Control
 --------------------------------------------------------------*/
 
-.grid-row {
+/*.grid-row {
 	margin-left: -$toast-gutter-width;
 	margin-right: -$toast-gutter-width;
 }
@@ -11,4 +11,62 @@
 	width: 33.333333%;
 	padding: 0 $toast-gutter-width;
 	position: relative;
+}
+*/
+
+
+/*Level Elements*/
+
+
+.level-elements {
+	@include align-items(center);
+	@include justify-content(space-between);
+
+}
+
+.level-left,
+.level-right {
+	@include flex-basis(auto);
+	@include flex-grow(0);
+	@include flex-shrink(0);
+	
+}
+
+.level-row {
+	@include flex-direction(row);
+	
+}
+
+
+.level-column {
+	@include flex-direction(column);
+	
+}
+
+
+@include mq(tablet) {
+	
+	.level-elements {
+		@include flexbox;
+		
+	}
+	
+	.level-left,
+	.level-right {
+		@include flexbox;
+	}
+	
+	.level-left {
+	  @include align-items(flex-start);
+	  @include justify-content(flex-start);
+	  
+	}
+	
+	.level-right {
+		@include align-items(flex-end);
+		@include justify-content(flex-end);
+		 margin-left: auto;
+	          
+	}
+
 }
