@@ -1086,28 +1086,31 @@ header {
   header .left {
     display: flex; }
     header .left img {
-<<<<<<< HEAD
-      width: 250px;
-      margin-left: 30px; }
+      /*<<<<<<< HEAD
+
+            width: 250px;
+						margin-left: 30px;
+
 =======
-      width: 225px; }
->>>>>>> 1eda687c5ea07d0631b299e053be0e628e49145c
+            width: 225px;
+>>>>>>> 1eda687c5ea07d0631b299e053be0e628e49145c*/ }
   header .central {
-    position: relative;
-    background-color: #212121;
-    height: 95px;
+    /*<<<<<<< HEAD
+				position: relative;
+        background-color: $nav-underline;
+				height: 95px;
+=======
+        background-color: #212121;
+        display: flex;
+				height: 94px;
+				position: absolute;
+				top: 0px;
+				left: 250px;
+>>>>>>> 1eda687c5ea07d0631b299e053be0e628e49145c*/
     z-index: 0;
     display: flex;
-<<<<<<< HEAD
     padding: 0 20px;
     margin-left: 20px; }
-=======
-    height: 94px;
-    position: absolute;
-    top: 0px;
-    left: 250px;
-    z-index: 0; }
->>>>>>> 1eda687c5ea07d0631b299e053be0e628e49145c
     header .central h1 {
       align-self: center;
       font-size: 25px;
@@ -1622,8 +1625,14 @@ hr {
 .heading-image {
   width: 100%;
   height: 75vh;
-  background-color: #00325f;
-  /* Defult background image */
+  background: -moz-linear-gradient(50% 100% 90deg, #002147 0%, #012349 42.73%, #062952 67.78%, #0d3260 88.2%, #143b6c 100%);
+  background: -webkit-linear-gradient(90deg, #002147 0%, #012349 42.73%, #062952 67.78%, #0d3260 88.2%, #143b6c 100%);
+  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0, #002147), color-stop(0.4273, #012349), color-stop(0.6778, #062952), color-stop(0.882, #0d3260), color-stop(1, #143b6c));
+  background: -o-linear-gradient(90deg, #002147 0%, #012349 42.73%, #062952 67.78%, #0d3260 88.2%, #143b6c 100%);
+  background: -ms-linear-gradient(90deg, #002147 0%, #012349 42.73%, #062952 67.78%, #0d3260 88.2%, #143b6c 100%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#002147', endColorstr='#143B6C' ,GradientType=0)";
+  background: linear-gradient(0deg, #002147 0%, #012349 42.73%, #062952 67.78%, #0d3260 88.2%, #143b6c 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#143B6C',endColorstr='#002147' , GradientType=0);
   background-size: cover;
   background-position: center center;
   text-align: center;
