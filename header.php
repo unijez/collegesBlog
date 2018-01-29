@@ -28,7 +28,7 @@
 
 <div class="overlay"></div>
 
- <header>
+ <header class="site-header">
 
 
 
@@ -95,9 +95,6 @@
 
 
       </header>
-
-</main>
-
 
 
 

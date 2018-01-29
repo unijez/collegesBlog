@@ -15,6 +15,12 @@
 
 ?>
 
+
+</div> <!--site-content-->
+
+
+<footer class="site-footer">
+
   <div class="footer-top">
 
     <div class="col">
@@ -36,6 +42,9 @@
 
   </div>
 
+
+
+</footer> <!-- site-footer-->
 
 
 <?php wp_footer(); ?>
