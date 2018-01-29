@@ -49,6 +49,9 @@ $nav-button-size: 77px !default;
 	width: $nav-button-size;
 	@include font-size(30px);
 	color: white;
+	//IE 11 Center fix
+	@include flex-direction(column);
+	
 	
 }
 

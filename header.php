@@ -55,11 +55,13 @@
 
 		
 		<button type="button" class="nav-button">
+				  	
+			<span class="site-icon">
+			  	<i class="fal fa-bars"></i>
+			  	<i class="fal fa-times"></i>
+			</span>
 		
-		          	<i class="fal fa-bars"></i>
-		          	<i class="fal fa-times"></i>
-		
-		          </button>
+		</button>
 		
 
         <nav class="global-nav retract">
