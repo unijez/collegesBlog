@@ -72,7 +72,7 @@
 	display: none;
 	
 	@include mq(desktop) {
-		padding-right: $desktop-side-pad;
+		/*padding-right: $desktop-side-pad;*/
 		display: block;
 	}
 	
@@ -135,6 +135,9 @@
 	@include mq(desktop) {
 		order: inherit;
 		margin-top: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
 	}
 	
 }
