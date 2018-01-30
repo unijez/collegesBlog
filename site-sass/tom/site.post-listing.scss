@@ -38,18 +38,18 @@ hr {
 	flex-wrap: wrap;
 }
 
-.item {
+.jp-relatedposts-post {
 	margin: 0 auto;
 	padding: $mobile-side-pad;
 }
 
-.item img {
+.jp-relatedposts-post a img {
 	width: 100%;
 	height: auto;
 	display: block;
 }
 
-.item-text {
+.jp-relatedposts-post h4 {
 	text-align: center;
 	padding-bottom: 20px;
   padding-top: 30px;
