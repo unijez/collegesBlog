@@ -277,6 +277,13 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
+
+/**
+ * Implement ACF.
+ */
+require get_template_directory() . '/inc/functions-acf.php';
+
+
 /**
  * Load Jetpack compatibility file.
  */
