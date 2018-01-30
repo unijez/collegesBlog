@@ -72,10 +72,13 @@
 	display: none;
 	
 	@include mq(desktop) {
-		/*padding-right: $desktop-side-pad;*/
+		padding-right: $desktop-side-pad;
 		display: block;
 	}
 	
+	@include mq(wide) {
+		padding-right: $nav-button-size *2;
+	}
 	
 	input {
 		border: none;
@@ -129,15 +132,18 @@
 	margin-top: -$nav-button-size;
 			
 	@include mq(tablet) {
-		margin-top: -82px;
+		margin-top: 0;
+		bottom: auto;
+		
 	}
 	
-	@include mq(desktop) {
+	@include mq(wide) {
 		order: inherit;
-		margin-top: 0;
+		margin: auto;
 		position: absolute;
 		right: 0;
 		top: 0;
+		bottom: 0;
 	}
 	
 }
