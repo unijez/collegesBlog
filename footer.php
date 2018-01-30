@@ -22,21 +22,8 @@
 <footer class="site-footer">
 
   <div class="footer-top">
-<<<<<<< HEAD
 
 
-  	<div class="site-module site-module-inner">
-
-
-  	    <div class="columns">
-
-  			<?php if( is_active_sidebar('footer-1') ):?>
-
-  	        <div class="column column--medium-1-of-2 column--1-of-4">
-
-=======
-  	
-  	
   	<div class="site-module site-module-inner"> 
   	 
   	 
@@ -46,7 +33,7 @@
   		
   	        <div class="column column--medium-1-of-2 column--1-of-4">	
   	        	
->>>>>>> 084a4effa4e706d998d06ed0b99735c06f061864
+
   	        	<?php dynamic_sidebar('footer-1');?>
 
   	        </div>	 <!--column-->
@@ -76,32 +63,21 @@
   				</div>	 <!--column-->
 
   				<?php endif; ?>
-<<<<<<< HEAD
 
-
-  			<div class="column column--medium-1-of-2 column--1-of-4">
-
-=======
-  	
-  			
+	
   			<?php if( function_exists('acf_add_local_field_group') )	:?>
   			
   			<div class="column column--medium-1-of-2 column--1-of-4">	
   					
->>>>>>> 084a4effa4e706d998d06ed0b99735c06f061864
+
   					<!--Display Social Media List-->
   					<?php get_template_part( 'template-parts/site/social-media', 'icons' ); ?>
 
   			</div>	 <!--column-->
-<<<<<<< HEAD
 
-
-
-=======
-  			
-  			<?php endif; ?>
+			<?php endif; ?>
   		
->>>>>>> 084a4effa4e706d998d06ed0b99735c06f061864
+
   	    </div> <!--columns-->
 
   	</div> <!--site-module-inner-->
