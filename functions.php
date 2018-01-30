@@ -301,11 +301,21 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 		}
 	}
 
- function default_image($thumbnail) {
+		function default_image($thumbnail) {
 
-		if ( has_post_thumbnail() ) {
-			the_post_thumbnail($thumbnail);
-		} else {
-			?><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/default-image.jpg" alt="<?php the_title(); ?>" /><?php
+			if ( has_post_thumbnail() ) {
+				the_post_thumbnail($thumbnail);
+			} else {
+				?><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/default-image.jpg" alt="<?php the_title(); ?>" /><?php
+			}
 		}
+
+	/*
+	 * JetPack Functions
+	 */
+	function jetpackme_remove_rp() {
+		$jprp = Jetpack_RelatedPosts::init();
+		$callback = array($jprp, 'filter_add_target_to_dom');
+		remove_filter('the_content', $callback, 40);
 	}
+	add_filter('wp', 'jetpackme_remove_rp', 20);
