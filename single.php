@@ -103,7 +103,7 @@
     				<hr></hr>
 
     				<div class="row">
-
+                <?php echo do_shortcode('[jetpack-related-posts]'); ?>
     					<!--<//?php while ( have_posts() ) : the_post(); ?>
 
     					<div class="item">
@@ -123,7 +123,7 @@
     								</a>
     							</div> <!-- item-text -->
     						<!--</div> <!-- post -->
-                <!--<//?php echo do_shortcode('[jetpack-related-posts]'); ?>
+                <!-- ?>
     					<!--</div> <!-- item -->
 
               <!--<div class="item">
