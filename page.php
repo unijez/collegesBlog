@@ -21,22 +21,29 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">\
 
-			<div class="single-container">
+			<!-- Main text and image content -->
+			 <div class="single-container">
 
-			<?php
-			while ( have_posts() ) : the_post();
+				 <?php
+ 			 		have_posts();
+  				the_post();
 
-				get_template_part( 'template-parts/content', 'page' );
+ 					get_template_part( 'template-parts/content', 'page' );
+ 				?>
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+			</div> <!-- single-container -->
 
-			endwhile; // End of the loop.
-			?>
+			<!-- Comments -->
+					<?php if ( comments_open() || get_comments_number() ) : ?>
 
-		</div>
+						<div class="comments-container">
+							<div class="single-container">
+
+						<?php  comments_template(); ?>
+
+					</div> <!-- comments-container -->
+
+				<?php  endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
