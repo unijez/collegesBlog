@@ -11,10 +11,9 @@
     background-color: rgba(0,0,0, 0);
     position: absolute;
     z-index: 3;
-    display: none;
-	@include menu-animation;
-	opacity: 0;
-	visibility: hidden;
+	  @include menu-animation;
+	  opacity: 0;
+	  visibility: hidden;
     &.menuOpen {
 		display: block;
 		cursor: pointer;
