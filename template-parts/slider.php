@@ -26,7 +26,7 @@
         <?php if (has_post_thumbnail()) : ?>
 
           <?php
-            $imgdata = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID ), 'hero-header' );
+            $imgdata = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID ), 'hero-header',false);
 
             $imgwidth = $imgdata[1];
             $wanted_width = 1600;
