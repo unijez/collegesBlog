@@ -319,3 +319,28 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 		remove_filter('the_content', $callback, 40);
 	}
 	add_filter('wp', 'jetpackme_remove_rp', 20);
+
+	function jetpackme_related_posts_headline($headline) {
+		$headline = sprintf(
+			'<h3 class="jp-widget-title">%s</h3>',
+			esc_html('YOU MIGHT ALSO LIKE');
+		);
+		return $headline;
+	}
+	add_filter('jetpack_relatedposts_filter_headline','jetpackme_related_posts_headline');
+
+	function jetpackme_more_related_posts($options) {
+		$options['size'] = 3;
+		return $options;
+	}
+	add_filter('jetpack_relatedposts_filter_options','jetpackme_more_related_posts');
+
+	function jetpackchange_image_size($thumbnail_size) {
+		$thumbnail_size['width'] = 433.317;
+		$thumbnail_size['height'] = 289.233;
+		$thumbnail_size['crop'] = true;
+		return $thumbnail_size;
+	}
+	add_filter('jetpack_relatedposts_filter_thumbnail_size', 'jetpackchange_image_size');
+
+	add_filter('jetpack_relatedposts_filter_post_contex','__return_empty_string');
