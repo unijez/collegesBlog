@@ -32,7 +32,12 @@
 
               <div class="heading-image" style="background-image: url('<?php echo $large_image_url[0]; ?>')">
                 <div class="heading-image_opacity">
-                  <h4><?php the_category(','); ?></h4>
+                  <h4>
+                    <?php $categories = get_the_category();
+									  if ( ! empty( $categories ) ) {
+    								   echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
+									  }?>
+                  </h4>
                   <h1><?php the_title();?></h1>
 				          <h5>Reading time <span class="eta"></span></h5>
                 </div>

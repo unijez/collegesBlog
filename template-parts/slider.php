@@ -36,7 +36,12 @@
 
         <div class="overlay-slide item">
             <div class="item-text">
-              <h5 class="brighter"><?php the_category(',');?></h5>
+              <h5 class="brighter">
+                <?php $categories = get_the_category();
+                if ( ! empty( $categories ) ) {
+                  echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
+                }?>
+              </h5>
               <a href="<?php the_permalink()?>">
                 <h2><?php the_title();?></h2>
               </a>
