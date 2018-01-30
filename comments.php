@@ -48,7 +48,7 @@ if ( post_password_required() ) {
 								'title_reply_before' => __('<h4 class="site-comment__title">'),
 								'class_submit' => __('submit-review main-btn'),
 								'comment_notes_before' => '',
-								'title_reply' => ''.__( 'Leave your Comment','afternoontea' ).'',
+								'title_reply' => ''.__( '','' ).'',
 
 								'fields' =>array(
 									'author' => '<div class="site-comment__author-detail">
