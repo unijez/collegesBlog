@@ -313,6 +313,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	/*
 	 * JetPack Functions
 	 */
+
+	 /*
 	function jetpackme_remove_rp() {
 		$jprp = Jetpack_RelatedPosts::init();
 		$callback = array($jprp, 'filter_add_target_to_dom');
