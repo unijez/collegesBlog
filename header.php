@@ -42,7 +42,7 @@
         </div> <!--site-header__logo-->
 		
         <div class="site-header__branding level-left">
-            <h1>Lincoln International <br> Business School</h1>
+            <h1><?php bloginfo( 'name' ); ?></h1>
         </div> <!--site-header__branding-->
 		
         <div class="site-header__search level-right">
