@@ -22,6 +22,56 @@
 <footer class="site-footer">
 
   <div class="footer-top">
+  	
+  	
+  	<div class="site-module site-module-inner"> 
+  	 
+  	 
+  	    <div class="columns">
+  	        	
+  	        <div class="column column--medium-1-of-2 column--1-of-4">	
+  	        	
+  	        	<?php
+  					if(is_active_sidebar('footer-sidebar-1')){
+  					
+  						dynamic_sidebar('footer-1');
+  						
+  					}
+  				?>
+  				
+  	        </div>	 <!--column-->
+  			
+  			<?php if(is_active_sidebar('footer-sidebar-2')):?>
+  			
+  			<div class="column column--medium-1-of-2 column--1-of-4">	
+  				
+  					
+  					<?php dynamic_sidebar('footer-2');?>
+  			
+  				
+  			</div>	 <!--column-->
+  			
+  			<?php endif; ?>
+  			
+  			<div class="column column--medium-1-of-2 column--1-of-4">	
+  					
+  					<!--Display Social Media List-->
+  					<?php get_template_part( 'template-parts/site/social-media', 'icons' ); ?>
+  					
+  				</div>	 <!--column-->
+  			
+  			
+  			<div class="column column--medium-1-of-2 column--1-of-4">	
+  				
+  				<!--Display Social Media List-->
+  				<?php get_template_part( 'template-parts/site/social-media', 'icons' ); ?>
+  				
+  			</div>	 <!--column-->
+  		
+  	    </div> <!--columns-->
+  	
+  	</div> <!--site-module-inner-->
+  	
 
     <div class="col">
       <?php dynamic_sidebar( 'footer-1' ); ?>
@@ -32,9 +82,7 @@
     <div class="col">
       <?php dynamic_sidebar( 'footer-3' ); ?>
     </div><!-- col-3 -->
-    <div class="col">
-      <?php dynamic_sidebar( 'footer-4' ); ?>
-    </div> <!-- col-4 -->
+
 
   </div>  <!-- footer-top -->
 
