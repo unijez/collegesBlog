@@ -13,6 +13,7 @@
   justify-content: center;
   align-content: stretch;
   align-items: center;
+  color: #fff;
 }
 
 .footer-bottom {
@@ -54,6 +55,9 @@
   color: #fff;
   .textwidget {
     line-height: 2;
+  }
+  a {
+    color: #fff;
   }
 }
 
