@@ -19,7 +19,7 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">\
+		<main id="main" class="site-main">
 
 			<!-- Main text and image content -->
 			 <div class="single-container">
