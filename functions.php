@@ -343,4 +343,4 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	}
 	add_filter('jetpack_relatedposts_filter_thumbnail_size', 'jetpackchange_image_size');
 
-	add_filter('jetpack_relatedposts_filter_post_contex','__return_empty_string');
+	add_filter('jetpack_relatedposts_filter_post_context','__return_empty_string');
