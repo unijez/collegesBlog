@@ -29,7 +29,7 @@
   	 
   	    <div class="columns">
   	        
-  			<?php if( is_active_sidebar('footer-sidebar-2') ):?>	
+  			<?php if( is_active_sidebar('footer-1') ):?>	
   		
   	        <div class="column column--medium-1-of-2 column--1-of-4">	
   	        	
@@ -39,7 +39,7 @@
   			
   			<?php endif; ?>
   			
-  			<?php if( is_active_sidebar('footer-sidebar-2') ):?>
+  			<?php if( is_active_sidebar('footer-2') ):?>
   			
   			<div class="column column--medium-1-of-2 column--1-of-4">	
   				
@@ -51,7 +51,7 @@
   			
   			<?php endif; ?>
   			
-  			<?php if( is_active_sidebar('footer-sidebar-3') ):?>
+  			<?php if( is_active_sidebar('footer-3') ):?>
   				
   				<div class="column column--medium-1-of-2 column--1-of-4">	
   					
@@ -77,17 +77,6 @@
   	
   	</div> <!--site-module-inner-->
   	
-
-    <div class="col">
-      <?php dynamic_sidebar( 'footer-1' ); ?>
-    </div><!-- col-1 -->
-    <div class="col">
-      <?php dynamic_sidebar( 'footer-2' ); ?>
-    </div><!-- col-2 -->
-    <div class="col">
-      <?php dynamic_sidebar( 'footer-3' ); ?>
-    </div><!-- col-3 -->
-
 
   </div>  <!-- footer-top -->
 

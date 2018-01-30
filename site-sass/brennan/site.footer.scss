@@ -4,15 +4,9 @@
 /* Footer */
 
 .footer-top {
-  height: 350px;
+  min-height: 350px;
   width: 100%;
   background: $footerbg-grey;
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-content: stretch;
-  align-items: center;
   color: #fff;
 }
 
@@ -47,19 +41,11 @@
 --------------------------------------------------------------*/
 
 
-.col {
-  order: 0;
-  flex: 1 2 auto;
-  align-self: auto;
-  margin: 0 70px;
-  color: #fff;
-  .textwidget {
-    line-height: 2;
-  }
-  a {
+
+ .footer-top a {
     color: #fff;
   }
-}
+
 
 @include mq(mobile) {
 

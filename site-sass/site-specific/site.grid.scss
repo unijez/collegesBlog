@@ -304,7 +304,7 @@ $toast-pulls: true !default;
 .columns {
   margin-left: -$desktop-side-pad;
   margin-right: -$desktop-side-pad;
-  margin-top: -$desktop-side-pad;
+  /*margin-top: -$desktop-side-pad;*/
   
   @include mq(tablet) {
   	@include flexbox;
