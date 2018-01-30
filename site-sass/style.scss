@@ -93,8 +93,8 @@ https://github.com/jonathantneal/sanitize.css
 /*@import "site-specific/site.grid";*/
 /*@import "site-specific/site.page";*/
 /*@import "site-specific/site.header";
-@import "site-specific/site.footer";
-@import "site-specific/site.post";*/
+@import "site-specific/site.footer";*/
+
 
 @import "brennan/site.header";
 @import "brennan/jscript";
@@ -104,7 +104,7 @@ https://github.com/jonathantneal/sanitize.css
 @import "brennan/slider-styling";
 
 @import "tom/site.post-listing";
-
+@import "site-specific/site.post";
 @import "site-specific/site.grid";
 @import "site-specific/site.page";
 @import "site-specific/site.header";
