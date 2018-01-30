@@ -46,7 +46,12 @@
             <?php else :?>
 
               <div class="heading-image">
-                <h4><?php the_category(','); ?></h4>
+                <h4>
+                  <?php $categories = get_the_category();
+                  if ( ! empty( $categories ) ) {
+                     echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
+                  }?>
+                </h4>
                 <h1><?php the_title();?></h1>
                 <h5>Reading time <span class="eta"></span></h5>
               </div> <!-- heading-image -->
@@ -107,7 +112,12 @@
     								<?php the_post_thumbnail('post-intro-image'); ?>
     							</a>
     							<div class="item-text">
-    								<h5><?php the_category(','); ?></h5>
+    								<h5>
+                      <?php $categories = get_the_category();
+  									  if ( ! empty( $categories ) ) {
+      								   echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
+  									  }?>
+                    </h5>
     								<a href="<?php the_permalink();?>">
     									<h2><?php the_title();?></h2>
     								</a>
@@ -121,7 +131,12 @@
     								<?php the_post_thumbnail('post-intro-image'); ?>
     							</a>
     							<div class="item-text">
-    								<h5><?php the_category(','); ?></h5>
+    								<h5>
+                      <?php $categories = get_the_category();
+  									  if ( ! empty( $categories ) ) {
+      								   echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
+  									  }?>
+                    </h5>
     								<a href="<?php the_permalink();?>">
     									<h2><?php the_title();?></h2>
     								</a>
@@ -135,7 +150,12 @@
     								<?php the_post_thumbnail('post-intro-image'); ?>
     							</a>
     							<div class="item-text">
-    								<h5><?php the_category(','); ?></h5>
+    								<h5>
+                      <?php $categories = get_the_category();
+  									  if ( ! empty( $categories ) ) {
+      								   echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
+  									  }?>
+                    </h5>
     								<a href="<?php the_permalink();?>">
     									<h2><?php the_title();?></h2>
     								</a>
