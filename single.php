@@ -104,25 +104,26 @@
 
     				<div class="row">
 
-    					<?php while ( have_posts() ) : the_post(); ?>
+    					<!--<//?php while ( have_posts() ) : the_post(); ?>
 
     					<div class="item">
-    						<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    							<a href="<?php the_permalink();?>">
-    								<?php the_post_thumbnail('post-intro-image'); ?>
+    						<div id="post-<//?php the_ID(); ?>" <//?php post_class(); ?>>
+    							<a href="<//?php the_permalink();?>">
+    								<//?php the_post_thumbnail('post-intro-image'); ?>
     							</a>
     							<div class="item-text">
     								<h5>
-                      <?php $categories = get_the_category();
+                      <//?php $categories = get_the_category();
   									  if ( ! empty( $categories ) ) {
       								   echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
   									  }?>
                     </h5>
-    								<a href="<?php the_permalink();?>">
-    									<h2><?php the_title();?></h2>
+    								<a href="<//?php the_permalink();?>">
+    									<h2><//?php the_title();?></h2>
     								</a>
     							</div> <!-- item-text -->
-    						</div> <!-- post -->
+    						<!--</div> <!-- post -->
+                <?php echo do_shortcode('[jetpack-related-posts]'); ?>
     					</div> <!-- item -->
 
               <div class="item">
