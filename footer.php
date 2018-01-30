@@ -28,20 +28,18 @@
   	 
   	 
   	    <div class="columns">
-  	        	
+  	        
+  			<?php if( is_active_sidebar('footer-sidebar-2') ):?>	
+  		
   	        <div class="column column--medium-1-of-2 column--1-of-4">	
   	        	
-  	        	<?php
-  					if(is_active_sidebar('footer-sidebar-1')){
-  					
-  						dynamic_sidebar('footer-1');
-  						
-  					}
-  				?>
+  	        	<?php dynamic_sidebar('footer-1');?>
   				
   	        </div>	 <!--column-->
   			
-  			<?php if(is_active_sidebar('footer-sidebar-2')):?>
+  			<?php endif; ?>
+  			
+  			<?php if( is_active_sidebar('footer-sidebar-2') ):?>
   			
   			<div class="column column--medium-1-of-2 column--1-of-4">	
   				
@@ -53,20 +51,27 @@
   			
   			<?php endif; ?>
   			
+  			<?php if( is_active_sidebar('footer-sidebar-3') ):?>
+  				
+  				<div class="column column--medium-1-of-2 column--1-of-4">	
+  					
+  						
+  						<?php dynamic_sidebar('footer-3');?>
+  				
+  					
+  				</div>	 <!--column-->
+  				
+  				<?php endif; ?>
+  				
+  			
   			<div class="column column--medium-1-of-2 column--1-of-4">	
   					
   					<!--Display Social Media List-->
   					<?php get_template_part( 'template-parts/site/social-media', 'icons' ); ?>
   					
-  				</div>	 <!--column-->
-  			
-  			
-  			<div class="column column--medium-1-of-2 column--1-of-4">	
-  				
-  				<!--Display Social Media List-->
-  				<?php get_template_part( 'template-parts/site/social-media', 'icons' ); ?>
-  				
   			</div>	 <!--column-->
+  			
+  		
   		
   	    </div> <!--columns-->
   	
