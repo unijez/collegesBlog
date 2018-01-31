@@ -98,8 +98,8 @@
 
 					<!--Display Related Posts-->
 					<?php get_template_part( 'template-parts/releated', 'posts' ); ?>
-					
-					
+
+
     		</main><!-- #main -->
 
  			<?php the_posts_pagination( array(
