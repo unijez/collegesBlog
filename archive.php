@@ -24,7 +24,7 @@
  				<h3 class="page-title__inner"><?php the_archive_title();?></h3>
  				<hr></hr>
 
- 				<div class="row">
+ 				<div class="row site-module-inner">
 
  					<?php while ( have_posts() ) : the_post(); ?>
 

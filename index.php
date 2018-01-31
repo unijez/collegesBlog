@@ -25,10 +25,10 @@ get_header(); ?>
 
 			<div class="main-container">
 
-				<h3 class="latest-posts">LATEST POSTS</h3>
+				<h3 class="page-title__inner">LATEST POSTS</h3>
 				<hr></hr>
 
-				<div class="row">
+				<div class="row site-module-inner">
 
 					<?php while ( have_posts() ) : the_post(); ?>
 

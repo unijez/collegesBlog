@@ -12,6 +12,12 @@
 ?>
 
 <?php if ( have_rows( 'social_media_repeater', 'option' ) ) : ?>
+<<<<<<< HEAD
+=======
+
+<h3 class="widget-title">Social</h3>
+
+>>>>>>> a2b5d50d4c728241d5d69c4ae0490f0cb702f6d1
 	<ul class="social">
 
 		<?php while ( have_rows( 'social_media_repeater', 'option' ) ) : the_row(); ?>

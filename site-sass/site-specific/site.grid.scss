@@ -293,6 +293,7 @@ $toast-pulls: true !default;
   
   
   
+<<<<<<< HEAD
 }
 
 
@@ -314,6 +315,29 @@ $toast-pulls: true !default;
 }
 
 
+=======
+}
+
+
+/* Layout Columns
+   ===========================================================*/
+
+
+
+.columns {
+  margin-left: -$desktop-side-pad;
+  margin-right: -$desktop-side-pad;
+  /*margin-top: -$desktop-side-pad;*/
+  
+  @include mq(tablet) {
+  	@include flexbox;
+  }
+  
+  
+}
+
+
+>>>>>>> a2b5d50d4c728241d5d69c4ae0490f0cb702f6d1
 .columns:last-child {
   margin-bottom: -$desktop-side-pad;
 }
@@ -507,5 +531,17 @@ $toast-pulls: true !default;
 		 margin-left: auto;
 	          
 	}
+
+}
+
+
+
+.site-module-inner {
+	@include module-inner-wrap;
+}
+
+
+.site-module {
+	padding: $desktop-side-pad;
 
 }
