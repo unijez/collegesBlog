@@ -33,8 +33,11 @@ button {
     padding: 0;
 }
 
-.global-nav{
 
+
+
+.global-nav{
+	position: relative;
     background-color: $headerbg-grey;
     list-style:none;
     margin-left:0;
@@ -50,7 +53,7 @@ button {
     padding-top: 110px;
     @include menu-animation;
     overflow: auto;
-    line-height: 50px;
+    line-height: 40px;
 
     a {
         width: 180px;
@@ -115,14 +118,14 @@ button {
 
 .menu-container {
   text-align: right;
-  margin-right: 30px;
+  padding-right: 30px;
 
-  li {
+  /*li {
     padding: 5px 0 5px 0;
-  }
+  }*/
 
   a {
-    padding: 2px 20px 15px 0;
+    padding: 0;
     border-bottom: 2px solid $nav-underline;
   }
 
@@ -134,15 +137,17 @@ button {
 
 
 .sub-menu {
-  margin-right: 40px;
+  margin-right: 0;
+  padding-bottom: 10px;
 
   a {
     margin-top: 5px;
     color: $nav-sublink;
+	@include font-size (15px);
   }
 
   li {
-    padding-top: 0px;
+    line-height: 25px;
   }
 
 }
