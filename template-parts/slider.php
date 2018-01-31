@@ -3,10 +3,9 @@
   $args = array(
 
       'post_type' => 'post',
-      'posts_per_page' => 5,
+      'posts_per_page' => 4,
       'meta_query' => array(
                       array(
-      'key' => '_thumbnail_id',
       'compare' => 'EXISTS'
       ),)
   );
@@ -19,7 +18,7 @@
 
     <?php while ( $home_work_posts->have_posts() ) : $home_work_posts->the_post() ?>
 
-      <div class="slick-slide" style="background-image: url(<?php slider_image();?>)">
+      <div class="slick-slide heading-image" style="background-image: url(<?php slider_image();?>)">
 
         <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"> <?php the_title(); ?> </a>
 

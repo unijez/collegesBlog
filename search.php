@@ -32,18 +32,7 @@ get_header(); ?>
 					<?php while ( have_posts() ) : the_post(); ?>
 
 					<div class="item">
-						<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-							<a href="<?php the_permalink();?>">
-								<?php default_image('post-intro-image'); ?>
-							</a>
-							<div class="item-text">
-								<h5><?php the_category(','); ?></h5>
-								<a href="<?php the_permalink();?>">
-									<h2><?php the_title();?></h2>
-								</a>
-								<p><?php the_excerpt();?></p>
-							</div> <!-- item-text -->
-						</div> <!-- post -->
+						<?php get_template_part( 'template-parts/post', 'listing' ); ?>
 					</div> <!-- item -->
 
 					<?php endwhile; ?>
