@@ -338,7 +338,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 		remove_filter('the_content', $callback, 40);
 	}
 	add_filter('wp', 'jetpackme_remove_rp', 20);
-<<<<<<< HEAD
 
 	function jetpackme_related_posts_headline($headline) {
 		$headline = sprintf(
@@ -364,6 +363,4 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	add_filter('jetpack_relatedposts_filter_thumbnail_size', 'jetpackchange_image_size');
 
 	add_filter('jetpack_relatedposts_filter_post_context','__return_empty_string');
-=======
 	*/
->>>>>>> a2b5d50d4c728241d5d69c4ae0490f0cb702f6d1
