@@ -57,8 +57,7 @@ hr {
 }
 
 .item-text h5 {
-
-margin: 0;
+	margin-bottom: 10px;
 }
 
 .item-text h5 a {
@@ -181,7 +180,7 @@ margin: 0;
 
 .date-published {
 	color: $category-excerpt-grey;
-	@include font-size(13px);
+	@include font-size(16px);
 	 margin-bottom: 15px;
 	@include font-weight(normal);
 }
@@ -189,8 +188,8 @@ margin: 0;
 .post-author {
 	color: $main-text-grey;
 	@include font-weight(normal);
-	@include font-size(14px);
-	margin-bottom: 0;
+	@include font-size(17px);
+	margin-bottom: 5px;
 	
 	
 }
@@ -203,8 +202,9 @@ margin: 0;
 }
 
 .single-container p {
+  @include font-size(17px);
+  @include font-weight(normal);
   color: $main-text-grey;
-  font-weight: 400;
   letter-spacing: 1px;
   word-spacing: 0px;
   line-height: 25px;
@@ -216,6 +216,12 @@ margin: 0;
 	display: inline-block;
 	line-height: 12px;
 	border-bottom: 4px solid $secondry-color;
+
+	padding-bottom: 5px;
+	@include hocus() {
+		border-bottom: 4px solid $main-text-grey;
+		}
+	
 }
 
 .single-container figcaption {

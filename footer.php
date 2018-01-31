@@ -71,6 +71,7 @@
   					
 
   					<!--Display Social Media List-->
+  					<h3 class="widget-title">Social</h3>
   					<?php get_template_part( 'template-parts/site/social-media', 'icons' ); ?>
 
   			</div>	 <!--column-->
