@@ -10,7 +10,9 @@
 
 ?>
 
-<?php 
+<?php if( function_exists('acf_add_local_field_group') )	:?>
+
+					<?php 
 						
 						$ids = get_field('related_posts_query', false, false);
 						
@@ -75,4 +77,7 @@
 
 						<?php endif; ?>		
 					
-					<?php endif; wp_reset_query(); ?>
+		<?php endif; wp_reset_query(); ?>
+		
+
+<?php endif; ?>		
