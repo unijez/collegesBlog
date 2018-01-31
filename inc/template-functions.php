@@ -139,9 +139,9 @@ function slider_image() {
 	global $post;
 	$image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'hero-header', false);
 	if ($image_url[0] == "") {
-			echo "potato";
+			echo false;
 	} else {
-			echo $image_url[0];
+			return $image_url[0];
 	}
 }
 // Default Image Function: adds default image when no preset thumbnail is found
@@ -151,5 +151,11 @@ function default_image($thumbnail) {
 		the_post_thumbnail($thumbnail);
 	} else {
 		?><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/default-image.jpg" alt="<?php the_title(); ?>" /><?php
+	}
+}
+
+function get_image_result($output) {
+	if ($output == false) {
+		echo "<div class='heading-image'></div>";
 	}
 }
