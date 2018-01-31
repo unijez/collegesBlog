@@ -2,7 +2,7 @@
     Classes accessed by the jScript - Brennan
 ---------------------------------------------*/
 
- .retract .menu-active {
+ .retract.menu-active {
    //overflow: visible;
    @include mq(mobile) {
      width: 80vw;

@@ -138,7 +138,11 @@ add_action( 'init', 'itsg_disable_comment_js' );
 function slider_image() {
 	global $post;
 	$image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'hero-header', false);
-	echo $image_url[0];
+	if ($image_url[0] == "") {
+			echo "potato";
+	} else {
+			echo $image_url[0];
+	}
 }
 // Default Image Function: adds default image when no preset thumbnail is found
 function default_image($thumbnail) {
