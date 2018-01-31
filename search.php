@@ -27,7 +27,7 @@ get_header(); ?>
 				</h3>
 				<hr></hr>
 
-				<div class="row">
+				<div class="row site-module-inner">
 
 					<?php while ( have_posts() ) : the_post(); ?>
 
