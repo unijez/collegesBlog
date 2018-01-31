@@ -57,13 +57,17 @@ hr {
 }
 
 .item-text h5 {
- margin-bottom: 15px;
+
+margin: 0;
 }
 
 .item-text h5 a {
   color: $category-excerpt-grey;
-  letter-spacing: 2px;
+ letter-spacing: 0.1em;
 }
+
+
+
 
 .item-text h2 {
   padding: 0 40px 0 40px;
@@ -170,13 +174,25 @@ hr {
   top: -85px;
 	border-radius: 50%;
 }
+.post-title {
+	margin-bottom: 5px;
+}
 
-.author h4 {
+
+.date-published {
+	color: $category-excerpt-grey;
+	@include font-size(13px);
+	 margin-bottom: 15px;
+	@include font-weight(normal);
+}
+
+.post-author {
 	color: $main-text-grey;
-	font-weight: 300;
-	font-size: 1em;
-	margin: 5px;
-	letter-spacing: 1px
+	@include font-weight(normal);
+	@include font-size(14px);
+	margin-bottom: 0;
+	
+	
 }
 
 	/* Main text and image content */
