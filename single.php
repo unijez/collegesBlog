@@ -104,8 +104,8 @@
 
  			<?php the_posts_pagination( array(
  				'mid_size' => 2,
- 				'prev_text' => __( 'Back', 'textdomain' ),
- 				'next_text' => __( 'Onward', 'textdomain' ),
+ 				'prev_text' => __( 'Back', 'collegeBlog' ),
+ 				'next_text' => __( 'Onward', 'collegeBlog' ),
  			) ); ?>
 
  			<?php endif;  wp_reset_query(); ?>
