@@ -98,5 +98,12 @@
 /* Containers */
 
 .single-pagination {
+	border-top: 1px solid $main-text-grey;
+	padding-top: 20px;
+	margin-bottom: 40px;
+}
 
+.single-pagination a {
+	@include font-weight(bold);
+	color: $main-text-grey;
 }
