@@ -12,6 +12,7 @@ a {
 
 .main-container {
   padding: 10px;
+	margin-top: 50px;
 }
 
 .latest-posts {
@@ -37,18 +38,18 @@ hr {
 	flex-wrap: wrap;
 }
 
-.item {
+.jp-relatedposts-post {
 	margin: 0 auto;
-	padding: 20px;
+	padding: $mobile-side-pad;
 }
 
-.item img {
+.jp-relatedposts-post a img {
 	width: 100%;
 	height: auto;
 	display: block;
 }
 
-.item-text {
+.jp-relatedposts-post h4 {
 	text-align: center;
 	padding-bottom: 20px;
   padding-top: 30px;
@@ -82,7 +83,7 @@ hr {
 .heading-image {
   width: 100%;
   height: 75vh;
-  background-color: $uni-blue; /* Defult background image */
+@include uni-gradient;
 	background-size: cover;
 	background-position: center center;
 	text-align: center;
@@ -208,7 +209,8 @@ hr {
   word-spacing: 2px;
 }
 
-.single-container p img {
+//Centering of the image
+.single-container img {
 	margin: 0 auto;
 }
 
@@ -217,17 +219,8 @@ hr {
  text-align:center
 }
 
-/*.single-container figure {
-	width: 100vw;
-	height: auto;
- 	position: relative;
- 	left: 50%;
- 	right: 50%;
- 	margin-left: -50vw;
- 	margin-right: -50vw;
-	margin-top: 70px;
-	margin-bottom: 70px;
-}*/
+
+
 
 .single-container .alignnone,
 .single-container .aligncenter {
@@ -237,6 +230,27 @@ hr {
 	margin-top: 60px;
 	margin-bottom: 60px;
 }
+
+
+.single-container .alignnone,
+.single-container .aligncenter{
+
+	  @include mq(desktop) {
+		  margin-left: -75px;
+		  margin-right: -75px;
+		  max-width: 750px;
+	  }
+
+}
+
+.single-container p .alignnone,
+.single-container p .aligncenter {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
 
 	/* block quote */
 
@@ -282,12 +296,25 @@ blockquote::before {
 	padding-top: 25px;
 }
 
+<<<<<<< HEAD
+=======
+	/* Footer */
+/*.footer-bottom {
+	height: 100px;
+	width: 100%;
+	background-color: $headerbg-grey;
+}*/
+
+>>>>>>> fc0f322118bbc8c492158372ea8ba4e414a11c58
 	/* Comments */
 
 .comments-container {
 	width: 100%;
-	height: auto;
-	padding-top: 50px;
+	min-height: 500px;
+	margin-bottom: 150px;
+	margin-top: 150px;
+	padding-top: 100px;
+	border-top: 1px solid $main-text-grey;
 	background: rgba(245,245,245,1);
 	background: -moz-linear-gradient(top, rgba(245,245,245,1) 72%, rgba(255,255,255,1) 100%);
 	background: -webkit-gradient(left top, left bottom, color-stop(72%, rgba(245,245,245,1)), color-stop(100%, rgba(255,255,255,1)));
@@ -299,7 +326,6 @@ blockquote::before {
 
 .comment {
 	word-wrap: break-word;
-
 }
 
 .comment.depth-1{
@@ -332,6 +358,7 @@ blockquote::before {
 	margin-bottom: $comments-spacing;
 	border-bottom: none;
 	@include flexbox;
+	letter-spacing: 1px;
 
 	ul {
 		margin: 0;
@@ -339,8 +366,8 @@ blockquote::before {
 }
 
 .comment-author img {
-	width: 70px;
-	height: 70px;
+	width: 60px;
+	height: 60px;
 	border-radius: 50%;
 	margin-right: $comments-spacing;
 }
@@ -365,6 +392,9 @@ blockquote::before {
 	@include font-weight(bold);
 }
 
+.comment-meta {
+	font-size: 14px;
+}
 
 .comment__content{
 padding-bottom: $comments-spacing;
@@ -389,6 +419,95 @@ padding-bottom: $comments-spacing;
 }
 
 	/* Form */
+
+.comment-respond {
+	padding-top: 15px;
+	color: $main-text-grey;
+}
+
+.comment-respond h4 {
+	font-weight: normal;
+}
+
+.site-comment__title {
+	text-align: center;
+	margin-bottom: 50px;
+	letter-spacing: 1px;
+
+	a:last-child {
+		font-size: 15px;
+		border-bottom: 4px solid $secondry-color;
+		font-weight: bold;
+	}
+
+}
+
+.comment-respond small {
+	margin-top: 30px;
+	margin: 0 auto;
+}
+
+.site-comment__author-detail {
+	@include flexbox;
+	margin: 30px 0;
+}
+
+.site-comment__author,
+.site-comment__email {
+	display: inline;
+	margin: 0 auto;
+	display: block;
+}
+
+.site-comment__author input,
+.site-comment__email input {
+	display: block;
+	border: 1px solid $main-text-grey;
+	margin: 10px 0;
+	background: $comments-input-background;
+	width: 100%;
+	padding: 10px;
+}
+
+.site-comment__actual {
+	padding: 0 100px;
+}
+
+.site-comment__actual label {
+	margin: auto;
+}
+
+.site-comment__actual textarea {
+	border: 1px solid $main-text-grey;
+	margin-top: 10px;
+	background: $comments-input-background;
+	width: 100%;
+	padding: 10px;
+	display: block;
+	margin-top: 10px;
+}
+
+.form-submit input {
+	border: 1px solid $main-text-grey;
+	border-radius: 2px;
+	margin: 30px auto;
+	display: block;
+	padding: 10px 20px;
+	letter-spacing: 1px;
+}
+
+.form-submit input:hover {
+	border: 1px solid $main-text-grey;
+	color: $related-container-color;
+	background: $main-text-grey;
+}
+
+/* page.php */
+
+.entry-header {
+	margin-top: 150px;
+	margin-bottom: 30px;
+}
 
 /* Media Queries */
 
@@ -485,16 +604,7 @@ hr {
 
 
 
-.single-container .alignnone,
-.single-container .aligncenter{
 
-	  @include mq(desktop) {
-		  margin-left: -75px;
-		  margin-right: -75px;
-		  max-width: 750px;
-	  }
-
-}
 
 	/* single.php */
 
@@ -570,6 +680,64 @@ hr {
 		text-align: left;
 		margin-top: 35px;
 		margin-left: 25px;
+	}
+
+}
+
+	/* comments */
+
+.comment-author img {
+
+	@include mq($until: tablet) {
+		display: none;
+	}
+
+}
+
+.comment p {
+
+	@include mq($until: tablet) {
+		padding: 0 0px;
+	}
+
+}
+
+ /* comments form */
+
+.site-comment__title {
+
+	 @include mq($until: tablet) {
+		 text-align: center;
+	 }
+
+ }
+
+ .site-comment__actual {
+
+	 @include mq($until: tablet) {
+		 padding: 0 53px;
+	 }
+
+ }
+
+.site-comment__author-detail {
+
+	@include mq($until: tablet) {
+		flex-direction: column;
+	}
+
+ }
+
+.comment.depth-1 {
+
+	@include mq($until: tablet) {
+		border-top: 1px solid $comments-hr;
+		border-bottom: 3px solid $comments-hr;
+		border-left: none;
+		border-right: none;
+		@include vendor(border-radius, 0px );
+		width: 90%;
+		margin: 0 auto;
 	}
 
 }

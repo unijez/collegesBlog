@@ -1,0 +1,21 @@
+/*--------------------------------------------------------------
+## Social
+--------------------------------------------------------------*/
+
+
+/*Widget Defaults.*/
+
+.social__item {
+	float: left;
+	@include font-size(20px);
+}
+
+.social__item:not(:last-child) {
+	margin-right: 20px;
+}
+
+.icon_wrap {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+}

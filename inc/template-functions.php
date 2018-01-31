@@ -93,7 +93,7 @@ function mytheme_comment($comment, $args, $depth) {
 							</li>
 							<li>
 								<div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('%1$s'), get_comment_date('F j, Y')) ?></a><?php edit_comment_link() ?>
-									<p class="comments-bullet">&#8226;</p>
+									<span class="comments-bullet">&#8226;</span>
 									<div class="reply">
 						         <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
 						      </div>
@@ -116,3 +116,37 @@ function mytheme_comment($comment, $args, $depth) {
      </div>
 <?php
         }
+
+/**
+* Nav menu function.
+*/
+
+register_nav_menu( 'main', 'Main Menu' );
+
+/**
+* Search function.
+*/
+
+function collegeBlog_search_form( $form ) {
+	$form =
+	'<form role="search" method="get" id="searchform" class="site-header__search--form" action="' . esc_url( home_url( '/' ) ). '" >
+		<div class="search-container">
+			<label class="screen-reader-text" for="s">' . __( 'Search for:', 'collegeBlog' ) . '</label>
+			<input type="text" placeholder="' . esc_attr__( 'Search', 'collegeBlog' ) . '" value="' . get_search_query() . '" name="s" id="s" class="blog-search" />
+			<button type="submit" id="searchsubmit">
+				<i class="far fa-search"></i>
+			</button>
+		</div>
+	</form>';
+
+	return $form;
+}
+add_filter( 'get_search_form', 'collegeBlog_search_form', 100 );
+
+
+// DISABLE WORDPRESS COMMENTS JS
+
+function itsg_disable_comment_js(){
+    wp_deregister_script( 'comment-reply' );
+}
+add_action( 'init', 'itsg_disable_comment_js' );

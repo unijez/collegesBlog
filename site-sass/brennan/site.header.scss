@@ -1,51 +1,34 @@
 /*--------------------------------------------------------------
 # Site Header - Brennan Styling
 --------------------------------------------------------------*/
-header{
 
+.site-header{
+	padding: 0;
 	background-color: $headerbg-grey;
 	color: #fff;
-	display: flex;
-    padding: 10px 20px;
-    height: 60px;
-    position: sticky;
+	/*display: flex;*/
+	/*min-height: 95px;*/
 
 	.left {
 
-        display: flex;
-		flex-grow: 1;
-		float: left;
-
-        img {
-
-            width: 250px;
-            float: left;
-            vertical-align: center;
-
-        }
-
+     
 	}
 
-    .central {
+  /*  .central {
 
-        position: absolute;
-        left: 260px;
-        top: 0;
-        height: 60px;
-        background-color: #212121;
-        width: 260px;
-        display: flex;
-        justify-content: center;
 
-        h4 {
+        h1 {
 
-            align-self: center;
-            margin: 0;
+					align-self: center;
+					font-size: 25px;
+					margin: 0 auto;
+
 
         }
-    }
 
-	.right {
+    }*/
+
+	/*.right {
 
         display: flex;
 		flex-grow: 1;
@@ -61,24 +44,33 @@ header{
             right: 20px;
             margin-left: 20px;
 
-        }
+		}
+	}*/
 
-        input {
+// Search Bar
 
-	        background-color: $searchbg-grey;
-            @include borderfix(all, 0px);
-            padding: 5px;
-            width: 50%;
-            align-self: center;
-            color: #fff;
-            margin-right: 25px;
+/*.searchform {
+width: 100%;
+@include flexbox;
 
-        }
+	.search-container {
+		align-self: center;
+		margin: 0 auto;
 	}
 
-	@include mq(mobile) {
+}*/
 
+
+
+// MQ
+
+/*.searchform {
+
+	@include mq($until:desktop){
+		display: none;
 	}
+
+}
 
 
 
@@ -97,6 +89,7 @@ header{
             width: 100%;
             left: 0;
             top: 60;
+						display: none;
         }
 
 	}
@@ -107,6 +100,6 @@ header{
 
 
 
-    }
+    }*/
 
 }

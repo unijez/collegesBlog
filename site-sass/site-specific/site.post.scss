@@ -69,3 +69,48 @@
     display: block;
     text-align: left;
 }
+
+
+/*--------------------------------------------------------------
+## Comment Tabs
+--------------------------------------------------------------*/
+
+		.comment-tabs{
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+      @include flexbox;
+      justify-content: center;
+      margin-top: -140px;
+		}
+
+		.comment-tabs li{
+			background: #fff;
+			color: #222;
+      font-size: 13px;
+      letter-spacing: 1px;
+			display: inline-block;
+			padding: 12px 15px;
+			cursor: pointer;
+      margin: 0 5px;
+      border: 1px solid $main-text-grey;
+      border-radius: 2px;
+      border-bottom: 2px solid $comments-background;
+		}
+
+		.comment-tabs li.current{
+			background-color: $comments-background;
+		}
+
+		.comment-tab__tab-content{
+			display: none;
+			padding-top: 100px;
+		}
+
+		.comment-tab__tab-content.current{
+			display: inherit;
+		}
+
+    .hello {
+
+    }

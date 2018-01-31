@@ -28,10 +28,11 @@
 	<?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
 
 <div class="overlay"></div>
 
+<<<<<<< HEAD
  <header>
 
 
@@ -62,11 +63,93 @@
             <a href="#"><span>School blogs</span></a>
             <a href="#"><span  class="last">Links</span></a>
         </nav>
+=======
 
+<header class="site-header">
+
+	
+	<div class="site-module site-module-inner level-elements">
+	
+
+        <div class="site-header__logo level-left">
+		  <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="<?php bloginfo( 'name' ); ?>">
+	          <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/uol_landscape.svg" alt="<?php bloginfo( 'name' ); ?> University Of Lincoln Logo">
+		  </a>
+        </div> <!--site-header__logo-->
+		
+        <div class="site-header__branding level-left">
+            <h1><?php bloginfo( 'name' ); ?></h1>
+        </div> <!--site-header__branding-->
+		
+        <div class="site-header__search level-right">
+
+					<?php get_search_form() ?>
+
+          
+		  
+        </div> <!-- site-header__search -->
+
+		
+		
+		
+
+        <nav class="global-nav retract">
+					<div class="collapse">
+							<?php
+							$defaults = array(
+								'theme_location'  => 'main',
+								'menu'            => '',
+								'container'       => 'div',
+								'container_class' => '',
+								'container_id'    => '',
+								'menu_class'      => 'menu',
+								'menu_id'         => '',
+								'echo'            => true,
+								'fallback_cb'     => 'wp_page_menu',
+								'before'          => '',
+								'after'           => '',
+								'link_before'     => '',
+								'link_after'      => '',
+								'items_wrap'      => '%3$s',
+								'depth'           => 0,
+								'walker'          => ''
+							);
+
+							wp_nav_menu( $defaults );
+							?>
+					</div> <!-- collapse -->
+
+					<div class="links collapse">
+						<a href="">
+							<i class="fab fa-instagram fa-2x"></i>
+						</a>
+						<a href="">
+							<i class="fab fa-twitter fa-2x"></i>
+						</a>
+						<a href="">
+							<i class="fab fa-facebook-f fa-2x"></i>
+						</a>
+					</div> <!-- links collapse -->
+
+
+        </nav> <!-- global-nav retract -->
+>>>>>>> fc0f322118bbc8c492158372ea8ba4e414a11c58
+
+	</div> <!--site-module-inner-->
+		
+		<button type="button" class="nav-button">
+				  	
+			  	<i class="fal fa-bars"></i>
+			  	<i class="fal fa-times"></i>
+		
+		</button>
+		
+		
+</header>
 
       </header>
 
 </main>
 	<!--<?php //get_template_part( 'slider' ); ?>-->
 
-	<div id="content" class="site-content">
+<div id="content" class="site-content">

@@ -26,62 +26,57 @@ if ( post_password_required() ) {
 
 <div id="comments" class="comments-area">
 
-	<?php
-	// You can start editing here -- including this comment!
+	<div class="comments-area_tabs">
 
-	if ( have_comments() ) : ?>
+		<ul class="comment-tabs">
+			<li class="comment-tab-link current" data-tab="tab-1">LEAVE A REPLY</li>
+			<li class="comment-tab-link" data-tab="tab-2">COMMENTS (<?php comments_number( '0', '1', '%' ); ?>)</li>
+		</ul>
 
-		<?php the_comments_navigation(); ?>
+		<!-- contents of "LEAVE A REPLY" -->
+		<div id="tab-1" class="comment-tab__tab-content current">
 
-		<ol class="comment-list">
-			<?php
-				wp_list_comments('type=comment&callback=mytheme_comment');
-			?>
-		</ol><!-- .comment-list -->
+			<?php		$commenter = wp_get_current_commenter();
+							$req = get_option( 'require_name_email' );
+							$aria_req = ( $req ? " aria-required='true'" : '' );
 
-		<?php the_comments_navigation();
+							$args_blog = array(
 
-		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() ) : ?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'collegeBlog' ); ?></p>
-		<?php
-		endif;
+								'comment_field' => '<div class="site-comment__review-body">
+								<div class="site-comment__actual"><label for="Your Comment">' . _x( 'Your Comment', 'noun' ) . ' <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></div>',
 
-	endif; // Check for have_comments().
+								'title_reply_before' => __('<h4 class="site-comment__title">'),
+								'class_submit' => __('submit-review main-btn'),
+								'comment_notes_before' => '',
+								'title_reply' => ''.__( '','' ).'',
 
+								'fields' =>array(
+									'author' => '<div class="site-comment__author-detail">
+										<div class="site-comment__author"><label for="author">' . __( 'Your Name','afternoontea' ) . ' <span class="required">*</span></label> <input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div>',
+									'email'  => '<div class="site-comment__email"><label for="email">' . __( 'Your Email address','afternoontea' ) . ' <span class="required">*</span></label> <input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></div></div></div>',
 
+								),
 
+							);
 
-						$commenter = wp_get_current_commenter();
-						$req = get_option( 'require_name_email' );
-						$aria_req = ( $req ? " aria-required='true'" : '' );
+		 comment_form($args_blog); ?>
 
+		</div>
+		<!-- contents of "COMMENTS" -->
+		<div id="tab-2" class="comment-tab__tab-content">
 
+			<?php if ( have_comments() ) : ?>
+			<?php the_comments_navigation(); ?>
+				<ol class="comment-list">
+			<?php wp_list_comments('type=comment&callback=mytheme_comment'); ?>
+				</ol><!-- .comment-list -->
+			<?php the_comments_navigation(); ?>
+					<?php else : // or, if we don't have comments:
+							if ( ! comments_open() ) : ?>
+								<p class="nocomments"><?php _e( 'HELLOOOOOOOOOOOO', 'twentyten' ); ?></p>
+							<?php endif; // end ! comments_open() ?>
+			<?php endif; ?>
 
-						$args_blog = array(
-
-							'comment_field' => '<div class="site-comment__review-body">
-							<div class="site-comment__actual"><label for="Your Comment">' . _x( 'Your Comment', 'noun' ) . ' <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></div>',
-
-							'title_reply_before' => __('<h4 class="site-comment__title">'),
-							'class_submit' => __('submit-review main-btn'),
-							'comment_notes_before' => '',
-							'title_reply' => ''.__( 'Leave your Comment','afternoontea' ).'',
-
-							'fields' =>array(
-								'author' => '<div class="site-comment__author-detail">
-									<div class="site-comment__author"><label for="author">' . __( 'Your Name','afternoontea' ) . ' <span class="required"></span></label> <input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div>',
-								'email'  => '<div class="site-comment__email"><label for="email">' . __( 'Your Email address','afternoontea' ) . ' <span class="required">*</span></label> <input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></div></div></div>',
-
-							),
-
-						);
-
-
-
-
-
-
-	 comment_form($args_blog); ?>
-
-</div><!-- #comments -->
+		</div> <!-- comment-tab__tab-content -->
+	</div> <!-- container -->
+</div> <!-- #comments -->

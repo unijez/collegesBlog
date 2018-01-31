@@ -32,18 +32,28 @@
 
               <div class="heading-image" style="background-image: url('<?php echo $large_image_url[0]; ?>')">
                 <div class="heading-image_opacity">
-                  <h4><?php the_category(','); ?></h4>
+                  <h4>
+                    <?php $categories = get_the_category();
+									  if ( ! empty( $categories ) ) {
+    								   echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
+									  }?>
+                  </h4>
                   <h1><?php the_title();?></h1>
-                  <h5>Reading time 4mins test</h5>
+				          <h5>Reading time <span class="eta"></span></h5>
                 </div>
               </div> <!-- heading-image -->
 
             <?php else :?>
 
               <div class="heading-image">
-                <h4><?php the_category(','); ?></h4>
+                <h4>
+                  <?php $categories = get_the_category();
+                  if ( ! empty( $categories ) ) {
+                     echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
+                  }?>
+                </h4>
                 <h1><?php the_title();?></h1>
-                <h5>Reading time 4mins</h5>
+                <h5>Reading time <span class="eta"></span></h5>
               </div> <!-- heading-image -->
 
             <?php endif; ?>
@@ -57,23 +67,30 @@
 								<h4><?php the_time('F j, Y'); ?></h4>
 							</div> <!-- author -->
 
-							<?php the_content();?>
+
+
+						<article class="blog-article">
+						  <?php the_content();?>
+						</article> <!--blog-article-->
 
             </div> <!-- single-container -->
 
 
             <!-- Comments -->
-            <div class="comments-container">
-              <div class="single-container">
 
-                <?php if ( comments_open() || get_comments_number() ) :
+                <?php if ( comments_open() || get_comments_number() ) : ?>
 
-                    comments_template();
+                  <div class="comments-container">
+                    <div class="single-container">
 
-                endif; ?>
+                  <?php  comments_template(); ?>
 
-              </div> <!-- single-container -->
-            </div> <!-- comments-container -->
+                </div> <!-- single-container -->
+                </div> <!-- comments-container -->
+
+              <?php  endif; ?>
+
+
 
 
  					<?php endwhile; ?>
@@ -86,53 +103,69 @@
     				<hr></hr>
 
     				<div class="row">
-
-    					<?php while ( have_posts() ) : the_post(); ?>
+                <?php echo do_shortcode('[jetpack-related-posts]'); ?>
+    					<!--<//?php while ( have_posts() ) : the_post(); ?>
 
     					<div class="item">
-    						<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    							<a href="<?php the_permalink();?>">
-    								<?php the_post_thumbnail('post-intro-image'); ?>
+    						<div id="post-<//?php the_ID(); ?>" <//?php post_class(); ?>>
+    							<a href="<//?php the_permalink();?>">
+    								<//?php the_post_thumbnail('post-intro-image'); ?>
     							</a>
     							<div class="item-text">
-    								<h5><?php the_category(','); ?></h5>
-    								<a href="<?php the_permalink();?>">
-    									<h2><?php the_title();?></h2>
+    								<h5>
+                      <//?php $categories = get_the_category();
+  									  if ( ! empty( $categories ) ) {
+      								   echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
+  									  }?>
+                    </h5>
+    								<a href="<//?php the_permalink();?>">
+    									<h2><//?php the_title();?></h2>
     								</a>
     							</div> <!-- item-text -->
-    						</div> <!-- post -->
-    					</div> <!-- item -->
+    						<!--</div> <!-- post -->
+                <!-- ?>
+    					<!--</div> <!-- item -->
 
-              <div class="item">
-    						<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    							<a href="<?php the_permalink();?>">
-    								<?php the_post_thumbnail('post-intro-image'); ?>
+              <!--<div class="item">
+    						<div id="post-<//?php the_ID(); ?>" <//?php post_class(); ?>>
+    							<a href="<//?php the_permalink();?>">
+    								<//?php the_post_thumbnail('post-intro-image'); ?>
     							</a>
     							<div class="item-text">
-    								<h5><?php the_category(','); ?></h5>
-    								<a href="<?php the_permalink();?>">
-    									<h2><?php the_title();?></h2>
+    								<h5>
+                      <//?php $categories = get_the_category();
+  									  if ( ! empty( $categories ) ) {
+      								   echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
+  									  }?>
+                    </h5>
+    								<a href="<//?php the_permalink();?>">
+    									<h2><//?php the_title();?></h2>
     								</a>
     							</div> <!-- item-text -->
-    						</div> <!-- post -->
-    					</div> <!-- item -->
+    						<!--</div> <!-- post -->
+    					<!--</div> <!-- item -->
 
-              <div class="item">
-    						<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    							<a href="<?php the_permalink();?>">
-    								<?php the_post_thumbnail('post-intro-image'); ?>
+              <!--<div class="item">
+    						<div id="post-<//?php the_ID(); ?>" <//?php post_class(); ?>>
+    							<a href="<//?php the_permalink();?>">
+    								<//?php default_image('post-intro-image'); ?>
     							</a>
     							<div class="item-text">
-    								<h5><?php the_category(','); ?></h5>
-    								<a href="<?php the_permalink();?>">
-    									<h2><?php the_title();?></h2>
+    								<h5>
+                      <//?php $categories = get_the_category();
+  									  if ( ! empty( $categories ) ) {
+      								   echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
+  									  }?>
+                    </h5>
+    								<a href="<//?php the_permalink();?>">
+    									<h2><//?php the_title();?></h2>
     								</a>
     							</div> <!-- item-text -->
-    						</div> <!-- post -->
-    					</div> <!-- item -->
+    						<!--</div> <!-- post -->
+    					<!--</div> <!-- item -->
 
 
-    					<?php endwhile; ?>
+    					<!--<//?php endwhile; ?>-->
 
     				</div> <!-- row -->
 

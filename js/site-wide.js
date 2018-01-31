@@ -10,12 +10,16 @@ jQuery(document).ready(function($) {
 
 
 	 	function mobileMenuLaunch() {
-	 		menuButton.click( function(e) {
+	 		menuButton.add(overlay).click( function(e) {
 	 			e.preventDefault();
 	 			e.stopPropagation();
 	 			e.stopImmediatePropagation();
 	 	        var status = globalNav.hasClass('menu-active');
+<<<<<<< HEAD
 
+=======
+	 			
+>>>>>>> fc0f322118bbc8c492158372ea8ba4e414a11c58
 	 	      if(status){
 
 	 	        globalNav.removeClass('menu-active');
@@ -35,6 +39,7 @@ jQuery(document).ready(function($) {
 
 	mobileMenuLaunch();
 
+<<<<<<< HEAD
 	/* BRENNAN'S SITE WIDE FUNCTIONS */
 	/*function slickSlider() {
 		$('.slick-slide').slick({
@@ -44,5 +49,59 @@ jQuery(document).ready(function($) {
 			autoplaySpeed: 2000,
 		});
 	}*/
+=======
+
+//	Reading Time Plugin
+
+	var $article = $('.blog-article');
+
+		$article.readingTime({
+		    readingTimeAsNumber: false,
+			readingTimeTarget: ('.eta'),
+			wordCountTarget: $article.find('.word-count'),
+			wordsPerMinute: 275,
+			lessThanAMinuteString: ('less than a minute'),
+			round: true,
+			lang: 'en',
+			success: function() {
+//				console.log('It worked!');
+			},
+			error: function(message) {
+//				console.log(message);
+				$article.find('.reading-time').remove();
+			}
+		});
+
+
+
+//	Slider Plugin
+
+	$('.hero-header').slick({
+		dots: true,
+		pauseOnHover: true,
+		arrows: false,
+		slidesToShow: 1,
+	  slidesToScroll: 1,
+	  autoplay: true,
+	  autoplaySpeed: 2500
+	});
+
+
+
+//	Comment Tabs
+
+$('ul.comment-tabs li').click(function(){
+		
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.comment-tabs li').removeClass('current');
+		$('.comment-tab__tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	})
+
+
+>>>>>>> fc0f322118bbc8c492158372ea8ba4e414a11c58
 
 });

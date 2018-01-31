@@ -48,11 +48,7 @@ if ( ! function_exists( 'collegeBlog_setup' ) ) :
 
 		/* image resizing */
 		add_image_size( 'post-intro-image', 300, 200, true );
-
-		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'collegeBlog' ),
-		) );
+		add_image_size( 'hero-header', 1915, 630, array( 'left', 'top' )  ); // Hard Crop Mode
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -101,12 +97,6 @@ function collegeBlog_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'collegeBlog_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'collegeBlog_content_width', 0 );
-
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
 
 /*
 *
@@ -170,8 +160,8 @@ function collegeBlog_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'collegeBlog' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	) );
 	//Footer Widgets
 	register_sidebar( array(
@@ -212,6 +202,36 @@ function collegeBlog_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'collegeBlog_widgets_init' );
+register_sidebar( array(
+        'name' => __( 'First Footer Widget Area', 'collegeBlog' ),
+        'id' => 'footer-1',
+        'description' => __( 'The first footer widget area', 'collegeBlog' ),
+        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+	register_sidebar( array(
+	        'name' => __( 'Second Footer Widget Area', 'collegeBlog' ),
+	        'id' => 'footer-2',
+	        'description' => __( 'The first footer widget area', 'collegeBlog' ),
+	        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+	        'after_widget' => '</div>',
+	        'before_title' => '<h3 class="widget-title">',
+	        'after_title' => '</h3>',
+	    ) );
+	register_sidebar( array(
+	        'name' => __( 'Third Footer Widget Area', 'collegeBlog' ),
+	        'id' => 'footer-3',
+	        'description' => __( 'The first footer widget area', 'collegeBlog' ),
+	        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+	        'after_widget' => '</div>',
+	        'before_title' => '<h3 class="widget-title">',
+	        'after_title' => '</h3>',
+	    ) );
+
+
+add_action( 'widgets_init', 'collegeBlog_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
@@ -225,12 +245,16 @@ function collegeBlog_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	wp_enqueue_script( 'fontawesome', get_template_directory_uri() . '/js/fontawesome-all.min.js', '5.0.1', null,  true );
+	wp_enqueue_script( 'slick.min.js', get_template_directory_uri() . '/js/slick/slick.min.js', null, null,  true );
 
+	wp_enqueue_script( 'readingTime', get_template_directory_uri() . '/js/readingTime.min.js', null, null,  true );
+
+	wp_enqueue_script( 'fontawesome', get_template_directory_uri() . '/js/fontawesome-all.min.js', '5.0.1', null,  true );
 
 	wp_enqueue_script( 'site-scripts', get_template_directory_uri() . '/js/site-wide-min.js', array('jquery'), null, true );
 
 }
+
 add_action( 'wp_enqueue_scripts', 'collegeBlog_scripts' );
 
 /**
@@ -253,9 +277,93 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
+
+/**
+ * Implement ACF.
+ */
+require get_template_directory() . '/inc/functions-acf.php';
+
+
 /**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+
+/**
+ * Default Image Function: adds default image when no preset thumbnail is found
+ */
+	function slider_image() {
+		global $post;
+		//echo get_post_thumbnail_id($post->ID);
+		/*$image_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID));*/
+		$image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'hero-header', false);
+		if ($image_url[0] == false) {
+				$image_url = esc_url(get_template_directory_uri())."/images/largesliderimage.jpg";
+				echo $image_url;
+		} else {
+				echo $image_url[0];
+		}
+	}
+
+		function default_image($thumbnail) {
+
+			if ( has_post_thumbnail() ) {
+				the_post_thumbnail($thumbnail);
+			} else {
+				?><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/default-image.jpg" alt="<?php the_title(); ?>" /><?php
+			}
+		}
+
+	/*
+	 * ACF P tag from image stripping
+	 */
+	 function filter_ptags_on_images($content) {
+		 	$content = preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+			return preg_replace('/<p>\s*(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
+	 }
+	 add_filter('acf_the_content', 'filter_ptags_on_images');
+	 add_filter('the_content', 'filter_ptags_on_images');
+
+	/*
+	 * JetPack Functions
+	 */
+
+	 /*
+	function jetpackme_remove_rp() {
+		$jprp = Jetpack_RelatedPosts::init();
+		$callback = array($jprp, 'filter_add_target_to_dom');
+		remove_filter('the_content', $callback, 40);
+	}
+	add_filter('wp', 'jetpackme_remove_rp', 20);
+<<<<<<< HEAD
+
+	function jetpackme_related_posts_headline($headline) {
+		$headline = sprintf(
+			'<h3 class="jp-widget-title">%s</h3>',
+			esc_html('YOU MIGHT ALSO LIKE');
+		);
+		return $headline;
+	}
+	add_filter('jetpack_relatedposts_filter_headline','jetpackme_related_posts_headline');
+
+	function jetpackme_more_related_posts($options) {
+		$options['size'] = 3;
+		return $options;
+	}
+	add_filter('jetpack_relatedposts_filter_options','jetpackme_more_related_posts');
+
+	function jetpackchange_image_size($thumbnail_size) {
+		$thumbnail_size['width'] = 433.317;
+		$thumbnail_size['height'] = 289.233;
+		$thumbnail_size['crop'] = true;
+		return $thumbnail_size;
+	}
+	add_filter('jetpack_relatedposts_filter_thumbnail_size', 'jetpackchange_image_size');
+
+	add_filter('jetpack_relatedposts_filter_post_context','__return_empty_string');
+=======
+	*/
+>>>>>>> a2b5d50d4c728241d5d69c4ae0490f0cb702f6d1

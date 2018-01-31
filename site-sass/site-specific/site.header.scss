@@ -1,26 +1,156 @@
 /*--------------------------------------------------------------
 # Site Header
 --------------------------------------------------------------*/
-.site-header{
 
-	@include mq(mobile) {
-	     color: red;
-	     
-	     
-	   }
-	   
-	   
-	   
-	   
-	   @include mq($until: tablet) {
-	     color: blue;
-	   }
-	   
-	   
-	   
-	   @include mq(mobile, tablet) {
-	     color: green;
-	   }
-	 
+@mixin input-border {
+	border-bottom: 1px solid $nav-underline;
+}
+
+
+.site-header{
+	position: relative;
+	
+	.site-module {
+		padding: 0;
+	}
+	
+}
+
+
+@include mq($until: tablet) {
+	
+	.site-header .site-module {
+		@include flexbox;
+		@include flex-direction(column);
+		
+	}
+
+
+}
+
+
+
+.site-header__logo {
+	padding: $mobile-side-pad;
+	order: 1;
+	@include align-self(flex-start);
+	width: 75%;
+	
+	@include mq(tablet) {
+		@include align-self(center);
+		width: auto;
+		order: inherit;
+	}
+	
+}
+
+
+.site-header__branding{
+	background-color: $nav-underline;
+	padding: $mobile-side-pad;
+	width: 100%;
+	order: 3;
+	
+	
+	
+	@include mq(tablet) {
+		width: auto;
+		order: inherit;
+	}
+	
+}
+
+.site-header__branding h1 {
+	@include font-size(25px);
+	letter-spacing: 0.04em;
+	margin: 0;
+}
+
+.site-header__search {
+	
+	
+	
+	display: none;
+	
+	@include mq(desktop) {
+		padding-right: 90px;
+		display: block;
+	}
+	
+	@include mq(wide) {
+	}
+	
+	@include mq(extraWide) {
+		/*padding-right: 0;*/
+	}
+	
+	input {
+		border: none;
+		background: $searchbg-grey;
+		align-self: center;
+		padding: 10px;
+		z-index: 2;
+		@include input-border;
+	}
+
+	button {
+		background: $searchbg-grey;
+		width: 38px;
+		height: 38px;
+		margin-left: -5px;
+		@include input-border;
+	}
+
+	// Placeholder text colour
+
+	::-webkit-input-placeholder {
+			color:    #fff;
+	}
+	:-moz-placeholder {
+		 color:    #fff;
+		 opacity:  1;
+	}
+	::-moz-placeholder {
+		 color:    #fff;
+		 opacity:  1;
+	}
+	:-ms-input-placeholder {
+		 color:    #fff;
+	}
+	::-ms-input-placeholder {
+		 color:    #fff;
+	}
+
+	::placeholder {
+		 color:    #fff;
+	}
+
+}
+
+
+
+
+.nav-button {
+	
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+			
+	@include mq(tablet) {
+		/*margin-top: 0;
+		bottom: auto;*/
+		margin: auto;
+	}
+	
+	@include mq(wide) {
+		/*order: inherit;
+		margin: auto;
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;*/
+	}
+	
 }
 

@@ -4,6 +4,7 @@
 /* Footer */
 
 .footer-top {
+<<<<<<< HEAD
 height: 350px;
 width: 100%;
 background: $footerbg-grey;
@@ -26,18 +27,59 @@ margin: 0 70px;
 height: 100px;
 width: 100%;
 background-color: $headerbg-grey;
+=======
+  min-height: 350px;
+  width: 100%;
+  background: $footerbg-grey;
+  color: #fff;
+}
+
+.footer-bottom {
+/*  height: 100px;
+  width: 100%;*/
+  background-color: $headerbg-grey;
+ /* @include flexbox;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;*/
+}
+
+.footer-bottom img {
+  align-self: center;
+  float: left;
+}
+
+.footer-bottom p {
+  color: $blockquote-before;
+  font-size: 14px;
+  margin: 0;
+  float: right;
+  padding-top: 35px;
+  letter-spacing: 1px;
+>>>>>>> fc0f322118bbc8c492158372ea8ba4e414a11c58
 }
 
 /*--------------------------------------------------------------
 # Site Footer - Brennan Styling
 --------------------------------------------------------------*/
 
+<<<<<<< HEAD
 .col {
   color: #fff;
   .textwidget {
     line-height: 2;
   }
 }
+=======
+
+
+ .footer-top a {
+    color: #fff;
+  }
+
+>>>>>>> fc0f322118bbc8c492158372ea8ba4e414a11c58
 
 @include mq(mobile) {
 
@@ -76,6 +118,21 @@ background-color: $headerbg-grey;
     }
 
   }
+<<<<<<< HEAD
+=======
+
+  .footer-bottom {
+    /*flex-direction: column;*/
+    padding: 20px 20px;
+    min-height:110px;
+  }
+
+  .footer-bottom p {
+    padding-top: 10px;
+    font-size: 13px;
+  }
+
+>>>>>>> fc0f322118bbc8c492158372ea8ba4e414a11c58
 }
 
 
