@@ -42,7 +42,7 @@
         </div> <!--site-header__logo-->
 
         <div class="site-header__branding level-left">
-            <h1><?php bloginfo( 'name' ); ?></h1>
+			<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
         </div> <!--site-header__branding-->
 
         <div class="site-header__search level-right">

@@ -245,36 +245,12 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-
-/**
- * Default Image Function: adds default image when no preset thumbnail is found
+/*
+ * ACF P tag from image stripping
  */
-	function slider_image() {
-		global $post;
-		$image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'hero-header', false);
-		if ($image_url[0] == false) {
-				$image_url = esc_url(get_template_directory_uri())."/images/largesliderimage.jpg";
-				echo $image_url;
-		} else {
-				echo $image_url[0];
-		}
-	}
-
-		function default_image($thumbnail) {
-
-			if ( has_post_thumbnail() ) {
-				the_post_thumbnail($thumbnail);
-			} else {
-				?><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/default-image.jpg" alt="<?php the_title(); ?>" /><?php
-			}
-		}
-
-	/*
-	 * ACF P tag from image stripping
-	 */
-	 function filter_ptags_on_images($content) {
-		 	$content = preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
-			return preg_replace('/<p>\s*(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
-	 }
-	 add_filter('acf_the_content', 'filter_ptags_on_images');
-	 add_filter('the_content', 'filter_ptags_on_images');
+ function filter_ptags_on_images($content) {
+	 	$content = preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+		return preg_replace('/<p>\s*(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
+ }
+ add_filter('acf_the_content', 'filter_ptags_on_images');
+ add_filter('the_content', 'filter_ptags_on_images');
