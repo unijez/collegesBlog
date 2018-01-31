@@ -1,3 +1,4 @@
+/* Containers */
 
 .pagination {
   text-align: center;
@@ -13,6 +14,8 @@
   display: flex;
   align-items: center;
 }
+
+/* Objects */
 
 .nav-links .current {
   background: $main-text-grey;
@@ -40,6 +43,7 @@
   color: $main-text-grey;
 }
 
+/* Calling Children */
 
 .nav-links a:first-child {
   border-radius: 2px 0 0 2px;
@@ -61,6 +65,8 @@
 .nav-links span:last-child {
   border-radius: 0 2px 2px 0;
 }
+
+/* Hovers */
 
 .nav-links a:hover {
   border: 1px solid $main-text-grey;
