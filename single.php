@@ -96,6 +96,7 @@
  					<?php endwhile; ?>
 
 
+<<<<<<< HEAD
           <!-- Related posts -->
           <div class="related-container">
 
@@ -168,6 +169,10 @@
     				</div> <!-- row -->
 
     			</div> <!-- container -->
+=======
+         <!--Display Related Posts-->
+         <?php get_template_part( 'template-parts/releated', 'posts' ); ?>
+>>>>>>> adc4ff042e7fdbb3c602bbb575047dc615d29021
 
     		</main><!-- #main -->
 
