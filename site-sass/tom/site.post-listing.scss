@@ -466,10 +466,6 @@ padding-bottom: $comments-spacing;
 	padding: 10px;
 }
 
-.site-comment__actual {
-	padding: 0 100px;
-}
-
 .site-comment__actual label {
 	margin: auto;
 }
@@ -714,7 +710,11 @@ hr {
  .site-comment__actual {
 
 	 @include mq($until: tablet) {
-		 padding: 0 53px;
+		 padding: 0 20px;
+	 }
+
+	 @include mq(tablet) {
+		 padding: 0 100px;
 	 }
 
  }
