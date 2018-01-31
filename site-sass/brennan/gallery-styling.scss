@@ -22,12 +22,12 @@
 }
 
 @include mq(mobile) {
-  .blog-article .gallery {
+  /*.blog-article .gallery {
     transform: translatex(35%);
     width: 100%;
     margin: 0 0;
     flex-direction: column;
-  }
+  }*/
 }
 
 
@@ -43,10 +43,10 @@
 }
 
 @include mq(mobile, tablet) {
-  .blog-article .gallery {
+  /*.blog-article .gallery {
     transform: translatex(35%);
     width: 100%;
     margin: 0 auto;
     flex-direction: column;
-  }
+  }*/
 }
