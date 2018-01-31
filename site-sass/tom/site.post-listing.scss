@@ -447,13 +447,13 @@ padding-bottom: $comments-spacing;
 .site-comment__author-detail {
 	@include flexbox;
 	margin: 30px 0;
+	justify-content: center;
 }
 
 .site-comment__author,
 .site-comment__email {
 	display: inline;
-	margin: 0 auto;
-	display: block;
+	margin: 0 20px;
 }
 
 .site-comment__author input,
