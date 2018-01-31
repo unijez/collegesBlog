@@ -156,6 +156,6 @@ function default_image($thumbnail) {
 
 function get_image_result($output) {
 	if ($output == false) {
-		echo "<div class='heading-image'></div>";
+		echo "<div class='backup-slide'></div>";
 	}
 }
