@@ -8,6 +8,7 @@
 
 
 .site-header{
+	position: relative;
 	
 	.site-module {
 		padding: 0;
@@ -72,12 +73,15 @@
 	display: none;
 	
 	@include mq(desktop) {
-		padding-right: $desktop-side-pad;
+		padding-right: 90px;
 		display: block;
 	}
 	
 	@include mq(wide) {
-		padding-right: $nav-button-size *2;
+	}
+	
+	@include mq(extraWide) {
+		/*padding-right: 0;*/
 	}
 	
 	input {
@@ -127,23 +131,25 @@
 
 
 .nav-button {
-	order: 2;
-	margin-left: auto;
-	margin-top: -$nav-button-size;
+	
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
 			
 	@include mq(tablet) {
-		margin-top: 0;
-		bottom: auto;
-		
+		/*margin-top: 0;
+		bottom: auto;*/
+		margin: auto;
 	}
 	
 	@include mq(wide) {
-		order: inherit;
+		/*order: inherit;
 		margin: auto;
 		position: absolute;
 		right: 0;
 		top: 0;
-		bottom: 0;
+		bottom: 0;*/
 	}
 	
 }
