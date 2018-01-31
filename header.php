@@ -84,15 +84,7 @@
 					</ul> <!-- collapse -->
 
 					<div class="links collapse">
-						<a href="">
-							<i class="fab fa-instagram fa-2x"></i>
-						</a>
-						<a href="">
-							<i class="fab fa-twitter fa-2x"></i>
-						</a>
-						<a href="">
-							<i class="fab fa-facebook-f fa-2x"></i>
-						</a>
+						<?php get_template_part( 'template-parts/site/social-media', 'icons' ); ?>
 					</div> <!-- links collapse -->
 
 
