@@ -3,7 +3,7 @@
 ---------------------------------------------*/
 
  .retract.menu-active {
-
+   overflow: visible;
    @include mq(mobile) {
      width: 80vw;
    }
@@ -20,6 +20,7 @@
  }
 
 .retract {
+    overflow: hidden;
     width: 0px;
 }
 
