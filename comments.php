@@ -46,7 +46,7 @@ if ( post_password_required() ) {
 								<div class="site-comment__actual"><label for="Your Comment">' . _x( 'Your Comment', 'noun' ) . ' <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></div>',
 
 								'title_reply_before' => __('<h4 class="site-comment__title">'),
-								'class_submit' => __('submit-review main-btn'),
+								'submit_button' => '<div class="site-comment__submit-button"><input name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s" /></div>',
 								'comment_notes_before' => '',
 								'title_reply' => ''.__( '','' ).'',
 
