@@ -1,4 +1,4 @@
-@include mq($from: desktop) {
+@include mq($from: wide) {
   .blog-article .gallery {
     width: 200%;
     margin: 0 -50%;
