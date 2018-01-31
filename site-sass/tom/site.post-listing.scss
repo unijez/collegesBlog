@@ -524,6 +524,18 @@ padding-bottom: $comments-spacing;
 	margin-bottom: 30px;
 }
 
+/* 404 */
+
+.404-container {
+	display: flex;
+}
+
+.error-404 {
+	height: 35vh;
+	padding: 100px 0;
+	text-align: center;
+}
+
 /* Media Queries */
 
 	/* index.php */
