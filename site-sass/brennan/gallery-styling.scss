@@ -1,0 +1,20 @@
+.blog-article {
+  margin: 0 auto;
+  width: 200%;
+  margin: 0 -50%;
+
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    figure {
+      width: 33%;
+      font-size: 12px;
+      
+      figcaption {
+        text-align: center;
+      }
+    }
+  }
+}
