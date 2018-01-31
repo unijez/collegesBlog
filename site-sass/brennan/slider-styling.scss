@@ -25,7 +25,6 @@
     .readmore {
       width: 30%;
       margin: 0 auto;
-      background-color: rgba(#000000, 0.4);
       padding: 10px;
 
       p {
@@ -34,7 +33,20 @@
       }
 
       a {
-        color: #32a0a7;
+        width: 120px;
+        border: 1px solid white;
+      	border-radius: 2px;
+      	margin: 30px auto;
+      	display: block;
+      	padding: 10px 10px;
+      	letter-spacing: 1px;
+        color: white;
+      }
+
+      a:hover {
+        border: 1px solid $main-text-grey;
+      	color: $related-container-color;
+      	background: rgba(#3e3e3e, 0.6);
       }
     }
 
