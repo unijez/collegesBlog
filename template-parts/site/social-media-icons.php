@@ -13,8 +13,6 @@
 
 <?php if ( have_rows( 'social_media_repeater', 'option' ) ) : ?>
 
-<h3 class="widget-title">Social</h3>
-
 	<ul class="social">
 
 		<?php while ( have_rows( 'social_media_repeater', 'option' ) ) : the_row(); ?>

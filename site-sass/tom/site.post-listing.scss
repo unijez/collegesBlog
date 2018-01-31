@@ -57,7 +57,8 @@ hr {
 }
 
 .item-text h5 {
-	text-transform: uppercase;
+	margin-bottom: 10px;
+
 }
 
 .item-text h5 a {
@@ -71,6 +72,7 @@ hr {
 .item-text h2 {
   padding: 0 40px 0 40px;
   color: $secondry-color;
+	text-transform: uppercase;
 }
 
 .item-text p {
@@ -180,7 +182,7 @@ hr {
 
 .date-published {
 	color: $category-excerpt-grey;
-	@include font-size(13px);
+	@include font-size(16px);
 	 margin-bottom: 15px;
 	@include font-weight(normal);
 }
@@ -188,10 +190,17 @@ hr {
 .post-author {
 	color: $main-text-grey;
 	@include font-weight(normal);
+<<<<<<< HEAD
+	@include font-size(17px);
+	margin-bottom: 5px;
+	
+	
+=======
 	@include font-size(14px);
 	margin-bottom: 0;
 
 
+>>>>>>> 34aed53c8a2299fd9b87b6ccc833468b765ceda7
 }
 
 	/* Main text and image content */
@@ -202,8 +211,9 @@ hr {
 }
 
 .single-container p {
+  @include font-size(17px);
+  @include font-weight(normal);
   color: $main-text-grey;
-  font-weight: 400;
   letter-spacing: 1px;
   word-spacing: 0px;
   line-height: 25px;
@@ -215,6 +225,12 @@ hr {
 	display: inline-block;
 	line-height: 12px;
 	border-bottom: 4px solid $secondry-color;
+
+	padding-bottom: 5px;
+	@include hocus() {
+		border-bottom: 4px solid $main-text-grey;
+		}
+	
 }
 
 .single-container figcaption {
