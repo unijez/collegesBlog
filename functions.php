@@ -275,10 +275,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	 * JetPack Functions
 	 */
 
-	 /*
-	function jetpackme_remove_rp() {
-		$jprp = Jetpack_RelatedPosts::init();
-		$callback = array($jprp, 'filter_add_target_to_dom');
-		remove_filter('the_content', $callback, 40);
-	}
-	add_filter('wp', 'jetpackme_remove_rp', 20);
+	 
+//	function jetpackme_remove_rp() {
+//		$jprp = Jetpack_RelatedPosts::init();
+//		$callback = array($jprp, 'filter_add_target_to_dom');
+//		remove_filter('the_content', $callback, 40);
+//	}
+//	add_filter('wp', 'jetpackme_remove_rp', 20);

@@ -768,6 +768,23 @@ h1, h2, h3, h4, h5, h6, p {
   text-align: center; }
 
 /*--------------------------------------------------------------
+## Social
+--------------------------------------------------------------*/
+/*Widget Defaults.*/
+.social__item {
+  float: left;
+  font-size: 20px;
+  font-size: 1.25rem; }
+
+.social__item:not(:last-child) {
+  margin-right: 20px; }
+
+.icon_wrap {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative; }
+
+/*--------------------------------------------------------------
 # Button Control
 --------------------------------------------------------------*/
 .main-btn {
@@ -1123,31 +1140,21 @@ width: 100%;
 --------------------------------------------------------------*/
 /* Footer */
 .footer-top {
-  height: 350px;
+  min-height: 350px;
   width: 100%;
   background: #444444;
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-content: stretch;
-  align-items: center;
   color: #fff; }
 
 .footer-bottom {
-  height: 100px;
-  width: 100%;
+  /*  height: 100px;
+  width: 100%;*/
   background-color: #282828;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
+  /* @include flexbox;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px; }
+  padding: 0 30px;*/ }
 
 .footer-bottom img {
   align-self: center;
@@ -1164,16 +1171,8 @@ width: 100%;
 /*--------------------------------------------------------------
 # Site Footer - Brennan Styling
 --------------------------------------------------------------*/
-.col {
-  order: 0;
-  flex: 1 2 auto;
-  align-self: auto;
-  margin: 0 70px;
+.footer-top a {
   color: #fff; }
-  .col .textwidget {
-    line-height: 2; }
-  .col a {
-    color: #fff; }
 
 @media (max-width: 46.24em) {
   .footer-top {
@@ -1193,9 +1192,9 @@ width: 100%;
         line-height: 1.5;
         font-size: 14px; }
   .footer-bottom {
-    flex-direction: column;
+    /*flex-direction: column;*/
     padding: 20px 20px;
-    height: 110px; }
+    min-height: 110px; }
   .footer-bottom p {
     padding-top: 10px;
     font-size: 13px; } }
@@ -1758,11 +1757,11 @@ blockquote::before {
   padding-top: 25px; }
 
 /* Footer */
-.footer-bottom {
-  height: 100px;
-  width: 100%;
-  background-color: #282828; }
-
+/*.footer-bottom {
+	height: 100px;
+	width: 100%;
+	background-color: $headerbg-grey;
+}*/
 /* Comments */
 .comments-container {
   width: 100%;
@@ -2181,20 +2180,321 @@ blockquote::before {
 .comment-tab__tab-content.current {
   display: inherit; }
 
-/*--------------------------------------------------------------
-# Grid Control
---------------------------------------------------------------*/
-/*.grid-row {
-	margin-left: -$toast-gutter-width;
-	margin-right: -$toast-gutter-width;
-}
+/* ==========================================================================
+   #Site Grid Sizes
+   ========================================================================== */
+/*-----------------------------------*
+  $TOAST-GRID
 
-.grid-col__1-of-3 {
-	width: 33.333333%;
-	padding: 0 $toast-gutter-width;
-	position: relative;
-}
-*/
+  An insane grid.
+  You'd be mad to use it.
+
+  Usage
+  =====
+
+  Assuming default values:
+
+  <div class="grid-wrap">
+    <div class="column column--1-of-2">
+      A half-width column.
+    </div>
+    <div class="column column--1-of-4 column--pull-1-of-4">
+      A quarter, pulled left by its own width. You get this, right?
+    </div>
+  </div>
+
+
+  Customisation
+  =============
+
+  $toast-grid-namespace and $toast-column-namespace
+  adjusts the class names for the grid. With
+  default values, grid wrappers have a class
+  of '.grid' and columns '.column'.
+
+  $toast-col-groups(n) adjusts column divisions.
+  For example, $toast-col-groups(12) will produce
+  a 12-column grid. $col-groups(3,6,8)
+  will produce a 3-, 6-, and 8-column grid.
+
+  $toast-gutter-width is—you guessed it—the gutter
+  width. Accepts any unit.
+
+  That's it. Have fun.
+
+\*-----------------------------------*/
+.grid-wrap {
+  list-style: none;
+  margin-left: -40px; }
+
+.column--2-of-2, .column--3-of-3, .column--4-of-4, .column--5-of-5, .column--6-of-6, .column--8-of-8, .column--12-of-12 {
+  width: 100%; }
+
+.column--1-of-2, .column--2-of-4, .column--3-of-6, .column--4-of-8, .column--6-of-12 {
+  width: 50%; }
+
+.column--1-of-3, .column--2-of-6, .column--4-of-12 {
+  width: 33.3333333333%; }
+
+.column--2-of-3, .column--4-of-6, .column--8-of-12 {
+  width: 66.6666666667%; }
+
+.column--1-of-4, .column--2-of-8, .column--3-of-12 {
+  width: 25%; }
+
+.column--3-of-4, .column--6-of-8, .column--9-of-12 {
+  width: 75%; }
+
+.column--1-of-5 {
+  width: 20%; }
+
+.column--2-of-5 {
+  width: 40%; }
+
+.column--3-of-5 {
+  width: 60%; }
+
+.column--4-of-5 {
+  width: 80%; }
+
+.column--1-of-6 {
+  width: 16.6666666667%; }
+
+.column--5-of-6 {
+  width: 83.3333333333%; }
+
+.column--1-of-8 {
+  width: 12.5%; }
+
+.column--3-of-8 {
+  width: 37.5%; }
+
+.column--5-of-8 {
+  width: 62.5%; }
+
+.column--7-of-8 {
+  width: 87.5%; }
+
+.column--1-of-12 {
+  width: 8.3333333333%; }
+
+.column--2-of-12 {
+  width: 16.6666666667%; }
+
+.column--5-of-12 {
+  width: 41.6666666667%; }
+
+.column--7-of-12 {
+  width: 58.3333333333%; }
+
+.column--10-of-12 {
+  width: 83.3333333333%; }
+
+.column--11-of-12 {
+  width: 91.6666666667%; }
+
+@media (max-width: 46.24em) {
+  .column {
+    width: auto; } }
+
+@media (min-width: 81.25em) {
+  .column.column--extralarge-4-of-4, .column.column--extralarge-3-of-3, .column.column--extralarge-2-of-2 {
+    width: 100%; }
+    .column.column--extralarge-4-of-4.column.grid-small-full .side-bar-pull_inside, .column.column--extralarge-3-of-3.column.grid-small-full .side-bar-pull_inside, .column.column--extralarge-2-of-2.column.grid-small-full .side-bar-pull_inside {
+      margin-left: 0; }
+  .column.column--extralarge-1-of-2, .column.column--extralarge-2-of-4 {
+    width: 50%; }
+  .column.column--extralarge-1-of-3 {
+    width: 33.3333333333%; }
+  .column.column--extralarge-2-of-3 {
+    width: 66.6666666667%; }
+  .column.column--extralarge-1-of-4 {
+    width: 25%; }
+  .column.column--extralarge-3-of-4 {
+    width: 75%; } }
+
+@media (min-width: 61.25em) and (max-width: 81.24em) {
+  .column.column--large-4-of-4, .column.column--large-3-of-3, .column.column--large-2-of-2 {
+    width: 100%; }
+    .column.column--large-4-of-4.column.grid-small-full .side-bar-pull_inside, .column.column--large-3-of-3.column.grid-small-full .side-bar-pull_inside, .column.column--large-2-of-2.column.grid-small-full .side-bar-pull_inside {
+      margin-left: 0; }
+  .column.column--large-1-of-2, .column.column--large-2-of-4 {
+    width: 50%; }
+  .column.column--large-1-of-3 {
+    width: 33.3333333333%; }
+  .column.column--large-2-of-3 {
+    width: 66.6666666667%; }
+  .column.column--large-1-of-4 {
+    width: 25%; }
+  .column.column--large-3-of-4 {
+    width: 75%; } }
+
+@media (min-width: 46.25em) and (max-width: 61.24em) {
+  .column.column--medium-4-of-4, .column.column--medium-3-of-3, .column.column--medium-2-of-2 {
+    width: 100%; }
+    .column.column--medium-4-of-4.column.grid-small-full .side-bar-pull_inside, .column.column--medium-3-of-3.column.grid-small-full .side-bar-pull_inside, .column.column--medium-2-of-2.column.grid-small-full .side-bar-pull_inside {
+      margin-left: 0; }
+  .column.column--medium-1-of-2, .column.column--medium-2-of-4 {
+    width: 50%; }
+  .column.column--medium-1-of-3 {
+    width: 33.3333333333%; }
+  .column.column--medium-2-of-3 {
+    width: 66.6666666667%; }
+  .column.column--medium-1-of-4 {
+    width: 25%; }
+  .column.column--medium-3-of-4 {
+    width: 75%; } }
+
+@media (min-width: 30em) and (max-width: 46.24em) {
+  .column[class*="column--small-"] {
+    display: inline-block;
+    margin-right: -.24em; }
+  .column.column--small-4-of-4, .column.column--small-3-of-3, .column.column--small-2-of-2 {
+    width: 100%; }
+    .column.column--small-4-of-4.column.grid-small-full .side-bar-pull_inside, .column.column--small-3-of-3.column.grid-small-full .side-bar-pull_inside, .column.column--small-2-of-2.column.grid-small-full .side-bar-pull_inside {
+      margin-left: 0; }
+  .column.column--small-1-of-2, .column.column--small-2-of-4 {
+    width: 50%; }
+  .column.column--small-1-of-3 {
+    width: 33.3333333333%; }
+  .column.column--small-2-of-3 {
+    width: 66.6666666667%; }
+  .column.column--small-1-of-4 {
+    width: 25%; }
+  .column.column--small-3-of-4 {
+    width: 75%; } }
+
+/* Layout Columns
+   ===========================================================*/
+.columns {
+  margin-left: -30px;
+  margin-right: -30px;
+  /*margin-top: -$desktop-side-pad;*/ }
+  @media (min-width: 46.25em) {
+    .columns {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; } }
+
+.columns:last-child {
+  margin-bottom: -30px; }
+
+.columns:not(:last-child) {
+  margin-bottom: calc($desktop-side-pad * 2 - $desktop-side-pad); }
+
+.columns.is-centered {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.columns.is-gapless {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0; }
+
+.columns.is-gapless > .column {
+  margin: 0;
+  padding: 0 !important; }
+
+.columns.is-gapless:not(:last-child) {
+  margin-bottom: 60px; }
+
+.columns.is-gapless:last-child {
+  margin-bottom: 0; }
+
+.columns.is-multiline {
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.columns.is-vstart {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  align-items: flex-start; }
+
+.columns.is-vcentered {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center; }
+
+.columns.is-vlast {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
+  align-items: flex-end; }
+
+.column {
+  display: block;
+  -webkit-flex-basis: 0;
+  -moz-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -moz-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  padding: 30px 30px; }
+
+.columns.is-multiline > .column {
+  -webkit-box-flex: none;
+  -webkit-flex: none;
+  -moz-box-flex: none;
+  -moz-flex: none;
+  -ms-flex: none;
+  flex: none; }
+
+/*Full Bleed Right/Left Hand Column*/
+@media (min-width: 46.25em) {
+  .side-bar-pull {
+    position: relative;
+    height: calc(100% + 30px + 30px);
+    padding: 0 0 0 30px; }
+  /*Left Hand Side*/
+  .side-bar-pull_left .side-bar-pull_inside {
+    margin-top: -30px;
+    margin-left: -30px;
+    margin-right: 30px; }
+  /*Right Hand Side*/
+  .side-bar-pull_right .side-bar-pull_inside {
+    /*margin-top: -$desktop-side-pad;*/ }
+  .side-bar-pull_right .side-bar-pull_inside {
+    /*margin-top: -$desktop-side-pad;*/ }
+  .side-bar-pull_inside {
+    padding: 30px; } }
+
+/*Make Columns Full Width On Mobile*/
+@media (max-width: 61.24em) {
+  .side-bar-pull.side-bar-pull_right.grid-small-full {
+    padding: 0; }
+  .column.grid-small-full .side-bar-pull_inside {
+    padding: 30px; } }
+
 /*Level Elements*/
 .level-elements {
   -webkit-box-align: center;
