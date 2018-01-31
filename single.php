@@ -83,9 +83,9 @@
                   <div class="comments-container">
                     <div class="single-container">
 
-                  <?php  comments_template(); ?>
-
-                </div> <!-- single-container -->
+	                  <?php  comments_template(); ?>
+	
+	                </div> <!-- single-container -->
                 </div> <!-- comments-container -->
 
               <?php  endif; ?>
