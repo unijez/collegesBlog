@@ -509,3 +509,15 @@ $toast-pulls: true !default;
 	}
 
 }
+
+
+
+.site-module-inner {
+	@include module-inner-wrap;
+}
+
+
+.site-module {
+	padding: $desktop-side-pad;
+
+}
