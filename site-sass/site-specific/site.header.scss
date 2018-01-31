@@ -9,20 +9,20 @@
 
 .site-header{
 	position: relative;
-	
+
 	.site-module {
 		padding: 0;
 	}
-	
+
 }
 
 
 @include mq($until: tablet) {
-	
+
 	.site-header .site-module {
 		@include flexbox;
 		@include flex-direction(column);
-		
+
 	}
 
 
@@ -35,13 +35,13 @@
 	order: 1;
 	@include align-self(flex-start);
 	width: 75%;
-	
+
 	@include mq(tablet) {
 		@include align-self(center);
 		width: auto;
 		order: inherit;
 	}
-	
+
 }
 
 
@@ -50,14 +50,14 @@
 	padding: $mobile-side-pad;
 	width: 100%;
 	order: 3;
-	
-	
-	
+
+
+
 	@include mq(tablet) {
 		width: auto;
 		order: inherit;
 	}
-	
+
 }
 
 .site-header__branding h1 {
@@ -67,23 +67,23 @@
 }
 
 .site-header__search {
-	
-	
-	
+
+
+
 	display: none;
-	
+
 	@include mq(desktop) {
 		padding-right: 90px;
 		display: block;
 	}
-	
+
 	@include mq(wide) {
 	}
-	
+
 	@include mq(extraWide) {
 		/*padding-right: 0;*/
 	}
-	
+
 	input {
 		border: none;
 		background: $searchbg-grey;
@@ -95,8 +95,8 @@
 
 	button {
 		background: $searchbg-grey;
-		width: 38px;
-		height: 38px;
+		width: 39px;
+		height: 39px;
 		margin-left: -5px;
 		@include input-border;
 	}
@@ -131,18 +131,18 @@
 
 
 .nav-button {
-	
+
 	position: absolute;
 	right: 0;
 	top: 0;
 	bottom: 0;
-			
+
 	@include mq(tablet) {
 		/*margin-top: 0;
 		bottom: auto;*/
 		margin: auto;
 	}
-	
+
 	@include mq(wide) {
 		/*order: inherit;
 		margin: auto;
@@ -151,6 +151,5 @@
 		top: 0;
 		bottom: 0;*/
 	}
-	
-}
 
+}
