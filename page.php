@@ -44,7 +44,14 @@ get_header(); ?>
 					</div> <!-- comments-container -->
 
 				<?php  endif; ?>
-
+			
+				
+			<!--Display Related Posts-->
+			<?php get_template_part( 'template-parts/releated', 'posts' ); ?>
+			
+			
+			
+			
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

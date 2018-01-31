@@ -67,39 +67,39 @@
 
 <header class="site-header">
 
-	
+
 	<div class="site-module site-module-inner level-elements">
-	
+
 
         <div class="site-header__logo level-left">
 		  <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="<?php bloginfo( 'name' ); ?>">
 	          <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/uol_landscape.svg" alt="<?php bloginfo( 'name' ); ?> University Of Lincoln Logo">
 		  </a>
         </div> <!--site-header__logo-->
-		
+
         <div class="site-header__branding level-left">
             <h1><?php bloginfo( 'name' ); ?></h1>
         </div> <!--site-header__branding-->
-		
+
         <div class="site-header__search level-right">
 
 					<?php get_search_form() ?>
 
-          
-		  
+
+
         </div> <!-- site-header__search -->
 
-		
-		
-		
+
+
+
 
         <nav class="global-nav retract">
-					<div class="collapse">
+					<ul class="collapse menu-container">
 							<?php
 							$defaults = array(
 								'theme_location'  => 'main',
 								'menu'            => '',
-								'container'       => 'div',
+								'container'       => '',
 								'container_class' => '',
 								'container_id'    => '',
 								'menu_class'      => 'menu',
@@ -117,7 +117,7 @@
 
 							wp_nav_menu( $defaults );
 							?>
-					</div> <!-- collapse -->
+					</ul> <!-- collapse -->
 
 					<div class="links collapse">
 						<a href="">
@@ -136,15 +136,15 @@
 >>>>>>> fc0f322118bbc8c492158372ea8ba4e414a11c58
 
 	</div> <!--site-module-inner-->
-		
+
 		<button type="button" class="nav-button">
-				  	
+
 			  	<i class="fal fa-bars"></i>
 			  	<i class="fal fa-times"></i>
-		
+
 		</button>
-		
-		
+
+
 </header>
 
       </header>
