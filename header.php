@@ -54,12 +54,7 @@
         </div> <!-- site-header__search -->
 
 		
-		<button type="button" class="nav-button">
-				  	
-			  	<i class="fal fa-bars"></i>
-			  	<i class="fal fa-times"></i>
 		
-		</button>
 		
 
         <nav class="global-nav retract">
@@ -105,7 +100,12 @@
 
 	</div> <!--site-module-inner-->
 		
+		<button type="button" class="nav-button">
+				  	
+			  	<i class="fal fa-bars"></i>
+			  	<i class="fal fa-times"></i>
 		
+		</button>
 		
 		
 </header>
