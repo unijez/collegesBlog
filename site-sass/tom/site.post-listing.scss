@@ -57,8 +57,7 @@ hr {
 }
 
 .item-text h5 {
-
-margin: 0;
+	text-transform: uppercase;
 }
 
 .item-text h5 a {
@@ -191,8 +190,8 @@ margin: 0;
 	@include font-weight(normal);
 	@include font-size(14px);
 	margin-bottom: 0;
-	
-	
+
+
 }
 
 	/* Main text and image content */
