@@ -20,3 +20,33 @@
     }
   }
 }
+
+@include mq(mobile) {
+  .blog-article .gallery {
+    transform: translatex(35%);
+    width: 100%;
+    margin: 0 0;
+    flex-direction: column;
+  }
+}
+
+
+
+
+@include mq($until: tablet) {
+  .blog-article .gallery {
+    transform: translatex(35%);
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+}
+
+@include mq(mobile, tablet) {
+  .blog-article .gallery {
+    transform: translatex(35%);
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+}
