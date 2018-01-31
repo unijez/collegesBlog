@@ -1,3 +1,8 @@
+
+//
+//  DEFLUT PAGINATION FOR EVERYTHING BUT SINGLE.PHP
+//
+
 /* Containers */
 
 .pagination {
@@ -84,4 +89,14 @@
 .nav-links span:hover {
   background: $main-text-grey;
   color: $related-container-color;
+}
+
+//
+//  SINGLE.PHP PAGINATION
+//
+
+/* Containers */
+
+.single-pagination {
+
 }

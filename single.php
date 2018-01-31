@@ -67,14 +67,16 @@
 								<h4><?php the_time('F j, Y'); ?></h4>
 							</div> <!-- author -->
 
-
-
 						<article class="blog-article">
 						  <?php the_content();?>
 						</article> <!--blog-article-->
 
             </div> <!-- single-container -->
 
+            <div class="single-pagination">
+              <?php previous_post_link(); ?>
+              <?php next_post_link(); ?>
+            </div> <!-- single-pagination -->
 
             <!-- Comments -->
 
@@ -90,23 +92,13 @@
 
               <?php  endif; ?>
 
-
-
-
  					<?php endwhile; ?>
-
 
 					<!--Display Related Posts-->
 					<?php get_template_part( 'template-parts/releated', 'posts' ); ?>
-					
-					
-    		</main><!-- #main -->
 
- 			<?php the_posts_pagination( array(
- 				'mid_size' => 2,
- 				'prev_text' => __( 'Back', 'collegeBlog' ),
- 				'next_text' => __( 'Onward', 'collegeBlog' ),
- 			) ); ?>
+
+    		</main><!-- #main -->
 
  			<?php endif;  wp_reset_query(); ?>
 
