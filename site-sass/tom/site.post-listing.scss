@@ -129,6 +129,8 @@ hr {
 
 .heading-image h4 a {
   color: #ffffff;
+	font-style: italic;
+	text-transform: uppercase;
 }
 
 .heading-image h1 {
@@ -190,17 +192,10 @@ hr {
 .post-author {
 	color: $main-text-grey;
 	@include font-weight(normal);
-<<<<<<< HEAD
 	@include font-size(17px);
 	margin-bottom: 5px;
-	
-	
-=======
 	@include font-size(14px);
 	margin-bottom: 0;
-
-
->>>>>>> 34aed53c8a2299fd9b87b6ccc833468b765ceda7
 }
 
 	/* Main text and image content */
@@ -224,13 +219,13 @@ hr {
 	color: $main-text-grey;
 	display: inline-block;
 	line-height: 12px;
-	border-bottom: 4px solid $secondry-color;
+	border-bottom: 2px solid $secondry-color;
 
 	padding-bottom: 5px;
 	@include hocus() {
 		border-bottom: 4px solid $main-text-grey;
 		}
-	
+
 }
 
 .single-container figcaption {
@@ -309,6 +304,11 @@ blockquote::before {
   line-height: 40px;
   padding: 0 50px 0 50px;
   color: $uni-blue;
+}
+
+.entry-content .alignleft,
+.entry-content .alignright {
+	margin: 20px;
 }
 
 	/* Related posts */
@@ -639,10 +639,6 @@ hr {
 	}
 
 }
-
-
-
-
 
 	/* single.php */
 
