@@ -150,12 +150,11 @@ hr {
   flex: 0 1 auto;
   align-self: auto;
   color: #ffffff;
-  font-style: italic;
-  font-weight: 300;
-  font-size: 0.9em;
+ @include font-weight(normal);
+ @include font-size(12px);
   margin-bottom: 0px;
-  opacity: 0.8;
-  letter-spacing: 1px;
+
+
 }
 
 	/* Author image and text */

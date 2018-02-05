@@ -44,8 +44,8 @@
               <a href="<?php the_permalink()?>">
                 <h2><?php the_title();?></h2>
               </a>
-              <div class="readmore">
-                  <a href="<?php the_permalink()?>">Read More</a>
+              <div class="readmore ">
+                  <a class="animated" href="<?php the_permalink()?>">Read More</a>
                 </p>
 							</div> <!-- author -->
             </div> <!-- item-text -->
