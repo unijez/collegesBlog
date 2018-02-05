@@ -34,7 +34,7 @@
 				
 				              <div class="heading-image" style="background-image: url('<?php echo $large_image_url[0]; ?>')">
 				                <div class="heading-image_opacity">
-				                  <h4>
+				                  <h4 class="brighter">
 				                    <?php $categories = get_the_category();
 													  if ( ! empty( $categories ) ) {
 				    								   echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
