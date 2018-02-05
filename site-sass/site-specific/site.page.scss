@@ -18,3 +18,13 @@
 	text-align: center;
 	color: $headerbg-grey;
 }
+
+
+@include mq($until: tablet) {
+
+	.main-container hr {
+		margin-left: 38.5%;
+		margin-right: 38.5%;
+	}
+
+}
