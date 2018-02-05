@@ -15,8 +15,14 @@
 .page-title__inner {
 	@include font-size(35px);
 	@include font-weight(black);
-	text-align: center;
 	color: $headerbg-grey;
+	
+	@include mq(tablet) {
+	
+		text-align: center;
+	}
+	
+	
 }
 
 
