@@ -33,6 +33,7 @@ if ( post_password_required() ) {
 			<li class="comment-tab-link" data-tab="tab-2">COMMENTS (<?php comments_number( '0', '1', '%' ); ?>)</li>
 		</ul>
 
+		<div class="tab-fix">
 		<!-- contents of "LEAVE A REPLY" -->
 		<div id="tab-1" class="comment-tab__tab-content current">
 
@@ -61,6 +62,7 @@ if ( post_password_required() ) {
 
 		 comment_form($args_blog); ?>
 
+		</div>
 		</div>
 		<!-- contents of "COMMENTS" -->
 		<div id="tab-2" class="comment-tab__tab-content">

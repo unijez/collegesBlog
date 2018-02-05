@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
 	 			e.stopPropagation();
 	 			e.stopImmediatePropagation();
 	 	        var status = globalNav.hasClass('menu-active');
-	 			
+
 	 	      if(status){
 
 	 	        globalNav.removeClass('menu-active');
@@ -76,7 +76,7 @@ jQuery(document).ready(function($) {
 //	Comment Tabs
 
 $('ul.comment-tabs li').click(function(){
-		
+
 		var tab_id = $(this).attr('data-tab');
 
 		$('ul.comment-tabs li').removeClass('current');
