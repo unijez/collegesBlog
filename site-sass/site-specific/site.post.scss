@@ -37,6 +37,13 @@
     display: block;
 }
 
+.g-recaptcha div {
+	margin: auto;
+}
+
+.comment-subscription-form {
+	text-align: center;
+}
 
 /*--------------------------------------------------------------
 ## Captions
@@ -54,7 +61,8 @@
 }
 
 .wp-caption .wp-caption-text {
-    margin: 0.8075em 0;
+    margin: 0;
+	@include font-size(13px);
 }
 
 .wp-caption-text {
@@ -104,7 +112,7 @@
 
 		.comment-tab__tab-content{
 			display: none;
-			padding-top: 100px;
+			padding-top: 70px;
 		}
 
 		.comment-tab__tab-content.current{

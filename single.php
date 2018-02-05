@@ -70,7 +70,7 @@
 								<time class="date-published" datetime="<?php the_time('d/m/Y') ?>"><?php the_time('F j, Y') ?></time>
 							</div> <!-- author -->
 
-						<article class="blog-article">
+						<article class="blog-article clear">
 						  <?php the_content();?>
 						</article> <!--blog-article-->
 
