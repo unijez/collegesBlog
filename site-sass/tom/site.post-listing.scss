@@ -521,7 +521,7 @@ padding-bottom: $comments-spacing;
 }
 
 .site-comment__submit-button input:hover {
-	border: 1px solid $main-text-grey;
+
 	color: $related-container-color;
 	background: $main-text-grey;
 }
@@ -531,6 +531,61 @@ padding-bottom: $comments-spacing;
 .entry-header {
 	margin-top: 150px;
 	margin-bottom: 30px;
+}
+
+ // list styles
+
+		//padding of list items
+
+.single-container ul {
+	padding-left: 40px;
+}
+
+.single-container ul:first-of-type ul {
+	padding-left: 40px;
+}
+
+.single-container ol {
+	padding-left: 40px;
+}
+
+.single-container ol:first-of-type ol {
+	padding-left: 40px;
+}
+
+.single-container ul:first-child {
+	padding: 10px;
+}
+
+.single-container ol:first-child {
+	padding: 10px;
+}
+
+		// dots styling
+
+.single-container ul li {
+	list-style: disc;
+}
+
+.single-container ul li ul li {
+	list-style: circle;
+}
+
+.single-container ul li ul li ul li{
+	list-style: square;
+}
+
+.single-container ol li {
+	list-style: decimal;
+}
+
+		// font styling
+
+.single-container ul,
+.single-container ol {
+	color: $main-text-grey;
+	letter-spacing: 1px;
+	line-height: 1.3em;
 }
 
 /* 404 */
