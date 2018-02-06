@@ -222,7 +222,6 @@ hr {
 
 }
 
-.single-container article li:not(:last-child),
 .single-container p:not(:last-child) {
 	margin-bottom: 30px;
 }
@@ -241,13 +240,21 @@ hr {
 	color: $main-text-grey;
 	display: inline-block;
 	line-height: 12px;
+	transition: .1s;
 	border-bottom: 2px solid $secondry-color;
+	opacity: 1;
 
 	padding-bottom: 5px;
 	@include hocus() {
 		border-bottom: 2px solid $main-text-grey;
 		}
 
+}
+
+.single-container p a:hover,
+.single-container p a:focus {
+	border-bottom: 2px solid $secondry-color;
+	opacity: .8;
 }
 
 .single-container figcaption {
