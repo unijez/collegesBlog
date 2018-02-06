@@ -151,13 +151,12 @@ hr {
   flex: 0 1 auto;
   align-self: auto;
   color: #ffffff;
- @include font-weight(normal);
- @include font-size(12px);
+ 	font-size: 20px;
   margin-bottom: 10px;
 
 
 	a{
-	color: white;	
+	color: white;
 	}
 
 }
@@ -220,7 +219,7 @@ hr {
   color: $main-text-grey;
   /*letter-spacing: 1px;*/
   line-height: 25px;
-  
+
 }
 
 .single-container article li:not(:last-child),
@@ -231,13 +230,13 @@ hr {
 .single-container article li {
  	list-style: disc;
  }
- 
+
  .comment-list li {
  	list-style: none;
  }
 
 
-.single-container article li a, 
+.single-container article li a,
 .single-container p a {
 	color: $main-text-grey;
 	display: inline-block;
@@ -270,16 +269,16 @@ hr {
 	margin-right: auto;
 	display: block;
 	float: none;
-	
+
 	@include mq(tablet) {
 		display: inline-block;
 		margin-right: 30px;
 		margin-bottom: 6px;
 		float: left;
-	
+
 	}
-	
-	
+
+
 }
 
 
@@ -290,13 +289,13 @@ hr {
 	margin-right: auto;
 	display: block;
 	float: none;
-	
+
 	@include mq(tablet) {
 		display: inline-block;
 		margin-left: 30px;
 		margin-bottom: 6px;
 		float: right;
-	
+
 	}
 }
 

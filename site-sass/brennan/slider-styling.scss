@@ -141,6 +141,10 @@ li.slick-active button{
     color: #fff !important;
   }
 
+  .brighter > a {
+    font-size: 20px;
+  }
+
 }
 
 @include mq($until: tablet) {
