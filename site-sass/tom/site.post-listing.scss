@@ -894,3 +894,10 @@ hr {
 	}
 
 }
+
+
+.blog-article > * {
+	@include mq($until: tablet) {
+		padding: 0 25px
+	}
+}
