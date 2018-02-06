@@ -589,12 +589,28 @@ padding-bottom: $comments-spacing;
 
 /* page.php */
 
+	// table styles
+
+.single-container table {
+	color: $main-text-grey;
+	letter-spacing: 1px;
+	line-height: 1.3em;
+}
+
+	// Definition Lists
+
+.single-container dl {
+	color: $main-text-grey;
+	letter-spacing: 1px;
+	line-height: 1.3em;
+}
+
 .entry-header {
 	margin-top: 150px;
 	margin-bottom: 30px;
 }
 
- // list styles
+	// list styles
 
 		//padding of list items
 
