@@ -11,15 +11,15 @@
 }
 
 .footer-bottom {
-/*  height: 100px;
-  width: 100%;*/
+  height: 100px;
+  width: 100%;
   background-color: $headerbg-grey;
- /* @include flexbox;
+   @include flexbox;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;*/
+  padding: 0 30px;
 }
 
 .footer-bottom img {
@@ -105,11 +105,3 @@
   }
 
 }
-
-
-
-  @include mq(mobile, tablet) {
-
-
-
-  }
