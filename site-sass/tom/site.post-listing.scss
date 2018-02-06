@@ -222,7 +222,6 @@ hr {
 
 }
 
-.single-container article li:not(:last-child),
 .single-container p:not(:last-child) {
 	margin-bottom: 30px;
 }
@@ -893,4 +892,11 @@ hr {
 		margin: 0 auto;
 	}
 
+}
+
+
+.blog-article > * {
+	@include mq($until: tablet) {
+		padding: 0 25px
+	}
 }
