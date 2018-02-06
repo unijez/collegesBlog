@@ -47,7 +47,7 @@ if ( ! function_exists( 'collegeBlog_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		/* image resizing */
-		add_image_size( 'post-intro-image', 300, 200, true );
+		add_image_size( 'post-intro-image', 450, 300, true );
 		add_image_size( 'hero-header', 1915, 630, array( 'left', 'top' )  ); // Hard Crop Mode
 
 		/*

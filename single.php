@@ -34,7 +34,7 @@
 				
 				              <div class="heading-image" style="background-image: url('<?php echo $large_image_url[0]; ?>')">
 				                <div class="heading-image_opacity">
-				                  <h4>
+				                  <h4 class="brighter">
 				                    <?php $categories = get_the_category();
 													  if ( ! empty( $categories ) ) {
 				    								   echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
@@ -70,7 +70,7 @@
 								<time class="date-published" datetime="<?php the_time('d/m/Y') ?>"><?php the_time('F j, Y') ?></time>
 							</div> <!-- author -->
 
-						<article class="blog-article">
+						<article class="blog-article clear">
 						  <?php the_content();?>
 						</article> <!--blog-article-->
 

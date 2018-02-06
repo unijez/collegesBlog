@@ -42,7 +42,7 @@ get_header(); ?>
 						<?php  comments_template(); ?>
 
 					</div> <!-- comments-container -->
-
+						
 				<?php  endif; ?>
 			
 				

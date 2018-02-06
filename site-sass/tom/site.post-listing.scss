@@ -98,7 +98,7 @@ hr {
 	justify-content: center;
 	align-content: stretch;
 	align-items: center;
-	line-height: 60px;
+	/*line-height: 60px;*/
 }
 
 .heading-image_opacity {
@@ -112,12 +112,12 @@ hr {
   justify-content: center;
   align-content: stretch;
   align-items: center;
-  line-height: 60px;
+  /*line-height: 60px;*/
 }
 
 	/* heading-image text */
 
-.heading-image h4 {
+/*.heading-image h4 {
   order: 0;
   flex: 0 1 auto;
   align-self: auto;
@@ -125,13 +125,13 @@ hr {
 	font-weight: 400;
 	letter-spacing: 2px;
   margin-bottom: 0px;
-}
+}*/
 
-.heading-image h4 a {
+/*.heading-image h4 a {
   color: #ffffff;
 	font-style: italic;
 	text-transform: uppercase;
-}
+}*/
 
 .heading-image h1 {
   order: 0;
@@ -145,17 +145,20 @@ hr {
   margin: 10px 0 10px 0;
 }
 
+.heading-image h4,
 .heading-image h5 {
   order: 0;
   flex: 0 1 auto;
   align-self: auto;
   color: #ffffff;
-  font-style: italic;
-  font-weight: 300;
-  font-size: 0.9em;
-  margin-bottom: 0px;
-  opacity: 0.8;
-  letter-spacing: 1px;
+ 	font-size: 20px;
+  margin-bottom: 10px;
+
+
+	a{
+	color: white;
+	}
+
 }
 
 	/* Author image and text */
@@ -194,8 +197,6 @@ hr {
 	@include font-weight(normal);
 	@include font-size(17px);
 	margin-bottom: 5px;
-	@include font-size(14px);
-	margin-bottom: 0;
 }
 
 	/* Main text and image content */
@@ -203,18 +204,39 @@ hr {
 .single-container {
 	max-width: 600px;
 	margin: 0 auto;
+	margin-bottom: 150px;
 }
 
+.single-container + .comments-container {
+	margin-top: 0;
+}
+
+
+.single-container article li,
 .single-container p {
   @include font-size(17px);
   @include font-weight(normal);
   color: $main-text-grey;
-  letter-spacing: 1px;
-  word-spacing: 0px;
+  /*letter-spacing: 1px;*/
   line-height: 25px;
-  margin-bottom: 30px;
+
 }
 
+.single-container article li:not(:last-child),
+.single-container p:not(:last-child) {
+	margin-bottom: 30px;
+}
+
+.single-container article li {
+ 	list-style: disc;
+ }
+
+ .comment-list li {
+ 	list-style: none;
+ }
+
+
+.single-container article li a,
 .single-container p a {
 	color: $main-text-grey;
 	display: inline-block;
@@ -223,7 +245,7 @@ hr {
 
 	padding-bottom: 5px;
 	@include hocus() {
-		border-bottom: 4px solid $main-text-grey;
+		border-bottom: 2px solid $main-text-grey;
 		}
 
 }
@@ -236,9 +258,48 @@ hr {
 }
 
 //Centering of the image
-.single-container img {
+.single-container article limg {
 	margin: 0 auto;
 }
+
+.single-container article l.alignleft {
+	margin-right: 0;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	float: none;
+
+	@include mq(tablet) {
+		display: inline-block;
+		margin-right: 30px;
+		margin-bottom: 6px;
+		float: left;
+
+	}
+
+
+}
+
+
+.single-container .alignright {
+	margin-right: 0;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	float: none;
+
+	@include mq(tablet) {
+		display: inline-block;
+		margin-left: 30px;
+		margin-bottom: 6px;
+		float: right;
+
+	}
+}
+
+
 
 .wp-caption {
  max-width:100%;
@@ -324,7 +385,7 @@ blockquote::before {
   color: $main-text-grey;
   letter-spacing: 2px;
   font-weight: 400;
-	padding-top: 25px;
+	padding-top: 45px;
 }
 
 	/* Footer */
@@ -709,13 +770,13 @@ hr {
 
 }
 
-.heading-image h4 {
+/*.heading-image h4 {
 
 	@include mq($until: tablet) {
 		font-size: 0.8em;
 	}
 
-}
+}*/
 
 .heading-image h1 {
 
@@ -727,13 +788,12 @@ hr {
 
 	@include mq(tablet) {
 		font-size: 2.3em;
-		line-height: 45px;
-		margin: 10px 0;
+		line-height: 50px;
+		margin: 0 0 10px;
 	}
 
 	@include mq(desktop) {
 		font-size: 2.9em;
-		line-height: 60px;
 	}
 
 }

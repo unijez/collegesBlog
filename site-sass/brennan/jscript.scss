@@ -5,7 +5,7 @@
  .retract.menu-active {
    //overflow: visible;
    @include mq(mobile) {
-     width: 80vw;
+     width: 100vw;
    }
 
    @include mq(tablet) {

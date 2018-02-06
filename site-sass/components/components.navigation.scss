@@ -82,9 +82,6 @@ button {
         font-weight: 900;
         height: 30px;
         color: #fff !important;
-        margin-top: 5px;
-        margin-left: 160px;
-        margin-bottom: 20px;
     }
 }
 
@@ -92,6 +89,7 @@ button {
 @include mq($until: tablet) {
 
     .global-nav {
+
         a:not(.nav-button) {
             width: 180px;
         }
