@@ -18,8 +18,8 @@
 
     <?php while ( $home_work_posts->have_posts() ) : $home_work_posts->the_post() ?>
 
-      <div class="slick-slide heading-image" style="background-image: url(<?php echo slider_image();?>)">
-        <?php get_image_result(slider_image()); ?>
+      <div class="slick-slide heading-image" style="background-image: url(<?php echo header_post_image();?>)">
+        <?php get_image_result(header_post_image()); ?>
         <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"> <?php the_title(); ?> </a>
 
         <?php if (has_post_thumbnail()) : ?>

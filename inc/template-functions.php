@@ -134,16 +134,25 @@ function itsg_disable_comment_js(){
     wp_deregister_script( 'comment-reply' );
 }
 add_action( 'init', 'itsg_disable_comment_js' );
-// Slider Image Function: adds a replacement image when no thumbnail is found
-function slider_image() {
+
+// Single Post Image Function: only allows appropriately sized imagesy
+function header_post_image() {
 	global $post;
 	$image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'hero-header', false);
+	if ($image_url[0] != null) {
+		list($img_width, $img_height, $img_type, $img_attr) = getimagesize($image_url[0]);
+	}
 	if ($image_url[0] == "") {
-			echo false;
+			return false;
 	} else {
-			return $image_url[0];
+			if($img_width < 1000 && $img_height < 300) {
+				return false;
+			} else {
+				return $image_url[0];
+			}
 	}
 }
+
 // Default Image Function: adds default image when no preset thumbnail is found
 function default_image($thumbnail) {
 
