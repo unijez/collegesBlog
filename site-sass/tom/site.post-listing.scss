@@ -134,6 +134,9 @@ hr {
   flex: 0 1 auto;
   align-self: auto;
 	padding: 0 25%;
+	@include mq(tablet) {
+		padding: 0 5%;
+	}
   font-size: 2.9em;
 	letter-spacing: 2px;
   color: #ffffff;
@@ -394,7 +397,6 @@ blockquote::before {
 .comments-container {
 	width: 100%;
 	min-height: 500px;
-	margin-bottom: 150px;
 	margin-top: 150px;
 	padding-top: 100px;
 	border-top: 1px solid $main-text-grey;
