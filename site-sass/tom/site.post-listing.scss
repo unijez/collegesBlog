@@ -226,11 +226,6 @@ hr {
  	list-style: disc;
  }
 
- .comment-list li {
- 	list-style: none;
- }
-
-
 .single-container article li a,
 .single-container p a {
 	color: $main-text-grey;
@@ -261,7 +256,7 @@ hr {
 }
 
 //Centering of the image
-.single-container article limg {
+.single-container article img {
 	margin: 0 auto;
 }
 
@@ -610,45 +605,50 @@ padding-bottom: $comments-spacing;
 
 		//padding of list items
 
-.single-container ul {
+.single-container article ul {
 	padding-left: 40px;
 }
 
-.single-container ul:first-of-type ul {
+.single-container article ul:first-of-type ul {
 	padding-left: 40px;
 }
 
-.single-container ol {
+.single-container article ol {
 	padding-left: 40px;
 }
 
-.single-container ol:first-of-type ol {
+.single-container article ol:first-of-type ol {
 	padding-left: 40px;
 }
 
-.single-container ul:first-child {
+.single-container article ul:first-child,
+.single-container .comments-area_tabs ul:first-child {
 	padding: 10px;
 }
 
-.single-container ol:first-child {
+.single-container article ol:first-child {
 	padding: 10px;
 }
 
 		// dots styling
 
-.single-container ul li {
+.single-container article ul li,
+.comment__content ul li {
 	list-style: disc;
 }
 
-.single-container ul li ul li {
+.single-container article ul li ul li,
+.comment__content ul li ul li {
 	list-style: circle;
 }
 
-.single-container ul li ul li ul li{
+.single-container article ul li ul li ul li,
+.comment__content ul li ul li ul li {
 	list-style: square;
 }
 
-.single-container ol li {
+.single-container article ol li,
+.comment__content ol li {
 	list-style: decimal;
 }
 
