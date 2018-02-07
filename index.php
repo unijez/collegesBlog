@@ -33,6 +33,7 @@ get_header(); ?>
 					<?php while ( have_posts() ) : the_post(); ?>
 
 					<div class="item">
+<<<<<<< HEAD
 						<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 							<a href="<?php the_permalink();?>">
 <<<<<<< HEAD
@@ -54,6 +55,11 @@ get_header(); ?>
 								<p><?php the_excerpt();?></p>
 							</div> <!-- item-text -->
 						</div> <!-- post -->
+=======
+							
+							<?php get_template_part( 'template-parts/post', 'listing' ); ?>
+							
+>>>>>>> a73c2c048929566e354721fa60862c59fab73176
 					</div> <!-- item -->
 
 					<?php endwhile; ?>
@@ -63,9 +69,9 @@ get_header(); ?>
 			</div> <!-- container -->
 
 			<?php the_posts_pagination( array(
-				'mid_size' => 2,
-				'prev_text' => __( 'Back', 'textdomain' ),
-				'next_text' => __( 'Onward', 'textdomain' ),
+				'mid_size' => 1,
+				'prev_text' => __( 'Prev', 'collegeBlog' ),
+				'next_text' => __( 'Next', 'collegeBlog' ),
 			) ); ?>
 
 			<?php endif;  wp_reset_query(); ?>

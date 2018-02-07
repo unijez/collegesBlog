@@ -8,7 +8,6 @@
  * @since 1.0
  * @version 1.0
  */
-
 /**
  * Adds custom classes to the array of body classes.
  *
@@ -24,7 +23,6 @@ function collegeBlog_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'collegeBlog_body_classes' );
-
 /**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
  */
@@ -34,16 +32,12 @@ function collegeBlog_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'collegeBlog_pingback_header' );
-
-
 /**
  * Remove Inline Styles From Figures
  *
  * @param array $classes Classes for the body element.
  * @return array
  */
-
-
 function remove_img_caption_style($attr, $content = null) {
 		// New-style shortcode with the caption inside the shortcode with the link and image tags.
 		if ( ! isset( $attr['caption'] ) ) {
@@ -68,14 +62,8 @@ function remove_img_caption_style($attr, $content = null) {
 		return '<figure ' . $id . 'class="wp-caption ' . esc_attr($align) . '">'
 		. do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></figure>';
 }
-
 add_shortcode('wp_caption', 'remove_img_caption_style');
 add_shortcode('caption', 'remove_img_caption_style');
-
-
-
-
-
 /**
  * Rebuilt funcion for comments display.
  */
@@ -116,7 +104,6 @@ function mytheme_comment($comment, $args, $depth) {
      </div>
 <?php
         }
-
 /**
 * Nav menu function.
 */
@@ -142,11 +129,44 @@ function collegeBlog_search_form( $form ) {
 	return $form;
 }
 add_filter( 'get_search_form', 'collegeBlog_search_form', 100 );
-
-
 // DISABLE WORDPRESS COMMENTS JS
-
 function itsg_disable_comment_js(){
     wp_deregister_script( 'comment-reply' );
 }
 add_action( 'init', 'itsg_disable_comment_js' );
+<<<<<<< HEAD
+=======
+
+// Single Post Image Function: only allows appropriately sized imagesy
+function header_post_image() {
+	global $post;
+	$image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'hero-header', false);
+	$img_width = $image_url[1];
+	if ($image_url[0] == "") {
+			return false;
+	} else {
+			if($img_width < 1600) {
+				return false;
+			} else {
+				return $image_url[0];
+			}
+	}
+}
+
+
+// Default Image Function: adds default image when no preset thumbnail is found
+function default_image($thumbnail) {
+
+	if ( has_post_thumbnail() ) {
+		the_post_thumbnail($thumbnail);
+	} else {
+		?><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/default-image.jpg" alt="<?php the_title(); ?>" /><?php
+	}
+}
+
+function get_image_result($output) {
+	if ($output == false) {
+		echo "<div class='backup-slide'></div>";
+	}
+}
+>>>>>>> a73c2c048929566e354721fa60862c59fab73176

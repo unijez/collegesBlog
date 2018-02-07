@@ -20,7 +20,25 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
+      <?php if ( has_post_thumbnail() ): ?>
+        <?php
+					$display_header = true;
+          $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
+          // $mobile_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'image-reg-name' );
+        ?>
+          <div class="heading-image" <?php if(header_post_image() == true) { echo 'style="background-image: url('.header_post_image().')"'; }?>>
+            <div class="heading-image_opacity">
+              <h4 class="brighter">
+                <?php $categories = get_the_category();
+							  if ( ! empty( $categories ) ) {
+								   echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
+							  }?>
+              </h4>
+              <h1><?php the_title();?></h1>
+            </div>
+          </div> <!-- heading-image -->
 
+        <?php endif; ?>
 			<!-- Main text and image content -->
 			 <div class="single-container">
 
@@ -57,3 +75,4 @@ get_header(); ?>
 
 <?php
 get_footer();
+?>

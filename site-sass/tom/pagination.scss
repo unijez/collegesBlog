@@ -1,4 +1,10 @@
 
+//
+//  DEFLUT PAGINATION FOR EVERYTHING BUT SINGLE.PHP
+//
+
+/* Containers */
+
 .pagination {
   text-align: center;
   display: flex;
@@ -14,8 +20,11 @@
   align-items: center;
 }
 
+/* Objects */
+
 .nav-links .current {
-  color: $secondry-color;
+  background: $main-text-grey;
+  color: $related-container-color;
   border: 1px solid $main-text-grey;
   border-right: 0px;
 }
@@ -23,13 +32,23 @@
 .nav-links span {
   padding: 15px;
   align-self: center;
+  transition: ease-in .1s;
 }
 
 .nav-links a {
   padding: 15px;
   align-self: center;
   border: 1px solid $main-text-grey;
+  transition: ease-in .1s;
 }
+
+.nav-links .dots {
+  border: 1px solid $main-text-grey;
+  border-right: 0px;
+  color: $main-text-grey;
+}
+
+/* Calling Children */
 
 .nav-links a:first-child {
   border-radius: 2px 0 0 2px;
@@ -44,10 +63,16 @@
   border-right: 0px;
 }
 
-.nav-links .dots {
-  border: 1px solid $main-text-grey;
+.nav-links span:first-child {
+  border-radius: 2px 0 0 2px;
   border-right: 0px;
 }
+
+.nav-links span:last-child {
+  border-radius: 0 2px 2px 0;
+}
+
+/* Hovers */
 
 .nav-links a:hover {
   border: 1px solid $main-text-grey;
@@ -55,6 +80,31 @@
   background: $main-text-grey;
 }
 
+.nav-links a:hover:first-child  {
+  border: 1px solid $main-text-grey;
+  color: $related-container-color;
+  background: $main-text-grey;
+  border-right: 0px;
+}
+
 .nav-links span:hover {
-  background: red;
+  background: $main-text-grey;
+  color: $related-container-color;
+}
+
+//
+//  SINGLE.PHP PAGINATION
+//
+
+/* Containers */
+
+.single-pagination {
+	border-top: 1px solid $main-text-grey;
+	padding-top: 20px;
+	margin-bottom: 100px;
+}
+
+.single-pagination a {
+	@include font-weight(bold);
+	color: $main-text-grey;
 }

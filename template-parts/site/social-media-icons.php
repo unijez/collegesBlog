@@ -15,9 +15,12 @@
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <h3 class="widget-title">Social</h3>
 
 >>>>>>> a2b5d50d4c728241d5d69c4ae0490f0cb702f6d1
+=======
+>>>>>>> a73c2c048929566e354721fa60862c59fab73176
 	<ul class="social">
 
 		<?php while ( have_rows( 'social_media_repeater', 'option' ) ) : the_row(); ?>

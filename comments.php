@@ -33,6 +33,7 @@ if ( post_password_required() ) {
 			<li class="comment-tab-link" data-tab="tab-2">COMMENTS (<?php comments_number( '0', '1', '%' ); ?>)</li>
 		</ul>
 
+		<div class="tab-fix">
 		<!-- contents of "LEAVE A REPLY" -->
 		<div id="tab-1" class="comment-tab__tab-content current">
 
@@ -46,7 +47,7 @@ if ( post_password_required() ) {
 								<div class="site-comment__actual"><label for="Your Comment">' . _x( 'Your Comment', 'noun' ) . ' <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></div>',
 
 								'title_reply_before' => __('<h4 class="site-comment__title">'),
-								'class_submit' => __('submit-review main-btn'),
+								'submit_button' => '<div class="site-comment__submit-button"><input name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s" /></div>',
 								'comment_notes_before' => '',
 								'title_reply' => ''.__( '','' ).'',
 
@@ -61,6 +62,7 @@ if ( post_password_required() ) {
 
 		 comment_form($args_blog); ?>
 
+		</div>
 		</div>
 		<!-- contents of "COMMENTS" -->
 		<div id="tab-2" class="comment-tab__tab-content">

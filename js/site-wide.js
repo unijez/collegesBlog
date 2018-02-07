@@ -16,10 +16,14 @@ jQuery(document).ready(function($) {
 	 			e.stopImmediatePropagation();
 	 	        var status = globalNav.hasClass('menu-active');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 	 			
 >>>>>>> fc0f322118bbc8c492158372ea8ba4e414a11c58
+=======
+
+>>>>>>> a73c2c048929566e354721fa60862c59fab73176
 	 	      if(status){
 
 	 	        globalNav.removeClass('menu-active');
@@ -91,7 +95,7 @@ jQuery(document).ready(function($) {
 //	Comment Tabs
 
 $('ul.comment-tabs li').click(function(){
-		
+
 		var tab_id = $(this).attr('data-tab');
 
 		$('ul.comment-tabs li').removeClass('current');

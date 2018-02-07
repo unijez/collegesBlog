@@ -1,22 +1,43 @@
-.blog-article {
-
-  padding-bottom: 60px;
-
-  .gallery {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 0 auto;
+@include mq($from: wide) {
+  .blog-article .gallery {
     width: 200%;
     margin: 0 -50%;
+  }
+}
 
-    figure {
-      width: 33%;
-      font-size: 12px;
+@include mq(mobile) {
+  .blog-article {
 
-      figcaption {
-        text-align: center;
+    padding-bottom: 60px;
+
+    .gallery {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      figure {
+        width: 33%;
+        font-size: 12px;
+
+        figcaption {
+          text-align: center;
+        }
       }
     }
   }
+}
+
+
+
+
+@include mq($until: tablet) {
+  .blog-article .gallery {
+    transform: translatex(35%);
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+}
+
+@include mq(mobile, tablet) {
 }

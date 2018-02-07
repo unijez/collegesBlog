@@ -72,13 +72,13 @@
 
 
         <div class="site-header__logo level-left">
-		  <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="<?php bloginfo( 'name' ); ?>">
+		  <a href="http://www.lincoln.ac.uk/home/" rel="<?php bloginfo( 'name' ); ?>">
 	          <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/uol_landscape.svg" alt="<?php bloginfo( 'name' ); ?> University Of Lincoln Logo">
 		  </a>
         </div> <!--site-header__logo-->
 
         <div class="site-header__branding level-left">
-            <h1><?php bloginfo( 'name' ); ?></h1>
+			<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
         </div> <!--site-header__branding-->
 
         <div class="site-header__search level-right">
@@ -120,15 +120,7 @@
 					</ul> <!-- collapse -->
 
 					<div class="links collapse">
-						<a href="">
-							<i class="fab fa-instagram fa-2x"></i>
-						</a>
-						<a href="">
-							<i class="fab fa-twitter fa-2x"></i>
-						</a>
-						<a href="">
-							<i class="fab fa-facebook-f fa-2x"></i>
-						</a>
+						<?php get_template_part( 'template-parts/site/social-media', 'icons' ); ?>
 					</div> <!-- links collapse -->
 
 

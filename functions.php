@@ -47,7 +47,7 @@ if ( ! function_exists( 'collegeBlog_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		/* image resizing */
-		add_image_size( 'post-intro-image', 300, 200, true );
+		add_image_size( 'post-intro-image', 450, 300, true );
 		add_image_size( 'hero-header', 1915, 630, array( 'left', 'top' )  ); // Hard Crop Mode
 
 		/*
@@ -291,10 +291,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-
-/**
- * Default Image Function: adds default image when no preset thumbnail is found
+/*
+ * ACF P tag from image stripping
  */
+<<<<<<< HEAD
 	function slider_image() {
 		global $post;
 		$image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'hero-header', false);
@@ -362,3 +362,22 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 	add_filter('jetpack_relatedposts_filter_post_context','__return_empty_string');
 	*/
+=======
+/*function filter_ptags_on_images($content) {
+ 	$content = preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+	return preg_replace('/<p>\s*(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
+}
+add_filter('acf_the_content', 'filter_ptags_on_images');
+add_filter('the_content', 'filter_ptags_on_images');*/
+
+function fb_unautop_4_img( $content )
+{
+    $content = preg_replace(
+        '/<p>\\s*?(<a rel=\"attachment.*?><img.*?><\\/a>|<img.*?>)?\\s*<\\/p>/s',
+        '<figure class="wp-caption alignnone">$1</figure>',
+        $content
+    );
+    return $content;
+}
+add_filter( 'the_content', 'fb_unautop_4_img', 99 );
+>>>>>>> a73c2c048929566e354721fa60862c59fab73176
