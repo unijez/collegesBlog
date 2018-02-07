@@ -145,7 +145,7 @@ function header_post_image() {
 	if ($image_url[0] == "") {
 			return false;
 	} else {
-			if($img_width < 1000 && $img_height < 300) {
+			if($img_width < 1280 && $img_height < 600) {
 				return false;
 			} else {
 				return $image_url[0];
