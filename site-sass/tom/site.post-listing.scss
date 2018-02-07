@@ -136,6 +136,7 @@ hr {
 	padding: 0 25%;
 	@include mq(tablet) {
 		padding: 0 5%;
+		max-width: 900px;
 	}
   font-size: 2.9em;
 	letter-spacing: 2px;
@@ -782,7 +783,7 @@ hr {
 	}
 
 	@include mq(desktop) {
-		height: 75vh;
+		height: 600px;
 	}
 
 }
