@@ -139,19 +139,18 @@ add_action( 'init', 'itsg_disable_comment_js' );
 function header_post_image() {
 	global $post;
 	$image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'hero-header', false);
-	if ($image_url[0] != null) {
-		list($img_width, $img_height, $img_type, $img_attr) = getimagesize($image_url[0]);
-	}
+	$img_width = $image_url[1];
 	if ($image_url[0] == "") {
 			return false;
 	} else {
-			if($img_width < 1280 && $img_height < 600) {
+			if($img_width < 1600) {
 				return false;
 			} else {
 				return $image_url[0];
 			}
 	}
 }
+
 
 // Default Image Function: adds default image when no preset thumbnail is found
 function default_image($thumbnail) {
