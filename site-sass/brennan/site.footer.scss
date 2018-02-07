@@ -66,6 +66,10 @@
     border-bottom: 2px solid #fff;
   }
 
+  .widget-container + .widget-container {
+    padding-top: 20px;
+  }
+
 
 @include mq(mobile) {
 
