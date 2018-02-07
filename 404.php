@@ -17,7 +17,7 @@ get_header(); ?>
 		<main id="main" class="site-main">
 
 			<div class="single-container ">
-				<div class="404-container">
+				<div class="container-404">
 					<section class="error-404 not-found">
 						<header class="page-header">
 							<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'collegeBlog' ); ?></h1>
