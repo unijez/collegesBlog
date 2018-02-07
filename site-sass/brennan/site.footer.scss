@@ -62,6 +62,10 @@
     color: #fff;
   }
 
+  .widget_nav_menu a:hover {
+    border-bottom: 2px solid #fff;
+  }
+
 
 @include mq(mobile) {
 
