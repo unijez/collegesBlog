@@ -38,7 +38,7 @@ hr {
 	flex-wrap: wrap;
 }
 
-.item {
+.item:not(.overlay-slide) {
 	margin: 0 auto;
 	padding: $mobile-side-pad;
 }
@@ -56,6 +56,17 @@ hr {
 	/* max-width: 450px;*/
 }
 
+.item-text h5,
+.item-text h2,
+.item-text time {
+	padding: 0 5%;
+	text-align: left;
+}
+
+.item-text time {
+	float: left;
+}
+
 .item-text h5 {
 	margin-bottom: 10px;
 
@@ -67,13 +78,13 @@ hr {
 }
 
 .item-text h2 {
-  padding: 0 40px 0 40px;
   color: $secondry-color;
 }
 
 .item-text p {
   margin: 40px 0 0 0;
-  padding: 0 40px 0 40px;
+  padding: 0 5%;
+	text-align: justify;
   color: $category-excerpt-grey;
 }
 
@@ -132,7 +143,7 @@ hr {
 .heading-image h1 {
   order: 0;
   flex: 0 1 auto;
-  align-self: auto;
+  align-self: left;
 	padding: 0 25%;
 	@include mq(tablet) {
 		padding: 0 5%;
@@ -144,18 +155,20 @@ hr {
   margin-bottom: 0px;
   margin: 5px 0 5px 0;
 	word-wrap: break-word;
-	width: 100%;
 }
 
 .heading-image h4,
 .heading-image h5 {
   order: 0;
   flex: 0 1 auto;
-  align-self: auto;
+  align-self: left;
   color: #ffffff;
  	font-size: 20px;
   margin-bottom: 10px;
 	font-weight: normal;
+	@include mq(tablet) {
+		padding: 0 5%;
+	}
 
 
 	a{
