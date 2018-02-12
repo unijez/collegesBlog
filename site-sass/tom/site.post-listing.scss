@@ -59,12 +59,16 @@ hr {
 .item-text h5,
 .item-text h2,
 .item-text time {
-	padding: 0 5%;
+	@include mq(tablet) {
+		padding: 0 5%;
+	}
 	text-align: left;
 }
 
 .item-text time {
-	float: left;
+	@include mq(tablet) {
+		float: left;
+	}
 }
 
 .item-text h5 {
@@ -144,11 +148,8 @@ hr {
   order: 0;
   flex: 0 1 auto;
   align-self: left;
-	padding: 0 25%;
-	@include mq(tablet) {
-		padding: 0 5%;
-		max-width: 900px;
-	}
+	padding: 0 5%;
+	max-width: 900px;
   font-size: 2.9em;
 	letter-spacing: 2px;
   color: #ffffff;
@@ -157,8 +158,8 @@ hr {
 	text-align: left;
 }
 
-.heading-image h4,
-.heading-image h5 {
+.site-main > .heading-image h4,
+.site-main > .heading-image h5 {
   order: 0;
   flex: 0 1 auto;
   align-self: left;
@@ -166,10 +167,7 @@ hr {
  	font-size: 20px;
   margin-bottom: 10px;
 	font-weight: normal;
-	@include mq(tablet) {
 		padding: 0 5%;
-	}
-
 
 	a{
 	color: white;

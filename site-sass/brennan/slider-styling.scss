@@ -41,7 +41,9 @@
     position: absolute;
 
     .readmore {
-      padding: 10px 5%;
+      @include mq(tablet) {
+        padding: 10px 5%;
+      }
 	    line-height: 30px;
       width: 160px;
 
@@ -124,7 +126,9 @@ li.slick-active button{
 }
 
 .esc {
-  padding: 0 5%;
+  @include mq(tablet) {
+    padding: 0 5%;
+  }
   text-align: left;
 }
 
