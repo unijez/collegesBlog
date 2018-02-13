@@ -110,6 +110,13 @@
     padding-top: 20px;
   }
 
+  .site-header__search--form {
+    display: none;
+
+    .blog-search {
+      width: 200px;
+    }
+  }
 
 @include mq(mobile) {
 
@@ -119,6 +126,10 @@
 
 
 @include mq($until: tablet) {
+  .site-header__search--form {
+    display: inherit;
+  }
+
   .footer-top {
     flex-direction: column;
     height: 100%;
