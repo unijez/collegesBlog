@@ -60,7 +60,7 @@ hr {
 .item-text h2,
 .item-text time {
 	@include mq(tablet) {
-		padding: 0 5%;
+		padding: 0 15%;
 	}
 	text-align: left;
 }
@@ -148,7 +148,7 @@ hr {
   order: 0;
   flex: 0 1 auto;
   align-self: left;
-	padding: 0 5%;
+	padding: 0 15%;
 	max-width: 900px;
   font-size: 2.9em;
 	letter-spacing: 2px;
@@ -167,7 +167,7 @@ hr {
  	font-size: 20px;
   margin-bottom: 10px;
 	font-weight: normal;
-		padding: 0 5%;
+		padding: 0 15%;
 
 	a{
 	color: white;

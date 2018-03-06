@@ -1,9 +1,13 @@
 .single-container-extended {
   width: 100%;
-  padding: 0 5%;
+  padding: 0 15%;
   display: inline-flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+
+  @include mq(tablet) {
+    flex-wrap: nowrap;
+  }
+  flex-wrap: wrap;
 
   .first-aside {
     flex-grow: 2;
@@ -19,14 +23,32 @@
       max-width: 100%;
     }
 
+    article *:not(figure):not(img) {
+      padding: 0 35px;
+      max-width: 600px;
+
+      h1 {
+         line-height: 1.2em;
+         font-size: 45px;
+         font-weight: normal;
+      }
+    }
+
+    figure {
+      margin: 2.5em 0;
+    }
+
   }
 
   .second-aside {
     flex-grow: 1;
-    border-left: 1px solid #000;
+    border-left: 1px solid $uni-grey;
     margin-top: 100px;
-    padding-left: 50px;
-    margin-left: 100px;
+    padding-left: 5%;
     float: right;
+
+    section {
+      max-width: 250px;
+    }
   }
 }
