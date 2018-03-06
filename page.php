@@ -39,17 +39,27 @@ get_header(); ?>
           </div> <!-- heading-image -->
 
         <?php endif; ?>
-			<!-- Main text and image content -->
-			 <div class="single-container">
-
-				 <?php
- 			 		have_posts();
-  				the_post();
-
- 					get_template_part( 'template-parts/content', 'page' );
- 				?>
-
-			</div> <!-- single-container -->
+			 <?php if( is_active_sidebar('sidebar-1') ):?>
+			 		<div class="single-container-extended">
+					<aside class="first-aside">
+						<?php have_posts();
+									the_post();
+									get_template_part( 'template-parts/content', 'page' );
+		 				?>
+					</aside>
+					<aside class="second-aside">
+						<?php dynamic_sidebar('footer-1');?>
+					</aside>
+					</div>
+				<?php else: ?>
+					<div class="single-container">
+					<?php have_posts();
+						 		the_post();
+								get_template_part( 'template-parts/content', 'page' );
+				 	?>
+				</div>
+			 	<?php endif; ?>
+			<!-- single-container -->
 
 			<!-- Comments -->
 					<?php if ( comments_open() || get_comments_number() ) : ?>

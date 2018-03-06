@@ -1,0 +1,32 @@
+.single-container-extended {
+  width: 100%;
+  padding: 0 5%;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  .first-aside {
+    flex-grow: 2;
+    margin-top: 100px;
+    margin-right: 50px;
+    float: left;
+
+    .spacer {
+      display: none;
+    }
+
+    .entry-content {
+      max-width: 100%;
+    }
+
+  }
+
+  .second-aside {
+    flex-grow: 1;
+    border-left: 1px solid #000;
+    margin-top: 100px;
+    padding-left: 50px;
+    margin-left: 100px;
+    float: right;
+  }
+}
