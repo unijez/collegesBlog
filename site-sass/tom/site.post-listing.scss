@@ -65,6 +65,16 @@ hr {
 	text-align: left;
 }
 
+.site-module-inner {
+	.item {
+		.item-text h5,
+		.item-text h2,
+		.item-text time {
+			padding: 0 5%;
+		}
+	}
+}
+
 .item-text time {
 	@include mq(tablet) {
 		float: left;

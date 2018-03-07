@@ -21,12 +21,12 @@
 			echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
 			}?>
 		</h5>
-		
+
 
 		<h2 class="post-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
-	
+
 		<time class="date-published" datetime="<?php the_time('d/m/Y') ?>"><?php the_time('jS F Y') ?></time>
-		
+
 		<?php the_excerpt();?>
 	</div> <!-- item-text -->
 </div> <!-- post -->
