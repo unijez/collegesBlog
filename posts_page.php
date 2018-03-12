@@ -42,19 +42,43 @@ get_header(); ?>
 
         <?php endif; ?>
 
-			<div class="row site-module-inner">
-				<?php $query = new WP_Query('cat=190&post_per_page=3'); ?>
-				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-
-				<div class="item">
-						<?php get_template_part( 'template-parts/post', 'listing' ); ?>
-
-				</div> <!-- item -->
-
 				<?php
-				endwhile;
-				wp_reset_postdata();
+					$acf_field_data = get_field("category");
 				?>
+
+				<?php $query = new WP_Query('cat='.$acf_field_data[0]); ?>
+				<?php if ($query->have_posts() ) : ?>
+				<div class="main-container">
+
+					<h3 class="page-title__inner">LATEST POSTS</h3>
+					<hr></hr>
+
+					<div class="row site-module-inner">
+
+						<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+
+						<div class="item">
+
+								<?php get_template_part( 'template-parts/post', 'listing' ); ?>
+
+						</div> <!-- item -->
+
+						<?php endwhile; ?>
+
+					</div> <!-- row -->
+
+				</div> <!-- container -->
+
+				<?php the_posts_pagination( array(
+					'mid_size' => 1,
+					'prev_text' => __( 'Prev', 'collegeBlog' ),
+					'next_text' => __( 'Next', 'collegeBlog' ),
+				) ); ?>
+
+				<?php endif;  wp_reset_query(); ?>
+
+			</main><!-- #main -->
+
 			</div> <!-- row -->
 			<!-- single-container -->
 
