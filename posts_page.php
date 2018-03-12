@@ -44,9 +44,20 @@ get_header(); ?>
 
 				<?php
 					$acf_field_data = get_field("category");
+					$query_args = array(
+						'cat' => $acf_field_data[0],
+						'paged' => get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1
+					);
 				?>
 
-				<?php $query = new WP_Query('cat='.$acf_field_data[0]); ?>
+				<?php $query = new WP_Query($query_args); ?>
+
+				<?php
+					$temp_query = $wp_query;
+					$wp_query   = NULL;
+					$wp_query   = $query;
+				?>
+
 				<?php if ($query->have_posts() ) : ?>
 				<div class="main-container">
 
@@ -67,15 +78,22 @@ get_header(); ?>
 
 					</div> <!-- row -->
 
+					<?php the_posts_pagination( array(
+						'mid_size' => 1,
+						'prev_text' => __( 'Prev', 'collegeBlog' ),
+						'next_text' => __( 'Next', 'collegeBlog' ),
+					) );
+					?>
+
+					<?php
+						$wp_query = NULL;
+						$wp_query = $temp_query;
+						endif;  wp_reset_query();
+					?>
+
 				</div> <!-- container -->
 
-				<?php the_posts_pagination( array(
-					'mid_size' => 1,
-					'prev_text' => __( 'Prev', 'collegeBlog' ),
-					'next_text' => __( 'Next', 'collegeBlog' ),
-				) ); ?>
 
-				<?php endif;  wp_reset_query(); ?>
 
 			</main><!-- #main -->
 
