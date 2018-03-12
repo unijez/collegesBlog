@@ -42,25 +42,23 @@ get_header(); ?>
 
         <?php endif; ?>
 
-					<div class="single-container">
-					<?php have_posts();
-						 		the_post();
-								get_template_part( 'template-parts/content', 'page' );
-				 	?>
-				</div>
+			<div class="row site-module-inner">
+				<?php $query = new WP_Query('cat=190&post_per_page=3'); ?>
+				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+
+				<div class="item">
+						<?php get_template_part( 'template-parts/post', 'listing' ); ?>
+
+				</div> <!-- item -->
+
+				<?php
+				endwhile;
+				wp_reset_postdata();
+				?>
+			</div> <!-- row -->
 			<!-- single-container -->
 
 			<!-- Comments -->
-					<?php if ( comments_open() || get_comments_number() ) : ?>
-
-						<div class="comments-container">
-							<div class="single-container">
-
-						<?php  comments_template(); ?>
-
-					</div> <!-- comments-container -->
-
-				<?php  endif; ?>
 
 
 			<!--Display Related Posts-->
