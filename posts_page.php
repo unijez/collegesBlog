@@ -7,6 +7,8 @@
  * and that other 'pages' on your WordPress site may use a
  * different template.
  *
+ * Template Name: Posts Page
+ *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
@@ -40,25 +42,65 @@ get_header(); ?>
 
         <?php endif; ?>
 
-					<div class="single-container">
-					<?php have_posts();
-						 		the_post();
-								get_template_part( 'template-parts/content', 'page' );
-				 	?>
-				</div>
+				<?php
+					$acf_field_data = get_field("category");
+					$query_args = array(
+						'cat' => $acf_field_data[0],
+						'paged' => get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1
+					);
+				?>
+
+				<?php $query = new WP_Query($query_args); ?>
+
+				<?php
+					$temp_query = $wp_query;
+					$wp_query   = NULL;
+					$wp_query   = $query;
+				?>
+
+				<?php if ($query->have_posts() ) : ?>
+				<div class="main-container">
+
+					<h3 class="page-title__inner">LATEST POSTS</h3>
+					<hr></hr>
+
+					<div class="row site-module-inner">
+
+						<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+
+						<div class="item">
+
+								<?php get_template_part( 'template-parts/post', 'listing' ); ?>
+
+						</div> <!-- item -->
+
+						<?php endwhile; ?>
+
+					</div> <!-- row -->
+
+					<?php the_posts_pagination( array(
+						'mid_size' => 1,
+						'prev_text' => __( 'Prev', 'collegeBlog' ),
+						'next_text' => __( 'Next', 'collegeBlog' ),
+					) );
+					?>
+
+					<?php
+						$wp_query = NULL;
+						$wp_query = $temp_query;
+						endif;  wp_reset_query();
+					?>
+
+				</div> <!-- container -->
+
+
+
+			</main><!-- #main -->
+
+			</div> <!-- row -->
 			<!-- single-container -->
 
 			<!-- Comments -->
-					<?php if ( comments_open() || get_comments_number() ) : ?>
-
-						<div class="comments-container">
-							<div class="single-container">
-
-						<?php  comments_template(); ?>
-
-					</div> <!-- comments-container -->
-
-				<?php  endif; ?>
 
 
 			<!--Display Related Posts-->

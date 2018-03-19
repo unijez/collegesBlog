@@ -20,17 +20,35 @@ get_header(); ?>
 
 	<?php get_template_part( 'template-parts/slider' ); ?>
 	<div id="primary" class="content-area">
-
 			<?php if ( have_posts() ) : ?>
 
 			<div class="main-container">
 
-				<h3 class="page-title__inner">LATEST POSTS</h3>
+				<h3 class="page-title__inner">RESEARCH</h3>
 				<hr></hr>
 
 				<div class="row site-module-inner">
+					<?php $query = new WP_Query('cat=190&post_per_page=3'); ?>
+					<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
-					<?php while ( have_posts() ) : the_post(); ?>
+					<div class="item">
+							<?php get_template_part( 'template-parts/post', 'listing' ); ?>
+
+					</div> <!-- item -->
+
+					<?php
+					endwhile;
+					wp_reset_postdata();
+					?>
+
+				</div> <!-- row -->
+
+				<h3 class="page-title__inner">TEACHING AND LEARNING</h3>
+				<hr></hr>
+
+				<div class="row site-module-inner">
+					<?php $query = new WP_Query('cat=191&post_per_page=3'); ?>
+					<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
 					<div class="item">
 <<<<<<< HEAD
@@ -60,20 +78,58 @@ get_header(); ?>
 							<?php get_template_part( 'template-parts/post', 'listing' ); ?>
 							
 >>>>>>> a73c2c048929566e354721fa60862c59fab73176
+
+							<?php get_template_part( 'template-parts/post', 'listing' ); ?>
+
 					</div> <!-- item -->
 
-					<?php endwhile; ?>
+					<?php
+					endwhile;
+					wp_reset_postdata();
+					?>
+
+				</div> <!-- row -->
+
+				<h3 class="page-title__inner">NEWS</h3>
+				<hr></hr>
+
+				<div class="row site-module-inner">
+					<?php $query = new WP_Query('cat=192&post_per_page=3'); ?>
+					<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+					<div class="item">
+
+							<?php get_template_part( 'template-parts/post', 'listing' ); ?>
+
+					</div> <!-- item -->
+
+					<?php
+					endwhile;
+					wp_reset_postdata();
+					?>
+
+				</div> <!-- row -->
+
+				<h3 class="page-title__inner">EVENTS</h3>
+				<hr></hr>
+
+				<div class="row site-module-inner">
+					<?php $query = new WP_Query('cat=193&post_per_page=3'); ?>
+					<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+
+					<div class="item">
+							<?php get_template_part( 'template-parts/post', 'listing' ); ?>
+
+					</div> <!-- item -->
+
+					<?php
+					endwhile;
+					wp_reset_postdata();
+					?>
 
 				</div> <!-- row -->
 
 			</div> <!-- container -->
-
-			<?php the_posts_pagination( array(
-				'mid_size' => 1,
-				'prev_text' => __( 'Prev', 'collegeBlog' ),
-				'next_text' => __( 'Next', 'collegeBlog' ),
-			) ); ?>
-
+			
 			<?php endif;  wp_reset_query(); ?>
 
 		</main><!-- #main -->

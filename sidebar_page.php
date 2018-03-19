@@ -7,6 +7,8 @@
  * and that other 'pages' on your WordPress site may use a
  * different template.
  *
+ * Template Name: Page with Sidebar
+ *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
@@ -39,13 +41,17 @@ get_header(); ?>
           </div> <!-- heading-image -->
 
         <?php endif; ?>
-
-					<div class="single-container">
-					<?php have_posts();
-						 		the_post();
-								get_template_part( 'template-parts/content', 'page' );
-				 	?>
-				</div>
+			 		<div class="single-container-extended">
+					<aside class="first-aside">
+						<?php have_posts();
+									the_post();
+									get_template_part( 'template-parts/content', 'page' );
+		 				?>
+					</aside>
+					<aside class="second-aside">
+						<?php if( is_active_sidebar('sidebar-1') ) { dynamic_sidebar('sidebar-1'); } else { echo "Seems like there's nothing here, add some widgets to fill it out"; }?>
+					</aside>
+					</div>
 			<!-- single-container -->
 
 			<!-- Comments -->

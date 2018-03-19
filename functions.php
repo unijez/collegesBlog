@@ -229,8 +229,6 @@ register_sidebar( array(
 	        'before_title' => '<h3 class="widget-title">',
 	        'after_title' => '</h3>',
 	    ) );
-
-
 add_action( 'widgets_init', 'collegeBlog_widgets_init' );
 
 /**

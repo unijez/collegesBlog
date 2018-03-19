@@ -147,6 +147,13 @@ background-color: $headerbg-grey;
   }
 
 >>>>>>> a73c2c048929566e354721fa60862c59fab73176
+  .footer-top .site-header__search--form {
+    display: none;
+
+    .blog-search {
+      width: 200px;
+    }
+  }
 
 @include mq(mobile) {
 
@@ -156,6 +163,10 @@ background-color: $headerbg-grey;
 
 
 @include mq($until: tablet) {
+  .site-header__search--form {
+    display: inherit;
+  }
+
   .footer-top {
     flex-direction: column;
     height: 100%;
