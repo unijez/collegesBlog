@@ -28,8 +28,9 @@ get_header(); ?>
 				<hr></hr>
 
 				<div class="row site-module-inner">
-					<?php $query = new WP_Query('cat=190&post_per_page=3'); ?>
-					<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+					<?php $query = new WP_Query('cat=190 & post_per_page=-1'); $counter = 1; ?>
+
+					<?php while ( $query->have_posts() && !( $counter > 3)  ) : $query->the_post(); ?>
 
 					<div class="item">
 							<?php get_template_part( 'template-parts/post', 'listing' ); ?>
@@ -37,6 +38,7 @@ get_header(); ?>
 					</div> <!-- item -->
 
 					<?php
+					$counter++;
 					endwhile;
 					wp_reset_postdata();
 					?>
@@ -47,8 +49,8 @@ get_header(); ?>
 				<hr></hr>
 
 				<div class="row site-module-inner">
-					<?php $query = new WP_Query('cat=191&post_per_page=3'); ?>
-					<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+					<?php $query = new WP_Query('cat=191&post_per_page=-1'); $counter = 1; ?>
+					<?php while ( $query->have_posts() && !( $counter > 3)  ) : $query->the_post(); ?>
 
 					<div class="item">
 
@@ -57,6 +59,7 @@ get_header(); ?>
 					</div> <!-- item -->
 
 					<?php
+					$counter++;
 					endwhile;
 					wp_reset_postdata();
 					?>
@@ -67,8 +70,8 @@ get_header(); ?>
 				<hr></hr>
 
 				<div class="row site-module-inner">
-					<?php $query = new WP_Query('cat=192&post_per_page=3'); ?>
-					<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+					<?php $query = new WP_Query('cat=192&post_per_page=-1'); $counter = 1; ?>
+					<?php while ( $query->have_posts() && !( $counter > 3 ) ) : $query->the_post(); ?>
 					<div class="item">
 
 							<?php get_template_part( 'template-parts/post', 'listing' ); ?>
@@ -76,6 +79,7 @@ get_header(); ?>
 					</div> <!-- item -->
 
 					<?php
+					$counter++;
 					endwhile;
 					wp_reset_postdata();
 					?>
@@ -86,8 +90,9 @@ get_header(); ?>
 				<hr></hr>
 
 				<div class="row site-module-inner">
-					<?php $query = new WP_Query('cat=193&post_per_page=3'); ?>
-					<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+					<?php $query = new WP_Query('cat=193&post_per_page=-1'); $counter = 1?>
+
+					<?php while ( $query->have_posts() && !( $counter > 3)  ) : $query->the_post(); ?>
 
 					<div class="item">
 							<?php get_template_part( 'template-parts/post', 'listing' ); ?>
@@ -95,6 +100,7 @@ get_header(); ?>
 					</div> <!-- item -->
 
 					<?php
+					$counter++;
 					endwhile;
 					wp_reset_postdata();
 					?>
@@ -102,7 +108,7 @@ get_header(); ?>
 				</div> <!-- row -->
 
 			</div> <!-- container -->
-			
+
 			<?php endif;  wp_reset_query(); ?>
 
 		</main><!-- #main -->
