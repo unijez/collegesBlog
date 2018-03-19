@@ -134,16 +134,7 @@ add_filter( 'get_the_archive_title', function ($title) {
     return $title;
 
 });
-	/* FUNCTIONS ADDED BY BRENNAN */
 
-	/* ADDING IN A DEFAULT IMAGE TO POSTS FUNCTION */
-	function default_image($thumbnail) {
-		if ( has_post_thumbnail() ) {
-							the_post_thumbnail($thumbnail);
-				} else {
-							?><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/default-image.jpg" alt="<?php the_title(); ?>" /><?php
-		}
-	}
 /*
 *
 *	FUCNTIONS ADDED BY TOM / END
@@ -162,43 +153,6 @@ function collegeBlog_widgets_init() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
-	) );
-	//Footer Widgets
-	register_sidebar( array(
-		'name'          => esc_html__( 'First Footer Widget Area', 'collegeBlog' ),
-		'id'            => 'footer-1',
-		'description'   => esc_html__( 'Add widgets here.', 'collegeBlog' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Second Footer Widget Area', 'collegeBlog' ),
-		'id'            => 'footer-2',
-		'description'   => esc_html__( 'Add widgets here.', 'collegeBlog' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Third Footer Widget Area', 'collegeBlog' ),
-		'id'            => 'footer-3',
-		'description'   => esc_html__( 'Add widgets here.', 'collegeBlog' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Fourth Footer Widget Area', 'collegeBlog' ),
-		'id'            => 'footer-4',
-		'description'   => esc_html__( 'Add widgets here.', 'collegeBlog' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
 	) );
 }
 add_action( 'widgets_init', 'collegeBlog_widgets_init' );
@@ -229,6 +183,8 @@ register_sidebar( array(
 	        'before_title' => '<h3 class="widget-title">',
 	        'after_title' => '</h3>',
 	    ) );
+
+
 add_action( 'widgets_init', 'collegeBlog_widgets_init' );
 
 /**
@@ -289,29 +245,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-/*
- * ACF P tag from image stripping
- */
-<<<<<<< HEAD
-	function slider_image() {
-		global $post;
-		$image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'hero-header', false);
-		if ($image_url[0] == false) {
-				$image_url = esc_url(get_template_directory_uri())."/images/largesliderimage.jpg";
-				echo $image_url;
-		} else {
-				echo $image_url[0];
-		}
-	}
 
-		function default_image($thumbnail) {
 
-			if ( has_post_thumbnail() ) {
-				the_post_thumbnail($thumbnail);
-			} else {
-				?><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/default-image.jpg" alt="<?php the_title(); ?>" /><?php
-			}
-		}
 
 	/*
 	 * ACF P tag from image stripping
@@ -322,60 +257,3 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	 }
 	 add_filter('acf_the_content', 'filter_ptags_on_images');
 	 add_filter('the_content', 'filter_ptags_on_images');
-
-	/*
-	 * JetPack Functions
-	 */
-
-	 /*
-	function jetpackme_remove_rp() {
-		$jprp = Jetpack_RelatedPosts::init();
-		$callback = array($jprp, 'filter_add_target_to_dom');
-		remove_filter('the_content', $callback, 40);
-	}
-	add_filter('wp', 'jetpackme_remove_rp', 20);
-
-	function jetpackme_related_posts_headline($headline) {
-		$headline = sprintf(
-			'<h3 class="jp-widget-title">%s</h3>',
-			esc_html('YOU MIGHT ALSO LIKE');
-		);
-		return $headline;
-	}
-	add_filter('jetpack_relatedposts_filter_headline','jetpackme_related_posts_headline');
-
-	function jetpackme_more_related_posts($options) {
-		$options['size'] = 3;
-		return $options;
-	}
-	add_filter('jetpack_relatedposts_filter_options','jetpackme_more_related_posts');
-
-	function jetpackchange_image_size($thumbnail_size) {
-		$thumbnail_size['width'] = 433.317;
-		$thumbnail_size['height'] = 289.233;
-		$thumbnail_size['crop'] = true;
-		return $thumbnail_size;
-	}
-	add_filter('jetpack_relatedposts_filter_thumbnail_size', 'jetpackchange_image_size');
-
-	add_filter('jetpack_relatedposts_filter_post_context','__return_empty_string');
-	*/
-=======
-/*function filter_ptags_on_images($content) {
- 	$content = preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
-	return preg_replace('/<p>\s*(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
-}
-add_filter('acf_the_content', 'filter_ptags_on_images');
-add_filter('the_content', 'filter_ptags_on_images');*/
-
-function fb_unautop_4_img( $content )
-{
-    $content = preg_replace(
-        '/<p>\\s*?(<a rel=\"attachment.*?><img.*?><\\/a>|<img.*?>)?\\s*<\\/p>/s',
-        '<figure class="wp-caption alignnone">$1</figure>',
-        $content
-    );
-    return $content;
-}
-add_filter( 'the_content', 'fb_unautop_4_img', 99 );
->>>>>>> a73c2c048929566e354721fa60862c59fab73176

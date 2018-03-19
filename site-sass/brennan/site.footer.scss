@@ -4,30 +4,6 @@
 /* Footer */
 
 .footer-top {
-<<<<<<< HEAD
-height: 350px;
-width: 100%;
-background: $footerbg-grey;
-display: inline-flex;
-flex-direction: row;
-flex-wrap: nowrap;
-justify-content: center;
-align-content: stretch;
-align-items: center;
-}
-
-.col {
-order: 0;
-flex: 1 2 auto;
-align-self: auto;
-margin: 0 70px;
-}
-
-.footer-bottom {
-height: 100px;
-width: 100%;
-background-color: $headerbg-grey;
-=======
   min-height: 350px;
   width: 100%;
   background: $footerbg-grey;
@@ -58,7 +34,6 @@ background-color: $headerbg-grey;
   float: right;
   padding-top: 35px;
   letter-spacing: 1px;
->>>>>>> fc0f322118bbc8c492158372ea8ba4e414a11c58
 }
 
 .widget-title {
@@ -77,83 +52,16 @@ background-color: $headerbg-grey;
   border-bottom: 1px solid #fff;
 }
 
-.widget-container .search-container {
-
-  input {
-    border: none;
-    padding: 10px;
-    border-bottom: 1px solid #8C8C8C;
-  }
-
-  button {
-    width: 38px;
-    height: 38px;
-    color: #8C8C8C;
-  }
-
-  // Placeholder text colour
-
-  ::-webkit-input-placeholder {
-      color:    #8C8C8C;
-  }
-  :-moz-placeholder {
-     color:    #8C8C8C;
-     opacity:  1;
-  }
-  ::-moz-placeholder {
-     color:    #8C8C8C;
-     opacity:  1;
-  }
-  :-ms-input-placeholder {
-     color:    #8C8C8C;
-  }
-  ::-ms-input-placeholder {
-     color:    #8C8C8C;
-  }
-
-  ::placeholder {
-     color:    #8C8C8C;
-  }
-
-}
-
 /*--------------------------------------------------------------
 # Site Footer - Brennan Styling
 --------------------------------------------------------------*/
 
-<<<<<<< HEAD
-.col {
-  color: #fff;
-  .textwidget {
-    line-height: 2;
-  }
-}
-=======
 
 
  .footer-top a {
     color: #fff;
   }
 
-<<<<<<< HEAD
->>>>>>> fc0f322118bbc8c492158372ea8ba4e414a11c58
-=======
-  .widget_nav_menu a:hover {
-    border-bottom: 2px solid #fff;
-  }
-
-  .widget-container + .widget-container {
-    padding-top: 20px;
-  }
-
->>>>>>> a73c2c048929566e354721fa60862c59fab73176
-  .footer-top .site-header__search--form {
-    display: none;
-
-    .blog-search {
-      width: 200px;
-    }
-  }
 
 @include mq(mobile) {
 
@@ -163,10 +71,6 @@ background-color: $headerbg-grey;
 
 
 @include mq($until: tablet) {
-  .site-header__search--form {
-    display: inherit;
-  }
-
   .footer-top {
     flex-direction: column;
     height: 100%;
@@ -196,8 +100,6 @@ background-color: $headerbg-grey;
     }
 
   }
-<<<<<<< HEAD
-=======
 
   .footer-bottom {
     flex-direction: column;
@@ -210,5 +112,4 @@ background-color: $headerbg-grey;
     font-size: 13px;
   }
 
->>>>>>> fc0f322118bbc8c492158372ea8ba4e414a11c58
 }

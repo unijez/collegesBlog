@@ -65,11 +65,8 @@
 
 if( function_exists('acf_add_local_field_group') ):
 
-<<<<<<< HEAD
-=======
 
 //Social Media
->>>>>>> a2b5d50d4c728241d5d69c4ae0490f0cb702f6d1
 acf_add_local_field_group(array(
 	'key' => 'group_5605d61f566b0',
 	'title' => 'Social Media Links',
@@ -168,8 +165,6 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
-<<<<<<< HEAD
-=======
 
 //Related Posts
 acf_add_local_field_group(array(
@@ -233,5 +228,4 @@ acf_add_local_field_group(array(
 ));
 
 
->>>>>>> a2b5d50d4c728241d5d69c4ae0490f0cb702f6d1
 endif;

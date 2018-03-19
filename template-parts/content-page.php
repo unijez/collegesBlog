@@ -14,13 +14,10 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if(!has_post_thumbnail()): ?>
-		<header class="entry-header clear">
-			<?php the_title( '<h1 class="page-title__inner">', '</h1>' ); ?>
-		</header><!-- .entry-header -->
-	<?php else: ?>
-		<section class="spacer"></section>
-	<?php endif; ?>
+	<header class="entry-header clear">
+		<?php the_title( '<h1 class="page-title__inner">', '</h1>' ); ?>
+	</header><!-- .entry-header -->
+
 	<div class="entry-content">
 		<?php
 			the_content();

@@ -15,15 +15,7 @@ jQuery(document).ready(function($) {
 	 			e.stopPropagation();
 	 			e.stopImmediatePropagation();
 	 	        var status = globalNav.hasClass('menu-active');
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-	 			
->>>>>>> fc0f322118bbc8c492158372ea8ba4e414a11c58
-=======
-
->>>>>>> a73c2c048929566e354721fa60862c59fab73176
 	 	      if(status){
 
 	 	        globalNav.removeClass('menu-active');
@@ -43,17 +35,6 @@ jQuery(document).ready(function($) {
 
 	mobileMenuLaunch();
 
-<<<<<<< HEAD
-	/* BRENNAN'S SITE WIDE FUNCTIONS */
-	/*function slickSlider() {
-		$('.slick-slide').slick({
-			slidesToShow: 5,
-			slidesToScroll: 1,
-			autoplay: true,
-			autoplaySpeed: 2000,
-		});
-	}*/
-=======
 
 //	Reading Time Plugin
 
@@ -106,6 +87,5 @@ $('ul.comment-tabs li').click(function(){
 	})
 
 
->>>>>>> fc0f322118bbc8c492158372ea8ba4e414a11c58
 
 });

@@ -38,48 +38,22 @@ hr {
 	flex-wrap: wrap;
 }
 
-.jp-relatedposts-post {
-.item:not(.overlay-slide) {
+.item {
 	margin: 0 auto;
 	padding: $mobile-side-pad;
 }
 
-.jp-relatedposts-post a img {
+.item img {
 	width: 100%;
 	height: auto;
 	display: block;
 }
 
-.jp-relatedposts-post h4 {
+.item-text {
 	text-align: center;
 	padding-bottom: 20px;
   padding-top: 30px;
 	/* max-width: 450px;*/
-}
-
-.item-text h5,
-.item-text h2,
-.item-text time {
-	@include mq(tablet) {
-		padding: 0 15%;
-	}
-	text-align: left;
-}
-
-.site-module-inner {
-	.item {
-		.item-text h5,
-		.item-text h2,
-		.item-text time {
-			padding: 0 5%;
-		}
-	}
-}
-
-.item-text time {
-	@include mq(tablet) {
-		float: left;
-	}
 }
 
 .item-text h5 {
@@ -93,13 +67,13 @@ hr {
 }
 
 .item-text h2 {
+  padding: 0 40px 0 40px;
   color: $secondry-color;
 }
 
 .item-text p {
   margin: 40px 0 0 0;
-  padding: 0 10% 0% 5%;
-	text-align: left;
+  padding: 0 40px 0 40px;
   color: $category-excerpt-grey;
 }
 
@@ -126,7 +100,7 @@ hr {
 .heading-image_opacity {
 	background-color: $uni-blue-heading;
 	width: 100%;
-  height: 100%;
+  height: 75vh;
 	text-align: center;
   display: flex;
   flex-direction: column;
@@ -158,27 +132,24 @@ hr {
 .heading-image h1 {
   order: 0;
   flex: 0 1 auto;
-  align-self: left;
-	padding: 0 15%;
-	max-width: 900px;
+  align-self: auto;
+	padding: 0 25%;
   font-size: 2.9em;
 	letter-spacing: 2px;
   color: #ffffff;
   margin-bottom: 0px;
-  margin: 5px 0 5px 0;
-	text-align: left;
+  margin: 10px 0 10px 0;
 }
 
-.site-main > .heading-image h4,
-.site-main > .heading-image h5 {
+.heading-image h4,
+.heading-image h5 {
   order: 0;
   flex: 0 1 auto;
-  align-self: left;
+  align-self: auto;
   color: #ffffff;
  	font-size: 20px;
   margin-bottom: 10px;
-	font-weight: normal;
-		padding: 0 15%;
+
 
 	a{
 	color: white;
@@ -415,24 +386,12 @@ blockquote::before {
 	padding-top: 45px;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-	/* Footer */
-/*.footer-bottom {
-	height: 100px;
-	width: 100%;
-	background-color: $headerbg-grey;
-}*/
-
->>>>>>> fc0f322118bbc8c492158372ea8ba4e414a11c58
-=======
->>>>>>> a73c2c048929566e354721fa60862c59fab73176
 	/* Comments */
 
 .comments-container {
 	width: 100%;
 	min-height: 500px;
+	margin-bottom: 150px;
 	margin-top: 150px;
 	padding-top: 100px;
 	border-top: 1px solid $main-text-grey;
@@ -704,7 +663,7 @@ padding-bottom: $comments-spacing;
 
 /* 404 */
 
-.container-404 {
+.404-container {
 	display: flex;
 }
 
@@ -818,7 +777,7 @@ hr {
 	}
 
 	@include mq(desktop) {
-		height: 600px;
+		height: 75vh;
 	}
 
 }
