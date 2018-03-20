@@ -263,3 +263,56 @@ function fb_unautop_4_img( $content )
     return $content;
 }
 add_filter( 'the_content', 'fb_unautop_4_img', 99 );
+
+/*
+	Custom RSS feed
+*/
+/*
+function custom_rss( $content ) {
+
+	$post_ID = get_the_ID();
+
+	$content = get_post_field('post_content', $post_ID);
+	$content = apply_filters('the_content', $content);
+	$content = str_replace(']]>', ']]&gt;', $content);
+
+	echo $content;
+}
+remove_all_actions( 'do_feed_rss2' );
+add_action( 'do_feed_rss2', 'custom_rss', 10, 1 );
+*/
+
+add_action('init', 'create_custom_rss');
+function create_custom_rss(){
+        add_feed('pullfromthis', 'custom_rss');
+}
+
+function custom_rss(){
+        get_template_part('rss', 'content');
+}
+
+function acf_in_feed($content) {
+    if(is_feed()) {
+        $post_id = get_the_ID();
+
+        $rssimage = get_field('rss_image');
+
+            if( !empty($rssimage) ):
+                $imgurl = $rssimage['url'];
+                $imgalt = $rssimage['alt'];
+                $imgtitle = $rssimage['title'];
+
+                $output .= '<p class="rss-image"><img src="';
+                $output .=  $imgurl;
+                $output .= '" alt="';
+                $output .= $imgalt;
+                $output .= '" title="';
+                $output .= $imgtitle;
+                $output .= '" /></p>';
+            endif;
+
+        $content = $content.$output;
+    }
+    return $content;
+}
+add_filter('the_content','acf_in_feed');
