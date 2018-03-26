@@ -12,7 +12,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
- * @subpackage collegeBlog
+ * @subpackage uolCollege
  * @author     Jez Thompson <jthompson@lincoln.ac.uk>
  * @since 1.0
  * @version 1.0
@@ -80,8 +80,8 @@ get_header(); ?>
 
 					<?php the_posts_pagination( array(
 						'mid_size' => 1,
-						'prev_text' => __( 'Prev', 'collegeBlog' ),
-						'next_text' => __( 'Next', 'collegeBlog' ),
+						'prev_text' => __( 'Prev', 'uolCollege' ),
+						'next_text' => __( 'Next', 'uolCollege' ),
 					) );
 					?>
 

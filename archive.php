@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
 * @package WordPress
-* @subpackage collegeBlog
+* @subpackage uolCollege
 * @author     Jez Thompson <jthompson@lincoln.ac.uk>
 * @since 1.0
 * @version 1.0
@@ -42,8 +42,8 @@
 
  			<?php the_posts_pagination( array(
  				'mid_size' => 2,
- 				'prev_text' => __( 'Back', 'collegeBlog' ),
- 				'next_text' => __( 'Onward', 'collegeBlog' ),
+ 				'prev_text' => __( 'Back', 'uolCollege' ),
+ 				'next_text' => __( 'Onward', 'uolCollege' ),
  			) ); ?>
 
  			<?php endif;  wp_reset_query(); ?>

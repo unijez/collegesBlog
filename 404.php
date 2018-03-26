@@ -5,7 +5,7 @@
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
  * @package WordPress
- * @subpackage collegeBlog
+ * @subpackage uolCollege
  * @author     Jez Thompson <jthompson@lincoln.ac.uk>
  * @since 1.0
  * @version 1.0
@@ -20,11 +20,11 @@ get_header(); ?>
 				<div class="404-container">
 					<section class="error-404 not-found">
 						<header class="page-header">
-							<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'collegeBlog' ); ?></h1>
+							<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'uolCollege' ); ?></h1>
 						</header><!-- .page-header -->
 
 						<div class="page-content">
-							<p><?php esc_html_e( 'It looks like nothing was found at this location.', 'collegeBlog' ); ?></p>
+							<p><?php esc_html_e( 'It looks like nothing was found at this location.', 'uolCollege' ); ?></p>
 
 						</div><!-- .page-content -->
 					</section><!-- .error-404 -->

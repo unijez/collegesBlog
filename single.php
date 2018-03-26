@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package WordPress
- * @subpackage collegeBlog
+ * @subpackage uolCollege
  * @author     Jez Thompson <jthompson@lincoln.ac.uk>
  * @since 1.0
  * @version 1.0
@@ -81,7 +81,7 @@
 					            <?php  if( get_previous_post()): ?>
 					            <li class="single-pagination__link level-left">
 
-					            	<?php previous_post_link( '' . esc_html__( '%link', 'collegeBlog' ) . '', 'Previous Post' ); ?>
+					            	<?php previous_post_link( '' . esc_html__( '%link', 'uolCollege' ) . '', 'Previous Post' ); ?>
 
 					            </li> <!--single-pagination__link-->
 
@@ -91,7 +91,7 @@
 
 					            <li class="single-pagination__link level-right">
 
-					            	<?php next_post_link( '' . esc_html__( '%link',     'collegeBlog' ) . '', 'Next Post' ); ?>
+					            	<?php next_post_link( '' . esc_html__( '%link',     'uolCollege' ) . '', 'Next Post' ); ?>
 
 					            </li> <!--single-pagination__link-->
 					            <?php endif; ?>
