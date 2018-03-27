@@ -5,7 +5,7 @@
  * @link https://jetpack.com/
  *
  * @package WordPress
- * @subpackage uolCollege
+ * @subpackage collegesBlog
  * @author     Jez Thompson <jthompson@lincoln.ac.uk>
  * @since 1.0
  * @version 1.0
@@ -18,11 +18,11 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function uolCollege_jetpack_setup() {
+function collegesBlog_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'    => 'uolCollege_infinite_scroll_render',
+		'render'    => 'collegesBlog_infinite_scroll_render',
 		'footer'    => 'page',
 	) );
 
@@ -32,7 +32,7 @@ function uolCollege_jetpack_setup() {
 	// Add theme support for Content Options.
 	add_theme_support( 'jetpack-content-options', array(
 		'post-details' => array(
-			'stylesheet' => 'uolCollege-style',
+			'stylesheet' => 'collegesBlog-style',
 			'date'       => '.posted-on',
 			'categories' => '.cat-links',
 			'tags'       => '.tags-links',
@@ -41,12 +41,12 @@ function uolCollege_jetpack_setup() {
 		),
 	) );
 }
-add_action( 'after_setup_theme', 'uolCollege_jetpack_setup' );
+add_action( 'after_setup_theme', 'collegesBlog_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function uolCollege_infinite_scroll_render() {
+function collegesBlog_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :

@@ -2,7 +2,7 @@
 /**
  * Displays releated posts if needed.
  * @package WordPress
- * @subpackage uolCollege
+ * @subpackage collegesBlog
  * @author     Jez Thompson <jthompson@lincoln.ac.uk>
  * @since 1.0
  * @version 1.0

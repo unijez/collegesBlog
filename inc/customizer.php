@@ -1,9 +1,9 @@
 <?php
 /**
- * uolCollege Theme Customizer
+ * collegesBlog Theme Customizer
  *
  * @package WordPress
- * @subpackage uolCollege
+ * @subpackage collegesBlog
  * @author     Jez Thompson <jthompson@lincoln.ac.uk>
  * @since 1.0
  * @version 1.0
@@ -14,7 +14,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function uolCollege_customize_register( $wp_customize ) {
+function collegesBlog_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -22,22 +22,22 @@ function uolCollege_customize_register( $wp_customize ) {
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial( 'blogname', array(
 			'selector'        => '.site-title a',
-			'render_callback' => 'uolCollege_customize_partial_blogname',
+			'render_callback' => 'collegesBlog_customize_partial_blogname',
 		) );
 		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
 			'selector'        => '.site-description',
-			'render_callback' => 'uolCollege_customize_partial_blogdescription',
+			'render_callback' => 'collegesBlog_customize_partial_blogdescription',
 		) );
 	}
 }
-add_action( 'customize_register', 'uolCollege_customize_register' );
+add_action( 'customize_register', 'collegesBlog_customize_register' );
 
 /**
  * Render the site title for the selective refresh partial.
  *
  * @return void
  */
-function uolCollege_customize_partial_blogname() {
+function collegesBlog_customize_partial_blogname() {
 	bloginfo( 'name' );
 }
 
@@ -46,14 +46,14 @@ function uolCollege_customize_partial_blogname() {
  *
  * @return void
  */
-function uolCollege_customize_partial_blogdescription() {
+function collegesBlog_customize_partial_blogdescription() {
 	bloginfo( 'description' );
 }
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function uolCollege_customize_preview_js() {
-	wp_enqueue_script( 'uolCollege-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+function collegesBlog_customize_preview_js() {
+	wp_enqueue_script( 'collegesBlog-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
-add_action( 'customize_preview_init', 'uolCollege_customize_preview_js' );
+add_action( 'customize_preview_init', 'collegesBlog_customize_preview_js' );

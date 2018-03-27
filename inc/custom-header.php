@@ -9,7 +9,7 @@
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
  * @package WordPress
- * @subpackage uolCollege
+ * @subpackage collegesBlog
  * @author     Jez Thompson <jthompson@lincoln.ac.uk>
  * @since 1.0
  * @version 1.0
@@ -18,27 +18,27 @@
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses uolCollege_header_style()
+ * @uses collegesBlog_header_style()
  */
-function uolCollege_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'uolCollege_custom_header_args', array(
+function collegesBlog_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'collegesBlog_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'uolCollege_header_style',
+		'wp-head-callback'       => 'collegesBlog_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'uolCollege_custom_header_setup' );
+add_action( 'after_setup_theme', 'collegesBlog_custom_header_setup' );
 
-if ( ! function_exists( 'uolCollege_header_style' ) ) :
+if ( ! function_exists( 'collegesBlog_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see uolCollege_custom_header_setup().
+	 * @see collegesBlog_custom_header_setup().
 	 */
-	function uolCollege_header_style() {
+	function collegesBlog_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

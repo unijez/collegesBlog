@@ -1,17 +1,17 @@
 <?php
 /**
- * uolCollege functions and definitions
+ * collegesBlog functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package WordPress
- * @subpackage uolCollege
+ * @subpackage collegesBlog
  * @author     Jez Thompson <jthompson@lincoln.ac.uk>
  * @since 1.0
  * @version 1.0
  */
 
-if ( ! function_exists( 'uolCollege_setup' ) ) :
+if ( ! function_exists( 'collegesBlog_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -19,14 +19,14 @@ if ( ! function_exists( 'uolCollege_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function uolCollege_setup() {
+	function collegesBlog_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on uolCollege, use a find and replace
-		 * to change 'uolCollege' to the name of your theme in all the template files.
+		 * If you're building a theme based on collegesBlog, use a find and replace
+		 * to change 'collegesBlog' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'uolCollege', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'collegesBlog', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -63,7 +63,7 @@ if ( ! function_exists( 'uolCollege_setup' ) ) :
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'uolCollege_custom_background_args', array(
+		add_theme_support( 'custom-background', apply_filters( 'collegesBlog_custom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
@@ -84,7 +84,7 @@ if ( ! function_exists( 'uolCollege_setup' ) ) :
 		) );
 	}
 endif;
-add_action( 'after_setup_theme', 'uolCollege_setup' );
+add_action( 'after_setup_theme', 'collegesBlog_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -93,10 +93,10 @@ add_action( 'after_setup_theme', 'uolCollege_setup' );
  *
  * @global int $content_width
  */
-function uolCollege_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'uolCollege_content_width', 640 );
+function collegesBlog_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'collegesBlog_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'uolCollege_content_width', 0 );
+add_action( 'after_setup_theme', 'collegesBlog_content_width', 0 );
 
 /*
 *
@@ -144,40 +144,40 @@ add_filter( 'get_the_archive_title', function ($title) {
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
  add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
-function uolCollege_widgets_init() {
+function collegesBlog_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'uolCollege' ),
+		'name'          => esc_html__( 'Sidebar', 'collegesBlog' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'uolCollege' ),
+		'description'   => esc_html__( 'Add widgets here.', 'collegesBlog' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
 }
-add_action( 'widgets_init', 'uolCollege_widgets_init' );
+add_action( 'widgets_init', 'collegesBlog_widgets_init' );
 register_sidebar( array(
-        'name' => __( 'First Footer Widget Area', 'uolCollege' ),
+        'name' => __( 'First Footer Widget Area', 'collegesBlog' ),
         'id' => 'footer-1',
-        'description' => __( 'The first footer widget area', 'uolCollege' ),
+        'description' => __( 'The first footer widget area', 'collegesBlog' ),
         'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3 class="widget-title">',
         'after_title' => '</h3>',
     ) );
 	register_sidebar( array(
-	        'name' => __( 'Second Footer Widget Area', 'uolCollege' ),
+	        'name' => __( 'Second Footer Widget Area', 'collegesBlog' ),
 	        'id' => 'footer-2',
-	        'description' => __( 'The first footer widget area', 'uolCollege' ),
+	        'description' => __( 'The first footer widget area', 'collegesBlog' ),
 	        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 	        'after_widget' => '</div>',
 	        'before_title' => '<h3 class="widget-title">',
 	        'after_title' => '</h3>',
 	    ) );
 	register_sidebar( array(
-	        'name' => __( 'Third Footer Widget Area', 'uolCollege' ),
+	        'name' => __( 'Third Footer Widget Area', 'collegesBlog' ),
 	        'id' => 'footer-3',
-	        'description' => __( 'The first footer widget area', 'uolCollege' ),
+	        'description' => __( 'The first footer widget area', 'collegesBlog' ),
 	        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 	        'after_widget' => '</div>',
 	        'before_title' => '<h3 class="widget-title">',
@@ -185,15 +185,15 @@ register_sidebar( array(
 	    ) );
 
 
-add_action( 'widgets_init', 'uolCollege_widgets_init' );
+add_action( 'widgets_init', 'collegesBlog_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function uolCollege_scripts() {
+function collegesBlog_scripts() {
 
 
-	wp_enqueue_style( 'uolCollege-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'collegesBlog-style', get_stylesheet_uri() );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -209,7 +209,7 @@ function uolCollege_scripts() {
 
 }
 
-add_action( 'wp_enqueue_scripts', 'uolCollege_scripts' );
+add_action( 'wp_enqueue_scripts', 'collegesBlog_scripts' );
 
 /**
  * Implement the Custom Header feature.
