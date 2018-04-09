@@ -87,7 +87,7 @@
 
   <div class="footer-bottom">
   	
-  	<div class="site-module site-module-inner level-elements">
+  	<div class="site-module site-module-inner">
 
     <a href="http://www.lincoln.ac.uk/home/" rel="<?php bloginfo( 'name' ); ?>">
           <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/uol_landscape.svg" alt="<?php bloginfo( 'name' ); ?> University Of Lincoln Logo">
