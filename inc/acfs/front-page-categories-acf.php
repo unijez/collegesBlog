@@ -1,14 +1,14 @@
 <?php
 acf_add_local_field_group(array(
-	'key' => 'group_5aa64bcbb8f56',
-	'title' => 'Display Posts',
+	'key' => 'group_5acb27024be2b',
+	'title' => 'Front Page Cateogries',
 	'fields' => array(
 		array(
-			'key' => 'field_5aa64be1979fd',
-			'label' => 'Category',
-			'name' => 'category',
+			'key' => 'field_5acb2718a6676',
+			'label' => 'Front Page Categories',
+			'name' => 'front_page_categories',
 			'type' => 'taxonomy',
-			'instructions' => 'Select one of the categories and then it will automatically pull your posts into the page',
+			'instructions' => 'Select four front page categories, if more than four are selected it will only use the first four selections',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -31,7 +31,7 @@ acf_add_local_field_group(array(
 			array(
 				'param' => 'page_template',
 				'operator' => '==',
-				'value' => 'posts_page.php',
+				'value' => 'categorized_front_page.php',
 			),
 		),
 	),

@@ -55,23 +55,16 @@
 
 	}
 
-
-
-
-
 // 3. Hide ACF field group menu item
 //add_filter('acf/settings/show_admin', '__return_false');
 
 
-if( function_exists('acf_add_local_field_group') ):
+if( function_exists('acf_add_local_field_group') ) {
 
 	require get_template_directory() . '/inc/acfs/social-media-acf.php';
 	require get_template_directory() . '/inc/acfs/related-posts-acf.php';
+	require get_template_directory() . '/inc/acfs/front-page-categories-acf.php';
+	require get_template_directory() . '/inc/acfs/display-posts-acf.php';
+	require get_template_directory() . '/inc/acfs/rss-functionality-acf.php';
 
-	//require get_template_directory() . '/inc/acfs/front-page-categories-acf.php';
-
-	//require get_template_directory() . '/inc/acfs/display-posts-acf.php';
-
-	//require get_template_directory() . '/inc/acfs/rss-functionality-acf.php';
-
-endif;
+}
