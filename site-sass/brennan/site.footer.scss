@@ -52,46 +52,6 @@
   border-bottom: 1px solid #fff;
 }
 
-.widget-container .search-container {
-
-  input {
-    border: none;
-    padding: 10px;
-    border-bottom: 1px solid #8C8C8C;
-  }
-
-  button {
-    width: 38px;
-    height: 38px;
-    color: #8C8C8C;
-  }
-
-  // Placeholder text colour
-
-  ::-webkit-input-placeholder {
-      color:    #8C8C8C;
-  }
-  :-moz-placeholder {
-     color:    #8C8C8C;
-     opacity:  1;
-  }
-  ::-moz-placeholder {
-     color:    #8C8C8C;
-     opacity:  1;
-  }
-  :-ms-input-placeholder {
-     color:    #8C8C8C;
-  }
-  ::-ms-input-placeholder {
-     color:    #8C8C8C;
-  }
-
-  ::placeholder {
-     color:    #8C8C8C;
-  }
-
-}
-
 /*--------------------------------------------------------------
 # Site Footer - Brennan Styling
 --------------------------------------------------------------*/
@@ -102,21 +62,6 @@
     color: #fff;
   }
 
-  .widget_nav_menu a:hover {
-    border-bottom: 2px solid #fff;
-  }
-
-  .widget-container + .widget-container {
-    padding-top: 20px;
-  }
-
-  .footer-top .site-header__search--form {
-    display: none;
-
-    .blog-search {
-      width: 200px;
-    }
-  }
 
 @include mq(mobile) {
 
@@ -126,10 +71,6 @@
 
 
 @include mq($until: tablet) {
-  .site-header__search--form {
-    display: inherit;
-  }
-
   .footer-top {
     flex-direction: column;
     height: 100%;

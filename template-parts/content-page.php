@@ -14,19 +14,16 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if(!has_post_thumbnail()): ?>
-		<header class="entry-header clear">
-			<?php the_title( '<h1 class="page-title__inner">', '</h1>' ); ?>
-		</header><!-- .entry-header -->
-	<?php else: ?>
-		<section class="spacer"></section>
-	<?php endif; ?>
+	<header class="entry-header clear">
+		<?php the_title( '<h1 class="page-title__inner">', '</h1>' ); ?>
+	</header><!-- .entry-header -->
+
 	<div class="entry-content">
 		<?php
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'collegeBlog' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'collegesBlog' ),
 				'after'  => '</div>',
 			) );
 		?>
@@ -39,7 +36,7 @@
 					sprintf(
 						wp_kses(
 							/* translators: %s: Name of current post. Only visible to screen readers */
-							__( 'Edit <span class="screen-reader-text">%s</span>', 'collegeBlog' ),
+							__( 'Edit <span class="screen-reader-text">%s</span>', 'collegesBlog' ),
 							array(
 								'span' => array(
 									'class' => array(),

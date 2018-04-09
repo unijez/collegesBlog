@@ -42,7 +42,7 @@
                 }?>
               </h5>
               <a href="<?php the_permalink()?>">
-                <h2 class="esc"><?php the_title();?></h2>
+                <h2><?php the_title();?></h2>
               </a>
               <div class="readmore ">
                   <a class="animated" href="<?php the_permalink()?>">Read More</a>

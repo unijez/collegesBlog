@@ -1,6 +1,6 @@
 <?php
 /**
- * collegeBlog functions and definitions
+ * collegesBlog functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
@@ -11,7 +11,7 @@
  * @version 1.0
  */
 
-if ( ! function_exists( 'collegeBlog_setup' ) ) :
+if ( ! function_exists( 'collegesBlog_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -19,14 +19,14 @@ if ( ! function_exists( 'collegeBlog_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function collegeBlog_setup() {
+	function collegesBlog_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on collegeBlog, use a find and replace
-		 * to change 'collegeBlog' to the name of your theme in all the template files.
+		 * If you're building a theme based on collegesBlog, use a find and replace
+		 * to change 'collegesBlog' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'collegeBlog', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'collegesBlog', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -63,7 +63,7 @@ if ( ! function_exists( 'collegeBlog_setup' ) ) :
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'collegeBlog_custom_background_args', array(
+		add_theme_support( 'custom-background', apply_filters( 'collegesBlog_custom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
@@ -84,7 +84,7 @@ if ( ! function_exists( 'collegeBlog_setup' ) ) :
 		) );
 	}
 endif;
-add_action( 'after_setup_theme', 'collegeBlog_setup' );
+add_action( 'after_setup_theme', 'collegesBlog_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -93,10 +93,10 @@ add_action( 'after_setup_theme', 'collegeBlog_setup' );
  *
  * @global int $content_width
  */
-function collegeBlog_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'collegeBlog_content_width', 640 );
+function collegesBlog_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'collegesBlog_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'collegeBlog_content_width', 0 );
+add_action( 'after_setup_theme', 'collegesBlog_content_width', 0 );
 
 /*
 *
@@ -144,54 +144,56 @@ add_filter( 'get_the_archive_title', function ($title) {
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
  add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
-function collegeBlog_widgets_init() {
+function collegesBlog_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'collegeBlog' ),
+		'name'          => esc_html__( 'Sidebar', 'collegesBlog' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'collegeBlog' ),
+		'description'   => esc_html__( 'Add widgets here.', 'collegesBlog' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
 }
-add_action( 'widgets_init', 'collegeBlog_widgets_init' );
+add_action( 'widgets_init', 'collegesBlog_widgets_init' );
 register_sidebar( array(
-        'name' => __( 'First Footer Widget Area', 'collegeBlog' ),
+        'name' => __( 'First Footer Widget Area', 'collegesBlog' ),
         'id' => 'footer-1',
-        'description' => __( 'The first footer widget area', 'collegeBlog' ),
+        'description' => __( 'The first footer widget area', 'collegesBlog' ),
         'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3 class="widget-title">',
         'after_title' => '</h3>',
     ) );
 	register_sidebar( array(
-	        'name' => __( 'Second Footer Widget Area', 'collegeBlog' ),
+	        'name' => __( 'Second Footer Widget Area', 'collegesBlog' ),
 	        'id' => 'footer-2',
-	        'description' => __( 'The first footer widget area', 'collegeBlog' ),
+	        'description' => __( 'The first footer widget area', 'collegesBlog' ),
 	        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 	        'after_widget' => '</div>',
 	        'before_title' => '<h3 class="widget-title">',
 	        'after_title' => '</h3>',
 	    ) );
 	register_sidebar( array(
-	        'name' => __( 'Third Footer Widget Area', 'collegeBlog' ),
+	        'name' => __( 'Third Footer Widget Area', 'collegesBlog' ),
 	        'id' => 'footer-3',
-	        'description' => __( 'The first footer widget area', 'collegeBlog' ),
+	        'description' => __( 'The first footer widget area', 'collegesBlog' ),
 	        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 	        'after_widget' => '</div>',
 	        'before_title' => '<h3 class="widget-title">',
 	        'after_title' => '</h3>',
 	    ) );
-add_action( 'widgets_init', 'collegeBlog_widgets_init' );
+
+
+add_action( 'widgets_init', 'collegesBlog_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function collegeBlog_scripts() {
+function collegesBlog_scripts() {
 
 
-	wp_enqueue_style( 'collegeBlog-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'collegesBlog-style', get_stylesheet_uri() );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -207,7 +209,7 @@ function collegeBlog_scripts() {
 
 }
 
-add_action( 'wp_enqueue_scripts', 'collegeBlog_scripts' );
+add_action( 'wp_enqueue_scripts', 'collegesBlog_scripts' );
 
 /**
  * Implement the Custom Header feature.
@@ -316,3 +318,15 @@ function acf_in_feed($content) {
     return $content;
 }
 add_filter('the_content','acf_in_feed');
+
+
+
+	/*
+	 * ACF P tag from image stripping
+	 */
+	 function filter_ptags_on_images($content) {
+		 	$content = preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+			return preg_replace('/<p>\s*(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
+	 }
+	 add_filter('acf_the_content', 'filter_ptags_on_images');
+	 add_filter('the_content', 'filter_ptags_on_images');

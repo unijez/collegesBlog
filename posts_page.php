@@ -80,8 +80,8 @@ get_header(); ?>
 
 					<?php the_posts_pagination( array(
 						'mid_size' => 1,
-						'prev_text' => __( 'Prev', 'collegeBlog' ),
-						'next_text' => __( 'Next', 'collegeBlog' ),
+						'prev_text' => __( 'Prev', 'collegesBlog' ),
+						'next_text' => __( 'Next', 'collegesBlog' ),
 					) );
 					?>
 

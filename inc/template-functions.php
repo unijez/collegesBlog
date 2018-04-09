@@ -14,7 +14,7 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function collegeBlog_body_classes( $classes ) {
+function collegesBlog_body_classes( $classes ) {
 	// Adds a class of hfeed to non-singular pages.
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
@@ -22,16 +22,16 @@ function collegeBlog_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'collegeBlog_body_classes' );
+add_filter( 'body_class', 'collegesBlog_body_classes' );
 /**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
  */
-function collegeBlog_pingback_header() {
+function collegesBlog_pingback_header() {
 	if ( is_singular() && pings_open() ) {
 		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
 	}
 }
-add_action( 'wp_head', 'collegeBlog_pingback_header' );
+add_action( 'wp_head', 'collegesBlog_pingback_header' );
 /**
  * Remove Inline Styles From Figures
  *
@@ -114,12 +114,12 @@ register_nav_menu( 'main', 'Main Menu' );
 * Search function.
 */
 
-function collegeBlog_search_form( $form ) {
+function collegesBlog_search_form( $form ) {
 	$form =
 	'<form role="search" method="get" id="searchform" class="site-header__search--form" action="' . esc_url( home_url( '/' ) ). '" >
 		<div class="search-container">
-			<label class="screen-reader-text" for="s">' . __( 'Search for:', 'collegeBlog' ) . '</label>
-			<input type="text" placeholder="' . esc_attr__( 'Search', 'collegeBlog' ) . '" value="' . get_search_query() . '" name="s" id="s" class="blog-search" />
+			<label class="screen-reader-text" for="s">' . __( 'Search for:', 'collegesBlog' ) . '</label>
+			<input type="text" placeholder="' . esc_attr__( 'Search', 'collegesBlog' ) . '" value="' . get_search_query() . '" name="s" id="s" class="blog-search" />
 			<button type="submit" id="searchsubmit">
 				<i class="far fa-search"></i>
 			</button>
@@ -128,7 +128,7 @@ function collegeBlog_search_form( $form ) {
 
 	return $form;
 }
-add_filter( 'get_search_form', 'collegeBlog_search_form', 100 );
+add_filter( 'get_search_form', 'collegesBlog_search_form', 100 );
 // DISABLE WORDPRESS COMMENTS JS
 function itsg_disable_comment_js(){
     wp_deregister_script( 'comment-reply' );
@@ -139,18 +139,19 @@ add_action( 'init', 'itsg_disable_comment_js' );
 function header_post_image() {
 	global $post;
 	$image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'hero-header', false);
-	$img_width = $image_url[1];
+	if ($image_url[0] != null) {
+		list($img_width, $img_height, $img_type, $img_attr) = getimagesize($image_url[0]);
+	}
 	if ($image_url[0] == "") {
 			return false;
 	} else {
-			if($img_width < 1600) {
+			if($img_width < 1280 && $img_height < 600) {
 				return false;
 			} else {
 				return $image_url[0];
 			}
 	}
 }
-
 
 // Default Image Function: adds default image when no preset thumbnail is found
 function default_image($thumbnail) {

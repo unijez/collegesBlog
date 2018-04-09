@@ -20,11 +20,12 @@ get_header(); ?>
 
 	<?php get_template_part( 'template-parts/slider' ); ?>
 	<div id="primary" class="content-area">
+
 			<?php if ( have_posts() ) : ?>
 
 			<div class="main-container">
 
-				<h3 class="page-title__inner">RESEARCH</h3>
+				<h3 class="page-title__inner">LATEST POSTS</h3>
 				<hr></hr>
 
 				<div class="row site-module-inner">
@@ -72,10 +73,13 @@ get_header(); ?>
 				<div class="row site-module-inner">
 					<?php $query = new WP_Query('cat='.get_cat_ID('News').'&post_per_page=3'); $counter = 1; ?>
 					<?php while ( $query->have_posts() && !( $counter > 3 ) ) : $query->the_post(); ?>
+
+					<?php while ( have_posts() ) : the_post(); ?>
+
 					<div class="item">
-
+							
 							<?php get_template_part( 'template-parts/post', 'listing' ); ?>
-
+							
 					</div> <!-- item -->
 
 					<?php
@@ -104,8 +108,17 @@ get_header(); ?>
 					endwhile;
 					wp_reset_postdata();
 					?>
+					<?php endwhile; ?>
 
 				</div> <!-- row -->
+
+			</div> <!-- container -->
+
+			<?php the_posts_pagination( array(
+				'mid_size' => 1,
+				'prev_text' => __( 'Prev', 'collegesBlog' ),
+				'next_text' => __( 'Next', 'collegesBlog' ),
+			) ); ?>
 
 			</div> <!-- container -->
 

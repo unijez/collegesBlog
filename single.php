@@ -81,7 +81,7 @@
 					            <?php  if( get_previous_post()): ?>
 					            <li class="single-pagination__link level-left">
 
-					            	<?php previous_post_link( '' . esc_html__( '%link', 'collegeBlog' ) . '', 'Previous Post' ); ?>
+					            	<?php previous_post_link( '' . esc_html__( '%link', 'collegesBlog' ) . '', 'Previous Post' ); ?>
 
 					            </li> <!--single-pagination__link-->
 
@@ -91,7 +91,7 @@
 
 					            <li class="single-pagination__link level-right">
 
-					            	<?php next_post_link( '' . esc_html__( '%link',     'collegeBlog' ) . '', 'Next Post' ); ?>
+					            	<?php next_post_link( '' . esc_html__( '%link',     'collegesBlog' ) . '', 'Next Post' ); ?>
 
 					            </li> <!--single-pagination__link-->
 					            <?php endif; ?>
