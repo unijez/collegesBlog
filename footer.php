@@ -92,9 +92,15 @@
     <a href="http://www.lincoln.ac.uk/home/" rel="<?php bloginfo( 'name' ); ?>">
           <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/uol_landscape.svg" alt="<?php bloginfo( 'name' ); ?> University Of Lincoln Logo">
     </a>
-
-    <p>	&#169; <b>University of Lincoln.</b> All rights reserved</p>
   	
+  		<div class="footer-credits">
+  
+	  	<?php university_links(); ?>
+	  	
+	    <p>	&#169; <b>University of Lincoln.</b> All rights reserved</p>
+  		
+  		</div> <!--footer-credits-->
+  		
   	</div>
   	
   </div> <!-- footer-bottom -->
