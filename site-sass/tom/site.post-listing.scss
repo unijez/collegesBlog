@@ -83,7 +83,7 @@ hr {
 
 .heading-image {
   width: 100%;
-  height: 75vh;
+  /*height: 75vh;*/
 @include uni-gradient;
 	background-size: cover;
 	background-position: center center;
@@ -100,7 +100,7 @@ hr {
 .heading-image_opacity {
 	background-color: $uni-blue-heading;
 	width: 100%;
-  height: 75vh;
+  /*height: 75vh;*/
 	text-align: center;
   display: flex;
   flex-direction: column;
@@ -109,6 +109,7 @@ hr {
   align-content: stretch;
   align-items: center;
   /*line-height: 60px;*/
+  padding: 50px 0 60px;
 }
 
 	/* heading-image text */
@@ -321,9 +322,9 @@ hr {
 .single-container .aligncenter{
 
 	  @include mq(desktop) {
-		  margin-left: -75px;
-		  margin-right: -75px;
-		  max-width: 750px;
+		  margin-left: auto;
+		  margin-right: auto;
+		  /*max-width: 750px;*/
 	  }
 
 }
@@ -773,11 +774,11 @@ hr {
 .heading-image {
 
 	@include mq(mobile) {
-		height: 50vh;	/* Issue! Image size not in ratio with set hight and no room (help jez!) */
+		/*height: 50vh;	/* Issue! Image size not in ratio with set hight and no room (help jez!) *!/*/
 	}
 
 	@include mq(desktop) {
-		height: 75vh;
+		/*height: 75vh;*/
 	}
 
 }
