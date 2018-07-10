@@ -125,14 +125,14 @@ endif;
  	$freedom = esc_url('secretariat.blogs.lincoln.ac.uk/information-compliance/freedom-of-information/' );
 
 	echo('<ul class="university-links">');
-
-	 	echo('<li><a href="' . $sccessibility. '">' . 'Accessibility'. '</a></li>');
-	 	echo('<li><a href="' . $contacting. '">' . 'Contacting the University'. '</a></li>');
-	 	echo('<li><a href="' . $legal. '">' . 'Legal'. '</a></li>');
-	 	echo('<li><a href="' . $privacy. '">' . 'Privacy'. '</a></li>');
-	 	echo('<li><a href="' . $disclaimer. '">' . 'Disclaimer'. '</a></li>');
-	 	echo('<li><a href="' . $freedom. '">' . 'Freedom of Information'. '</a></li>');
-
+		
+	 	echo('<li><a href="' . $sccessibility. '" title="Accessibility">' . 'Accessibility'. '</a></li>');
+	 	echo('<li><a href="' . $contacting. '" title="Contacting the University">' . 'Contacting the University'. '</a></li>');
+	 	echo('<li><a href="' . $legal. '" title="Legal">' . 'Legal'. '</a></li>');
+	 	echo('<li><a href="' . $privacy. '" title="Privacy">' . 'Privacy'. '</a></li>');
+	 	echo('<li><a href="' . $disclaimer. '" title="Disclaimer">' . 'Disclaimer'. '</a></li>');
+	 	echo('<li><a href="' . $freedom. '" title="Freedom of Information">' . 'Freedom of Information'. '</a></li>');
+		
 	echo('</ul>');
 
  };
