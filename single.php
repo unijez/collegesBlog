@@ -73,6 +73,28 @@
 						<article class="blog-article clear">
 						  <?php the_content();?>
 						</article> <!--blog-article-->
+						
+						
+						
+						<div class="author-bio__name">
+									
+									
+								<?php echo get_avatar( get_the_author_meta( 'ID' ), 512 ); ?>
+									
+									
+									<div class="author-bio__content">
+										<h4 class="author-title"> About the Author</h4>
+											<h4 class="author-title_sub"><?php echo get_the_author_meta( 'display_name', $contributor_id ); ?></h4>
+											<p><?php echo get_the_author_meta( 'description', $contributor_id ); ?></p>
+											 <a class="button contributor-posts-link" href="<?php echo esc_url( get_author_posts_url( $contributor_id ) ); ?>">
+											   <?php printf( _n( '%d Article', '%d Articles', $post_count, 'dyad' ), $post_count ); ?>
+											 </a>
+									</div>
+								
+								
+								
+						</div> <!--author-bio__name-->
+						
 
             </div> <!-- single-container -->
 

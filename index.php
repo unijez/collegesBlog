@@ -45,7 +45,7 @@ get_header(); ?>
 			</div> <!-- container -->
 
 			<?php the_posts_pagination( array(
-				'mid_size' => 1,
+				'mid_size' => 2,
 				'prev_text' => __( 'Prev', 'collegesBlog' ),
 				'next_text' => __( 'Next', 'collegesBlog' ),
 			) ); ?>

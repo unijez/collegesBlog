@@ -310,8 +310,8 @@ hr {
 
 .single-container .alignnone,
 .single-container .aligncenter {
-	margin-left: calc(-100vw / 2 + 100% / 2);
-	margin-right: calc(-100vw / 2 + 100% / 2);
+	margin-left: auto;
+	margin-right: auto;
 	max-width: 100vw;
 	margin-top: 60px;
 	margin-bottom: 60px;
@@ -914,3 +914,117 @@ hr {
 		padding: 0 25px
 	}
 }
+
+
+
+.author-bio {
+	padding-bottom: $desktop-side-pad;
+}
+
+.author-bio__name {
+	@include vendor(border-radius, $small-border-radius);
+	background-color: $comments-background;
+	padding: $desktop-side-pad;
+	@include flexbox;
+
+	@include flex-direction(column);
+	
+	
+	@include mq(tablet) {
+		@include justify-content(flex-start);
+		@include flex-direction(row);
+	}
+	
+}
+
+
+.author-bio__name  .avatar{
+	@include vendor(border-radius, 50%);
+	width: 90px;
+	height: 90px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: $desktop-side-pad;
+	
+	@include mq(tablet) {
+		margin-top: $desktop-side-pad;
+		/*padding-top: $desktop-side-pad;*/
+		/*border-top: 1px solid $grey3;*/
+	}
+	
+}
+
+
+/*.teams-page  .author-bio__name {
+	padding: $desktop-side-pad;
+	background-color: $almost-white;
+}
+
+.teams-page .author-bio__name  .avatar{
+
+	@include mq(tablet) {
+		margin-top: 0;
+		/*padding-top: $desktop-side-pad;*!/
+		/*border-top: 1px solid $grey3;*!/
+	}
+	
+}*/
+
+
+
+.author-title {
+	color: $footerbg-grey;
+	@include font-size(18px);
+	
+	margin-bottom: 5px;
+	@include mq(tablet) {
+	@include font-size(20px);
+	}
+	
+	
+}
+
+.author-title_sub {
+	color: $footerbg-grey;
+	@include font-size(15px);
+	@include font-weight(normal);
+	margin-bottom: 20px;
+	@include mq(tablet) {
+	@include font-size(18px);
+	}
+}
+
+
+.author-bio__content {
+	@include font-size(16px);
+	
+	@include mq(tablet) {
+		padding-left: 30px;
+		@include flex(1);
+		@include font-size(15px);
+	}
+}
+
+
+.teams-page .author-bio__content p{
+	@include font-size(13px);
+	
+	@include mq(tablet) {
+		@include font-size(18px);
+		line-height: 23px;
+	}
+	
+}
+
+
+.contributor-posts-link {
+	color: $bottomtext-blue;
+	text-decoration: none;
+	margin-top: 20px;
+	
+	display: block;
+	@include hocus() {
+		  text-decoration: underline;
+	}
+}
+
