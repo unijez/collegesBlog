@@ -64,7 +64,7 @@
             <!-- Main text and image content -->
 			       <div class="single-container">
 
-							<div class="author">
+							<div class="author-bio_image">
 								<?php echo get_avatar( get_the_author_meta( 'ID' ), 64 ); ?>
 								<h4 class="post-author"> <b>By</b> <?php the_author(); ?></h4>
 								<time class="date-published" datetime="<?php the_time('d/m/Y') ?>"><?php the_time('F j, Y') ?></time>

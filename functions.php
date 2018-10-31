@@ -248,13 +248,18 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 /**
  * Load Theme Update file.
  */
-require get_template_directory() .  '/plugin-update-checker/plugin-update-checker.php';
-$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://wordpress.uat.lincoln.ac.uk/themes/collegesBlog/collegesBlog-theme-update.json',
-	__FILE__, //Full path to the main plugin file or functions.php.
-	'collegesBlog'
-);
+if ( file_exists( get_template_directory() . '/inc/plugin-update-checker/plugin-update-checker.php' ) ) { 	
 
+	require get_template_directory() .  '/inc/plugin-update-checker/plugin-update-checker.php';
+	
+	$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+		'https://wordpress.uat.lincoln.ac.uk//wp-update-server/?action=get_metadata&slug=collegesBlog',
+		__FILE__, //Full path to the main plugin file or functions.php.
+		'collegesBlog'
+	);
+	
+	
+}
 
 	/*
 	 * ACF P tag from image stripping
